@@ -5,7 +5,6 @@
     "ngRoute",
     "ngCookies",
     "rests",
-    "ui.bootstrap"
     ])
     .config(function ($routeProvider) {
         $routeProvider
