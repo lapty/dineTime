@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module('restaurantour')
+        .module('dinetime')
         .controller('homeCtrl',['$scope', function ($scope) {
 
         }]);

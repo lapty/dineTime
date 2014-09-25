@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Restaurantour', ngApp: 'restaurantour' });
+  res.render('index', { title: 'Dine Time', ngApp: 'dinetime' });
 };

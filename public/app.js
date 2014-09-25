@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('restaurantour',[
+    angular.module('dinetime',[
     "ngRoute",
     "ngCookies",
     "rests",
