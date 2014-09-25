@@ -1,20 +1,22 @@
 (function () {
     "use strict";
 
-    angular.module('baby-mean',[
+    angular.module('restaurantour',[
     "ngRoute",
     "ngCookies",
-    "posts"
+    "rests",
+    "ui.bootstrap"
     ])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/',{
                 templateUrl: "views/main.html",
-                controller: "homeCtrl"
+                controller: "restsController"
             })
             .otherwise({
                 redirectTo: '/'
             });
     });
+
 
 })();

@@ -6,3 +6,35 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+.restWrap {
+    width:100%;
+    padding:0px;
+    background-color:rgba(0,0,0,.5);
+
+}
+
+.restBlock {
+    border:1px blue solid;
+    height:250px;
+    padding:0px;
+    background-size:cover;
+    text-align:center;
+    color:rgba(255,255,255,.9);
+    font-size:2.5em;
+    opacity:.7;
+    transition:all .5s ease;
+    span {
+        position:relative;
+        top:90px;
+
+    }
+}
+
+.addTo {
+    position:relative;
+    top: 130px;
+    width:100%;
+    font-size:.8em;
+}

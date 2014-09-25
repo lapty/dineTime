@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module('baby-mean')
+        .module('restaurantour')
         .controller('homeCtrl',['$scope', function ($scope) {
 
         }]);

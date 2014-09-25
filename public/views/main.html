@@ -1,14 +1,57 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#/blog">Blog</a></li>
-   
+    <li class="active"><a ng-href="#/userlist">User List</a></li>
+
   </ul>
-  <h3 class="text-muted">baby-mean</h3>
 </div>
 
 <div class="jumbotron">
-  <h1>Welcome to baby-mean</h1>
-  <p><a class="btn btn-lg btn-success" ng-href="#/posts">Go to blog!</a></p>
+  <h1>restauranTOUR</h1>
+  <button class="btn btn-success" data-ng-click="getSample()">
+      RANDOM REST
+     </button>
+    {{randomRest.name}}
+
+
 </div>
 
+
+
+<a href="#/rests/new" class="btn btn-success">Create New Restaurant</a>
+
+<input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS">
+
+        <div class="row" style="margin:0;">
+        <div class="restWrap col-xs-12">
+            <div ng-repeat="rest in rests | filter: search">
+
+                <div class="restBlock col-md-3" style="background-image:url({{rest.image}})">
+                    <a href="#/rests/{{rest._id}}">
+                        <h2>{{rest.name}}</h2>
+                    </a>
+                    <button class="addTo" ng-click="addToList($index); changeClass()" ng-disabled="disabled">add 2 list</button>
+                </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--     <div class="restWrapper">
+        <div id="restBlock" style="background-image:url('{{rest.image}}');" data-ng-repeat="rest in rests">
+            <a href="#/rests/{{rest._id}}">
+                <p><div id="restImg" >
+
+                    <h2>{{rest.title}}</h2>
+                    <p>{{rest.content}}</p>
+
+                </div></p>
+            </a>
+        </div>
+    </div> -->

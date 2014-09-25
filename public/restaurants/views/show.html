@@ -1,0 +1,15 @@
+        SHOW MENU <a ng-href="#">Home</a>
+
+<section>
+    <h1>{{rest.title}}</h1>
+    <p>{{rest.content}}</p>
+    <p>{{rest.number}}</p>
+    <p>{{rest.address}}</p>
+    <p>{{rest.site}}</p>
+
+    <a href="#/rests/{{rest._id}}/edit">Edit</a> | <a ng-click="deleteRest(rest._id)">Delete</a>
+</section>
+
+MENU
+
+<p>{{menu.items}}</p>
