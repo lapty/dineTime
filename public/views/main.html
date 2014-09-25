@@ -1,17 +1,15 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li class="active"><a ng-href="#/userlist">User List</a></li>
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/userlist">User List</a></li>
 
   </ul>
 </div>
 
 <div class="jumbotron">
-  <h1><img src="../logo.png" width="350" style="opacity:.7;"></h1>
-  <button class="btn btn-success" data-ng-click="getSample()">
-      RANDOM REST
+  <h1><img class="logo" src="../images/logo.png" width="350" data-ng-click="getSample()"></h1>
      </button>
-    {{randomRest.name}}
+    <h1>{{randomRest.name}}</h1>
 
 
 </div>
