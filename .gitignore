@@ -1,7 +1,5 @@
 .idea
-node_modules
 .DS_Store
 dist
 .tmp
 .sass-cache
-public/components
