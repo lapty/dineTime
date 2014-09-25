@@ -1,40 +1,92 @@
-## Baby Mean - small reference app for the mean stack
-Nothing groundbreaking here!  This app is intended as a learning tool that consists of Angular, Node, MongoDB, and Express with CRUD.
+# Requirements Document
 
-Would not recommend use in a production environment!
 
-### Directory Structure
+### Elevator
 
-``` javascript
-|- public                       // public folder (angularjs files)
-|  |- components                // bower components
-|  |- css
-|  |- js
-|  |- posts                     // posts feature
-|  | |- views
-|  | | |- create.html
-|  | | |- edit.html
-|  | | |- list.html
-|  | | |- show.html
-|  | |- posts.js
-|  | |- postsController.js
-|  | |- postsServices.js
-|  |- views                    // app common views
-|  | |- main.html
-|  |- app.js                   // main angular module
-|  |- homeCtrl.js              // default home controller
-|- routes
-|  |- index.js
-|- views                        // server side templates, NOTE: check layout.jade
-|  |- index.jade
-|  |- layout.jade
-|- .bowerrc                     // tells bower where to install dependencies
-|- .gitignore
-|- .npmignore
-|- app.js                       // main nodejs app file
-|- bower.json
-|- Gruntfile.js                 // grunt task runner file
-|- package.json
-|- Procfile
+<p>The biggest problem people have: "Where do I want to eat"? Restaurantour will randomize a restaraunt or allow users to review a menu which contains user-voted menu items. Don't make any more decisions!</p>
 
-```
+
+### MVP Features
+
+- Restaurant tracking
+	- A user-populated list of restaurants can be ordered by whether or not the user has been there recently.
+
+- Restaurant randomizer
+	- A simple click function will pick a restaurant for the user at random. 
+
+- Favorite list
+	- Users can add restauraunts to a specific list to narrow randomization
+
+- Menu item voting
+	- Users can vote on specific menu items to help others choose a menu item. (Upvotes/downvotes)
+
+
+### Technologies
+
+- mongodb, angular, mean-stack, bootstrap UI, underscore, passport, heroku, grunt, ngAnimate
+
+
+### Wireframes
+
+- https://gomockingbird.com/mockingbird/#nmkym99
+
+
+
+### Roadmap (additional features)
+
+- Find restaurants
+	- A search function for restaurants by menu item name
+	- A filter for restaurant pricing
+
+- Explore menu items further
+	- Users can upload images of specific menu items, and leave commments for particular menu items.
+
+- User authentication
+	- Users can add restauraunts to favorites and keep a restaurant list tailored to them
+
+- Restauraunts specific by location
+	- Can choose what city, restauraunt list will populate according to specific city
+
+
+
+## User Story Template
+
+#### Name
+
+  Ability to Crud restaurants that are available for app.
+  Any user is able to add a restaurant and restauraunt   menu.
+
+
+#### Value Statement: 
+
+As an admin user,
+I want the ability to approve new restaurants added by users. I want to be able to CRUD all menu items as well as clear votes for any particular menu item.
+
+
+####  Assumptions
+- We can assume that we know what restaurant we're going to add
+- We can assume users will not abuse the voting system.
+
+
+#### Acceptance Criterion
+
+1. admin is able to create a restaurant
+2. admin is able to update a restaurant
+3. admin is able to delete a restauraunt
+4. admin is able to read a course
+5. The restaurant will contain the following field:
+- Name
+- Menu
+- Restaurant info (hours, contact, geolocation)
+- Image of restaurant that will be used as a placeholder
+
+#### Notes
+
+As a user, 
+
+I want add restauraunts to my restauraunt list.
+I want to be able to have a restaurant randomly picked for me.
+I want to have that restaurant put in a recently went restauraunt when done.
+
+so that I can not fight over where I choose to eat.
+
