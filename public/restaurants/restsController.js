@@ -11,17 +11,6 @@
 
             restsService.getRest($routeParams.restId).success(function (rest) {
                 $scope.rest = rest;
-                $scope.userList = restsService.userList;
-
-                $scope.addToList = function(index) {
-
-                    $scope.userList.push();
-
-                    console.log("adding to list");
-                    console.log($scope.userList);
-                    this.disabled = true;
-
-                  }
 
             });
 
@@ -49,6 +38,17 @@
             $scope.changeClass = function () {
                 this.class = "disabled";
           }
+
+            $scope.rests = restsService.getRests();
+            $scope.userList = restsService.userList;
+            $scope.addToList = function(index) {
+                $scope.userList.push($scope.rests[index]);
+                console.log(index);
+                console.log($scope.userList.length)
+                console.log($scope.rests[index]);
+
+            }
+
 
         }]);
 })();///END MODULE

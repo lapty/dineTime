@@ -37,7 +37,6 @@
             }
 
 
-
             return {
                 getRests: getRests,
                 getRest: getRest,

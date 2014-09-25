@@ -3,7 +3,13 @@ User Restaurant List <a ng-href="#">Home</a>
 
 
 <br><br><br>
+<div ng-repeat="rest in userList track by $index"></div>
 REST LIST HERE
-
-
+{{userList.name}}
+<br><br>
+{{userList.rest.name}}
+<br><br>
 {{userList}}
+
+{{$index.name}}
+</div>
