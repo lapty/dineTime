@@ -3,7 +3,7 @@
 
 ### Elevator
 
-<p>The biggest problem people have: "Where do I want to eat"? Restaurantour will randomize a restaraunt or allow users to review a menu which contains user-voted menu items. Don't make any more decisions!</p>
+<p>The biggest problem people have: "Where do I want to eat"? Restaurantour will randomize a restaraunt, add to a personal restauraunt list and allow users to review a menu which contains user-voted menu items. Don't make any more decisions!</p>
 
 
 ### MVP Features
