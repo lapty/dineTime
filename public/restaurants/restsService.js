@@ -7,35 +7,40 @@
 
             var userList = [];
 
-            // restaurant services
+            var restList = "api/collections/demotiy/"
+
+
+
+            ////////Restaurant services
             function getRests() {
 
-                return $http.get("api/collections/demotiy");
+                return $http.get(restList);
             }
 
             function getRest(restId) {
-                return $http.get("api/collections/demotiy/" + restId);
+                return $http.get(restList + restId);
             }
 
             function createRest(newRest) {
-                $http.post("api/collections/demotiy", newRest).then(function (res) {
+                $http.post(restList, newRest).then(function (res) {
                     $rootScope.$broadcast("rest:added");
                 });
             }
 
             function editRest(rest) {
-                $http.put("api/collections/demotiy/" + rest._id, rest).then(function (res)              {
+                $http.put(restList + rest._id, rest).then(function (res)              {
                     $rootScope.$broadcast("rest:updated");
                 });
 
             }
 
             function deleteRest(restId) {
-                $http.delete("api/collections/demotiy/" + restId).then(function (res) {
+                $http.delete(restList + restId).then(function (res) {
                     $rootScope.$broadcast("rest:deleted");
                 });
             }
 
+            ///////
 
             return {
                 getRests: getRests,
@@ -43,7 +48,8 @@
                 createRest: createRest,
                 editRest: editRest,
                 deleteRest: deleteRest,
-                userList: userList,
+                /////
+
             };
 
         }]);

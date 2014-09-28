@@ -1,9 +1,22 @@
 <a ng-href="#">Home</a>
 
-<p><input type="text" data-ng-model="rest.name"></p>
-<p><input type="text" data-ng-model="rest.image" placeholder="imageURL"></p>
-<p><input type="text" data-ng-model="rest.number" placeholder="phone number"></p>
-<p><input type="text" data-ng-model="rest.address" placeholder="address"></p>
-<p><input type="text" data-ng-model="rest.site" placeholder="website"></p>
-<p><textarea data-ng-model="rest.content"></textarea></p>
-<button data-ng-click="editRest(rest)">Update Restaurant</button>
+Add item for {{rest.name}}
+<form action="" ng-submit=addItem(item)>
+  <p><input type="text" placeholder="Name" ng-model="item.name"></p>
+  <p><input type="text" placeholder="Description" ng-model="item.description"></p>
+  <p><input type="text" ng-model="item.price" placeholder="price"></input></p>
+  <p><button>SUBMIT</button></p>
+</form>
+
+Edit item
+<div class="menuItems">
+    <form>
+  <section ng-repeat="item in rest.menu">
+    <p>Item: <input type="text" data-ng-model="item.name" placeholder="item name">
+    Description: <input type="text" data-ng-model="item.description" placeholder="Description">
+    Price: <input type="text" data-ng-model="item.price" placeholder="Price"></p>
+    <button ng-click="deleteItem(index)">X</button>
+  </section>
+  <button ng-click="editRest(rest)">Submit Changes</button>
+  </form>
+</div>

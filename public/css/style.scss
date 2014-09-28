@@ -4,11 +4,16 @@ body {
   padding:0px;
   }
 
-
 a {
   color: white;
   opacity: .8;
   font-weight:lighter;
+}
+
+.show {
+    a {
+        color:blue;
+    }
 }
 
 .jumbotron {
@@ -21,6 +26,7 @@ a {
         text-align:center;
         margin-top:40px;
     }
+
 }
 
 .logo {
@@ -66,4 +72,15 @@ a {
 .navButt {
     background-color:rgba(0,0,0,.001);
     border-radius:100%;
+}
+
+
+////show
+
+.info {
+    text-align:center;
+    background-image:rgba(255,255,255,.5);
+    color:rgba(255,255,255,.9);
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: black 0 2px 3px;
 }

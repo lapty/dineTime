@@ -12,9 +12,8 @@ SHOW MENU <a ng-href="#">Home</a>
 
     <div class="menuItems">
       <section ng-repeat="item in rest.menu">
-        <p><span data-ng-model="item.vote">{{item.vote}}</span> {{item.name}} {{item.description}} ${{item.price}}
-            <button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled" ng-disabled = "disabled">recommend</button>
-            <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled" ng-disabled = "disabled">don't recommend</button></p>
+        <p><span>{{item.name}}</span> {{item.price}} {{item.vote}} <button ng-click="addVote(vote)"></button></p>
+        <button ng-click="deleteItem($index)">delete</button>
 
       </section>
     </div>
