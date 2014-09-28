@@ -9,7 +9,7 @@
 <div class="jumbotron">
   <h1><img class="logo" src="../images/logo.png" width="350" data-ng-click="getSample()"></h1>
      </button>
-    <h1>{{randomRest.name}}</h1>
+    <h1><a href="#/rests/{{randomRest._id}}">{{randomRest.name}}</a></h1>
 
 
 </div>
@@ -38,18 +38,3 @@
             </div>
         </div>
     </div>
-
-
-
-    <!--     <div class="restWrapper">
-        <div id="restBlock" style="background-image:url('{{rest.image}}');" data-ng-repeat="rest in rests">
-            <a href="#/rests/{{rest._id}}">
-                <p><div id="restImg" >
-
-                    <h2>{{rest.title}}</h2>
-                    <p>{{rest.content}}</p>
-
-                </div></p>
-            </a>
-        </div>
-    </div> -->

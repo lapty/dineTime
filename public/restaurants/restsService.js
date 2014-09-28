@@ -7,7 +7,7 @@
 
             var userList = [];
 
-            var restList = "api/collections/demotiy/"
+            var restList = "api/collections/demotiy/";
 
 
 

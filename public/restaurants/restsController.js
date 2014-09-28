@@ -48,15 +48,16 @@
             this.class = "disabled";
         };
 
-        $scope.rests = restsService.getRests();
-        $scope.userList = restsService.userList;
-        $scope.addToList = function(index) {
 
-            $scope.userList.push($scope.rests[index].name);
-            console.log(index);
-            console.log($scope.userList.length)
-            console.log($scope.rests[index]);
+        $scope.addToList = function(rest) {
+            // var userList = restsService.userList;
+            $scope.userList = restsService.userList;
 
+            $scope.userList.push({
+                name: rest.name,
+                image: rest.image,
+            });
+            console.log($scope.userList)
         };
 
         $scope.addItem = function(item){
