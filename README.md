@@ -11,9 +11,9 @@
 
 - Restaurant randomizer
 	- A simple click function will pick a restaurant for the user at random. 
-	-
+	
 - Item finder
-	- A search function for restaurants by menu item name
+        - A search function for restaurants by menu item name
 
 - Favorite list
 	- Users can add restauraunts to a specific list to narrow randomization
