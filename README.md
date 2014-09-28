@@ -3,16 +3,17 @@
 
 ### Elevator
 
-<p>The biggest problem people have: "Where do I want to eat"? Restaurantour will randomize a restaraunt, add to a personal restauraunt list and allow users to review a menu which contains user-voted menu items. Don't make any more decisions!</p>
+<p>The biggest problem people have: "Where do I want to eat"? Dine Time will randomize a restaraunt, add to a personal restauraunt list for narrower randomization and allow users to review a menu which contains user-voted menu items. Don't make any more decisions!</p>
 
 
 ### MVP Features
 
-- Restaurant tracking
-	- A user-populated list of restaurants can be ordered by whether or not the user has been there recently.
 
 - Restaurant randomizer
 	- A simple click function will pick a restaurant for the user at random. 
+	
+- Item finder
+        - A search function for restaurants by menu item name
 
 - Favorite list
 	- Users can add restauraunts to a specific list to narrow randomization
@@ -23,7 +24,7 @@
 
 ### Technologies
 
-- mongodb, angular, mean-stack, bootstrap UI, underscore, passport, heroku, grunt, ngAnimate
+- mongodb, angular, mean-stack, bootstrap UI, underscore, heroku, grunt
 
 
 ### Wireframes
@@ -34,8 +35,7 @@
 
 ### Roadmap (additional features)
 
-- Find restaurants
-	- A search function for restaurants by menu item name
+- Filter restaurants
 	- A filter for restaurant pricing
 
 - Explore menu items further
@@ -46,6 +46,9 @@
 
 - Restauraunts specific by location
 	- Can choose what city, restauraunt list will populate according to specific city
+
+- Restaurant tracking
+	- A user-populated list of restaurants can be ordered by whether or not the user has been there recently.
 
 
 
