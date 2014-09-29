@@ -20,30 +20,30 @@
     </button>
     <h1><a href="#/rests/{{randomRest._id}}">{{randomRest.name}}</a></h1>
 
+<h1 id="scrollButt">
+        <i class="fa fa-angle-double-down"></i>
+    </h1>
 
 </div>
 
 
-
-<a href="#/rests/new" class="btn btn-success">Create New Restaurant</a>
-
-<input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS">
-
-<div class="row" style="margin:0;">
+<div class="row" id="scroll" style="margin:0;">
+    <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS">
     <div class="restWrap col-xs-12">
         <div ng-repeat="rest in rests | filter: search">
 
-            <div class="restBlock col-md-3" style="background-image:url({{rest.image}})">
-                <a href="#/rests/{{rest._id}}">
-                    <h2>{{rest.name}}</h2>
-                </a>
-                <button class="addTo" ng-click="addToList($index); changeClass()" ng-disabled="disabled">add 2 list</button>
+            <div class="restBlock col-md-3">
+                <a class="restName" href="#/rests/{{rest._id}}">
+                <div class="restBox" style="background-image:url({{rest.image}})">
+
+                    <span>{{rest.name}}</span>
+
+
             </div>
-
-
+        </a>
+            <i ng-click="addToList(rest); changeClass()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
+            </div>
         </div>
-
-
     </div>
 </div>
 </div>

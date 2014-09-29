@@ -1,6 +1,7 @@
-SHOW MENU <a ng-href="#/admin">Home</a>
-<div class="show">
+<div class="show" style="background-image:url('{{rest.image}}')">
+
 <section class="info">
+    <a ng-href="#/admin">Home</a>
     <h1>{{rest.name}}</h1>
     <p>{{rest.number}}</p>
     <p>{{rest.address}}</p>
@@ -12,9 +13,13 @@ SHOW MENU <a ng-href="#/admin">Home</a>
 
     <div class="menuItems">
       <section ng-repeat="item in rest.menu">
-        <p><span data-ng-model="item.vote">{{item.vote}}</span> {{item.name}} {{item.description}} {{item.price | currency}}
+        <p>
             <button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbUp"><i class="fa fa-thumbs-up"></i></button>
-            <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbDown"><i class="fa fa-thumbs-down"></i></button></p>
+            <span data-ng-model="item.vote">{{item.vote}}</span>
+            <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbDown"><i class="fa fa-thumbs-down"></i></button>
+             {{item.name}} {{item.description}} {{item.price | currency}}
+
+            </p>
 
       </section>
     </div>

@@ -43,6 +43,7 @@
             ///////
 
             return {
+                userList: userList,
                 getRests: getRests,
                 getRest: getRest,
                 createRest: createRest,

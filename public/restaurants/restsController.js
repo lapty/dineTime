@@ -14,6 +14,8 @@
 
         });
 
+        $scope.userList = restsService.userList;
+
         $scope.createRest = function (newRest) {
             restsService.createRest({
                 name:newRest.name,
@@ -24,7 +26,7 @@
                 content:newRest.content,
                 menu:[]
             })
-            $location.path("/rests/");
+            $location.path("/admin/");
 
         };
 
@@ -44,20 +46,22 @@
             $scope.randomRest = _.sample(rests);
         };
 
+        $scope.getSampleList = function () {
+
+            var userList = $scope.userList;
+            $scope.randomRest = _.sample(userList);
+        };
+
         $scope.changeClass = function () {
             this.class = "disabled";
         };
 
 
         $scope.addToList = function(rest) {
-            // var userList = restsService.userList;
-            $scope.userList = restsService.userList;
 
-            $scope.userList.push({
-                name: rest.name,
-                image: rest.image,
-            });
-            console.log($scope.userList)
+            $scope.userList.push(rest);
+
+            console.log($scope.userList);
         };
 
         $scope.addItem = function(item){
@@ -90,7 +94,11 @@
             };
           };
 
-
+        $(function() {
+        $(".jumbotron").on("click", "#scrollButt", function() {
+        $('html, body').animate({
+          scrollTop: $("#scroll").offset().top }, 750);  });
+        });
 
     }]);
 })();///END MODULE
