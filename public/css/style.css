@@ -41,7 +41,8 @@ a {
 
 .logo {
   opacity: 0.7;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  width: 350px; }
 
 .logo:hover {
   opacity: 1; }
@@ -161,14 +162,9 @@ a {
   color: red; }
 
 @media screen and (min-width: 0px) and (max-width: 639px) {
-  .restWrap::-webkit-scrollbar {
-    display: block; }
   ::-webkit-scrollbar {
     display: block; }
-  ::-webkit-scrollbar-thumb {
-    background-color: black;
-    border: 3px rgba(80, 120, 201, 0.6) solid;
-    border-radius: 5px;
-    height: 5px; } }
+  .logo {
+    width: 300px; } }
 
 @media screen and (min-width: 640px) and (max-width: 1088px) { }
