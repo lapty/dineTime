@@ -85,6 +85,7 @@
         };
 
         $scope.isCollapsed = true;
+        $scope.menuCollapse = true;
 
         $scope.login = function (username, password) {
             if ( username === 'admin' && password === 'admin') {
@@ -99,6 +100,16 @@
         $('html, body').animate({
           scrollTop: $("#scroll").offset().top }, 750);  });
         });
+
+
+    ///Alerts
+
+    $scope.addAlert = function() {
+    $('#alert').html('<div class="alert"><span>Added restaurant to list!</span></div>')
+    setTimeout(function() {
+        $("div.alert").fadeOut();
+    }, 3000);
+}
 
     }]);
 })();///END MODULE

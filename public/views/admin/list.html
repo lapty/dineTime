@@ -5,7 +5,7 @@ User Restaurant List <a ng-href="#">Home</a>
 
 <div class="row" style="margin:0;">
     <div class="listWrap col-xs-12">
-        <div ng-repeat="rest in userList">
+        <div ng-repeat="rest in userList track by $index">
             <div class="restBlock col-md-3">
                 <a class="restName" href="#/rests/{{rest._id}}">
                     <div class="restBox" style="background-image:url({{rest.image}})">

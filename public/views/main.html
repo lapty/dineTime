@@ -1,18 +1,26 @@
 <div class="header">
-    <ul class="nav nav-pills pull-right">
-        <li><a ng-href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
-            <div collapse="isCollapsed">
-                <form ng-submit="login(username, password)">
-                    Username: <input type="text" ng-model="username" class="ng-pristine ng-valid"><br>
-                    Password: <input type="password" ng-model="password" class="ng-pristine ng-valid">
-                    <button type="submit"><i class="fa fa-check-square"></i></button>
+<ul class="nav nav-pills pull-left">
+            <!-- <i class="fa fa-bars menuButt" style="font-size:2.5em;" ng-click="menuCollapse = !menuCollapse"></i>
+                <div class="menu" collapse="menuCollapse"> -->
+            <!--         <ul> -->
+                        <li><a ng-href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
+                            <div collapse="isCollapsed">
+                                <form ng-submit="login(username, password)">
+                                    <p>User: <input type="text" ng-model="username" class="ng-pristine ng-valid"></p>
+                                    <p>Pass: <input type="password" ng-model="password" class="ng-pristine ng-valid"></p>
+                                    <button type="submit"><i class="fa fa-check-square"></i></button>
 
-                    <br/>
-{{loginError}}
-                </form>
-            </div></li>
-            <li><a ng-href="#/userlist">User List</a></li>
-        </ul>
+                                    <br/>
+                                    {{loginError}}
+                                </form>
+                            </div></li>
+                            <li><a ng-href="#/userlist">Dine List</a></li>
+                    <!--     </ul> -->
+
+            <!--         </div>
+             -->
+
+    </ul>
     </div>
 
     <div class="jumbotron"><br><br>
@@ -20,12 +28,14 @@
     </button>
     <h1><a href="#/rests/{{randomRest._id}}">{{randomRest.name}}</a></h1>
 
-<h1 id="scrollButt">
-        <i class="fa fa-angle-double-down"></i>
-    </h1>
+
+        <h1><i id="scrollButt" class="fa fa-angle-double-down"></i></h1>
 
 </div>
 
+
+
+<div id="alert"></div>
 
 <div class="row" id="scroll" style="margin:0;">
     <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS">
@@ -41,7 +51,7 @@
 
             </div>
         </a>
-            <i ng-click="addToList(rest); changeClass()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
+            <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
             </div>
         </div>
     </div>
