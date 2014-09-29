@@ -202,3 +202,30 @@ a {
 }
 
 //// animations
+
+
+/////////Media queries
+
+  @media screen and (min-width:0px) and (max-width:639px) {
+
+.restWrap::-webkit-scrollbar {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    display:block;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:black;
+    border: 3px rgba(80,120,201,.6) solid;
+    border-radius:5px;
+    height:5px;
+}
+
+
+}
+  @media screen and (min-width:640px) and (max-width:1088px) {
+
+
+}
