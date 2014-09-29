@@ -14,8 +14,8 @@ Edit item
   <section ng-repeat="item in rest.menu">
     <p>Item: <input type="text" data-ng-model="item.name" placeholder="item name">
     Description: <input type="text" data-ng-model="item.description" placeholder="Description">
-    Price: <input type="text" data-ng-model="item.price" placeholder="Price"></p>
-    <button ng-click="deleteItem(index)">X</button>
+    Price: <input type="text" data-ng-model="item.price" placeholder="Price"> <button ng-click="deleteItem(index)">X</button></p>
+
   </section>
   <button ng-click="editRest(rest)">Submit Changes</button>
   </form>

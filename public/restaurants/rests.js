@@ -8,23 +8,23 @@
         .config(function ($routeProvider) {
             $routeProvider
                 .when('/userlist', {
-                    templateUrl: 'restaurants/views/list.html',
+                    templateUrl: 'views/admin/list.html',
                     controller: 'restsController'
                 })
                 .when('/rests/new', {
-                    templateUrl: 'restaurants/views/create.html',
+                    templateUrl: 'views/admin/create.html',
                     controller: 'restsController'
                 })
                 .when('/rests/:restId', {
-                    templateUrl: 'restaurants/views/show.html',
+                    templateUrl: 'views/admin/show.html',
                     controller: 'restsController'
                 })
                 .when('/rests/:restId/edit', {
-                    templateUrl: 'restaurants/views/edit.html',
+                    templateUrl: 'views/admin/edit.html',
                     controller: 'restsController'
                 })
                 .when('/rests/:restId/editMenu', {
-                    templateUrl: 'restaurants/views/editMenu.html',
+                    templateUrl: 'views/admin/editMenu.html',
                     controller: 'restsController'
                 });
         });

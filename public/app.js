@@ -6,11 +6,16 @@
     "ngCookies",
     "rests",
     "ui.bootstrap",
+    "ngAnimate"
     ])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/',{
                 templateUrl: "views/main.html",
+                controller: "restsController"
+            })
+            .when('/admin',{
+                templateUrl: "views/adminmain.html",
                 controller: "restsController"
             })
             .otherwise({

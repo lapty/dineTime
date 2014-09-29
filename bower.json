@@ -1,5 +1,5 @@
 {
-  "name": "restaurantour",
+  "name": "dinetime",
   "version": "0.0.1",
   "ignore": [
     "**/.*",
@@ -17,6 +17,8 @@
     "angular-route": "1.2.15",
     "bootstrap": "~3.1.1",
     "angular-bootstrap": "~0.11.0",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "angular-animate": "~1.2.25",
+    "font-awesome": "~4.2.0"
   }
 }

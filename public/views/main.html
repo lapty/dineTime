@@ -1,14 +1,23 @@
 <div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li><a ng-href="#">Sign In</a></li>
-    <li><a ng-href="#/userlist">User List</a></li>
+    <ul class="nav nav-pills pull-right">
+        <li><a ng-href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
+            <div collapse="isCollapsed">
+                <form ng-submit="login(username, password)">
+                    Username: <input type="text" ng-model="username" class="ng-pristine ng-valid"><br>
+                    Password: <input type="password" ng-model="password" class="ng-pristine ng-valid">
+                    <button type="submit"><i class="fa fa-check-square"></i></button>
 
-  </ul>
-</div>
+                    <br/>
+{{loginError}}
+                </form>
+            </div></li>
+            <li><a ng-href="#/userlist">User List</a></li>
+        </ul>
+    </div>
 
-<div class="jumbotron">
-  <h1><img class="logo" src="../images/logo.png" width="350" data-ng-click="getSample()"></h1>
-     </button>
+    <div class="jumbotron"><br><br>
+        <h1><img class="logo" src="../images/logo.png" width="350" data-ng-click="getSample()"></h1>
+    </button>
     <h1><a href="#/rests/{{randomRest._id}}">{{randomRest.name}}</a></h1>
 
 
@@ -20,21 +29,21 @@
 
 <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS">
 
-        <div class="row" style="margin:0;">
-        <div class="restWrap col-xs-12">
-            <div ng-repeat="rest in rests | filter: search">
+<div class="row" style="margin:0;">
+    <div class="restWrap col-xs-12">
+        <div ng-repeat="rest in rests | filter: search">
 
-                <div class="restBlock col-md-3" style="background-image:url({{rest.image}})">
-                    <a href="#/rests/{{rest._id}}">
-                        <h2>{{rest.name}}</h2>
-                    </a>
-                    <button class="addTo" ng-click="addToList($index); changeClass()" ng-disabled="disabled">add 2 list</button>
-                </div>
-
-
-                </div>
-
-
+            <div class="restBlock col-md-3" style="background-image:url({{rest.image}})">
+                <a href="#/rests/{{rest._id}}">
+                    <h2>{{rest.name}}</h2>
+                </a>
+                <button class="addTo" ng-click="addToList($index); changeClass()" ng-disabled="disabled">add 2 list</button>
             </div>
+
+
         </div>
+
+
     </div>
+</div>
+</div>

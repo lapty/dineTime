@@ -1,0 +1,21 @@
+SHOW MENU <a ng-href="#/admin">Home</a>
+<div class="show">
+<section class="info">
+    <h1>{{rest.name}}</h1>
+    <p>{{rest.number}}</p>
+    <p>{{rest.address}}</p>
+    <p>{{rest.site}}</p>
+
+    <a href="#/rests/{{rest._id}}/edit">Edit</a> |
+    <a href="#/rests/{{rest._id}}/editMenu">Edit MENU</a>  | <a ng-click="deleteRest(rest._id)">Delete</a>
+</section>
+
+    <div class="menuItems">
+      <section ng-repeat="item in rest.menu">
+        <p><span data-ng-model="item.vote">{{item.vote}}</span> {{item.name}} {{item.description}} {{item.price | currency}}
+            <button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbUp"><i class="fa fa-thumbs-up"></i></button>
+            <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbDown"><i class="fa fa-thumbs-down"></i></button></p>
+
+      </section>
+    </div>
+</div>

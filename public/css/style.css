@@ -3,6 +3,22 @@ body {
   margin: 0px;
   padding: 0px; }
 
+.header {
+  color: white; }
+  .header input {
+    background-color: rgba(0, 0, 0, 0.001);
+    border: none;
+    border-bottom: 1px white solid; }
+  .header button {
+    background-color: rgba(0, 0, 0, 0.001);
+    border: none;
+    font-size: 2em; }
+  .header form {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .header i:hover {
+    color: green; }
+
 a {
   color: white;
   opacity: 0.8;
@@ -56,6 +72,19 @@ a {
 .navButt {
   background-color: rgba(0, 0, 0, 0.001);
   border-radius: 100%; }
+
+.thumbUp, .thumbDown {
+  background-color: rgba(0, 0, 0, 0.001);
+  font-size: 1.5em;
+  margin: 0px;
+  padding: 0px;
+  border: none; }
+
+.thumbUp {
+  color: green; }
+
+.thumbDown {
+  color: red; }
 
 .info {
   text-align: center;

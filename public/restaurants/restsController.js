@@ -3,7 +3,7 @@
 
     angular
     .module('rests')
-    .controller('restsController', ['$scope', 'restsService', '$location', '$routeParams', function ($scope, restsService, $location, $routeParams, $modal) {
+    .controller('restsController', ['$scope', 'restsService', '$location', '$routeParams', function ($scope, restsService, $location, $routeParams, $modal, $modalInstance) {
 
         restsService.getRests().success(function (rests) {
             $scope.rests = rests;
@@ -79,6 +79,17 @@
         $scope.deleteItem = function (index) {
             $scope.rest.menu.splice(index, 1);
         };
+
+        $scope.isCollapsed = true;
+
+        $scope.login = function (username, password) {
+            if ( username === 'admin' && password === 'admin') {
+                $location.path('/admin');
+            } else {
+                $scope.loginError = "Invalid username/password.";
+            };
+          };
+
 
 
     }]);

@@ -4,6 +4,28 @@ body {
   padding:0px;
   }
 
+.header {
+    color:white;
+    input {
+        background-color:rgba(0,0,0,.001);
+        border:none;
+        border-bottom:1px white solid;
+
+    }
+    button {
+        background-color:rgba(0,0,0,.001);
+        border:none;
+        font-size:2em;
+    }
+    form {
+        padding:5px;
+        background-color:rgba(0,0,0,.5)
+    }
+    i:hover {
+        color:green;
+    }
+}
+
 a {
   color: white;
   opacity: .8;
@@ -74,9 +96,22 @@ a {
     border-radius:100%;
 }
 
+.thumbUp, .thumbDown {
+    background-color:rgba(0,0,0,.001);
+    font-size:1.5em;
+    margin: 0px; padding:0px;
+    border: none;
+}
+
+.thumbUp {
+    color:green;
+}
+
+.thumbDown {
+    color:red;
+}
 
 ////show
-
 .info {
     text-align:center;
     background-image:rgba(255,255,255,.5);
@@ -84,3 +119,6 @@ a {
     font-family: 'Open Sans', sans-serif;
     text-shadow: black 0 2px 3px;
 }
+
+
+//// animations
