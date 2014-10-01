@@ -117,5 +117,9 @@
             $('#ranModal').modal('hide')
         }
 
+        $scope.click = function(){
+            $scope.active = true
+
+}
     }])
         })();///END MODULE

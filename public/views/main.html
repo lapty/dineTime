@@ -11,9 +11,9 @@
                 </div></li>
         </ul>
 
-    <div class="offCanvas"><div class="tagCan">
+    <div class="offCanvas" ng-class="{'active': isActive == true}"><div class="tagCan">
         <ul>
-            <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In<i class="fa fa-user"></i></a>
+            <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
                 <div collapse="isCollapsed">
                     <form ng-submit="login(username, password)">
                         <p>User: <input type="text" ng-model="username" class="ng-pristine ng-valid"></p>
@@ -26,7 +26,7 @@
             </ul>
             <img src="../images/logo.png">
         </div>
-        <i class="fa fa-caret-right tag"></i>
+        <i ng-click="isActive = !isActive" class="fa fa-caret-right tag"></i>
     </div>
 
 

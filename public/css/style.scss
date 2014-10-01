@@ -236,9 +236,9 @@ font-size:1.5em;
         }
     }
 }
-.offCanvas:hover {
+/* .offCanvas:hover {
     left:0;
-}
+} */
 
 .tagCan {
     width:91%;
@@ -325,16 +325,15 @@ font-size:1.5em;
     margin-top: 45%;
 }
 
-.nav {
-    display:block;
-}
-
-.offCanvas {
-    display:none;
+.active {
+    left:0px;
 }
 
 }
-  @media screen and (min-width:640px) and (max-width:1088px) {
+  @media screen and (min-width:640px) {
 
+.offCanvas:hover {
+    left:0px;
+}
 
 }

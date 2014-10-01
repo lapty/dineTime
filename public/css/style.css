@@ -193,9 +193,9 @@ button {
       list-style-type: none;
       padding: 10px; }
 
-.offCanvas:hover {
-  left: 0; }
-
+/* .offCanvas:hover {
+    left:0;
+} */
 .tagCan {
   width: 91%;
   display: inline-block;
@@ -244,6 +244,9 @@ button {
   color: red; }
 
 @media screen and (min-width: 0px) and (max-width: 639px) {
+  /* .nav {
+    display:block;
+} */
   ::-webkit-scrollbar {
     display: block; }
   .logo {
@@ -256,9 +259,9 @@ button {
     font-size: 1em; }
   .modalBox {
     margin-top: 45%; }
-  .nav {
-    display: block; }
-  .offCanvas {
-    display: none; } }
+  .active {
+    left: 0px; } }
 
-@media screen and (min-width: 640px) and (max-width: 1088px) { }
+@media screen and (min-width: 640px) {
+  .offCanvas:hover {
+    left: 0px; } }
