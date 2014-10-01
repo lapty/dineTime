@@ -69,11 +69,16 @@ a {
 .tagCan {
   width: 91%;
   display: inline-block;
-  height: 1000px;
+  height: 100%;
   border-right: 1px white solid;
   background-color: rgba(0, 0, 0, 0.8);
   margin: 0px;
   padding: 0px; }
+  .tagCan img {
+    width: 50%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 22%; }
 
 .jumbotron {
   width: 100%;
