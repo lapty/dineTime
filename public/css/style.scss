@@ -198,17 +198,17 @@ font-size:1.5em;
 .offCanvas {
     position:fixed;
     width:250px;
-    height:100%;
+    height:300px;
     left:-230px;
     z-index:9999;
     transition:all .5s ease;
     color:white;
     .tag {
-        opacity:.7;
+        opacity:1;
         display:inline-block;
         float:right;
-        font-size:4em;
-        margin-top:100%;
+        font-size:5em;
+        /* margin-top:257px; */
         color:white;
     }
     input {
@@ -241,17 +241,17 @@ font-size:1.5em;
 } */
 
 .tagCan {
-    width:91%;
+    width:90%;
     display:inline-block;
     height:100%;
-    border-right:1px white solid;
+    border-right:1px white solid; border-bottom:1px white solid;
     background-color:rgba(0,0,0,.8);
     margin: 0px; padding: 0px;
     img {
         width:50%;
         position:absolute;
-        bottom:0px;
-        margin-left:22%;
+        bottom:0;
+        margin-left:19%;
     }
 }
 ///////END SIDE MENU
@@ -299,7 +299,7 @@ font-size:1.5em;
 
 /////////Media queries
 
-  @media screen and (min-width:0px) and (max-width:639px) {
+  @media screen and (min-width:0px) and (max-width:780px) {
 
 ::-webkit-scrollbar {
     display:block;
@@ -329,8 +329,13 @@ font-size:1.5em;
     left:0px;
 }
 
+.restBlock {
+    opacity:1;
 }
-  @media screen and (min-width:640px) {
+
+
+}
+  @media screen and (min-width:781px) {
 
 .offCanvas:hover {
     left:0px;

@@ -8,7 +8,11 @@
         .config(function ($routeProvider) {
             $routeProvider
                 .when('/userlist', {
-                    templateUrl: 'views/admin/list.html',
+                    templateUrl: 'views/user/list.html',
+                    controller: 'restsController'
+                })
+                .when('/user/:restId', {
+                    templateUrl: 'views/user/show.html',
                     controller: 'restsController'
                 })
                 .when('/rests/new', {

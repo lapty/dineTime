@@ -1,0 +1,42 @@
+<div class="offCanvas" ng-click="isActive = !isActive"  ng-class="{'active': isActive == true}"><div class="tagCan">
+    <ul>
+        <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
+            <div collapse="isCollapsed">
+                <form ng-submit="login(username, password)">
+                    <p>User: <input type="text" ng-model="username" class="ng-pristine ng-valid"></p>
+                    <p>Pass: <input type="password" ng-model="password" class="ng-pristine ng-valid"></p>
+                    <button type="submit"><i class="fa fa-check-square"></i></button>
+                    <br/>{{loginError}}
+                </form>
+            </div></li>
+            <li><a ng-href="#/userlist">Dine List <i class="fa fa-cutlery"></i></a></li>
+        </ul>
+        <a href="#"><img src="../images/logo.png"></a>
+    </div>
+    <i class="fa fa-caret-right tag"></i>
+</div>
+
+<div class="show" style="background-image:url('{{rest.image}}')">
+
+<section class="info">
+    <a ng-href="#/">Home</a>
+    <h1>{{rest.name}}</h1>
+    <p>{{rest.number}}</p>
+    <p><a href="http://mapof.it/{{rest.address}}">{{rest.address}}</a></p>
+    <p><a href="{{rest.site}}">{{rest.site}}</a></p>
+
+</section>
+
+    <div class="menuItems">
+      <section ng-repeat="item in rest.menu">
+        <p>
+            <button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbUp"><i class="fa fa-thumbs-up"></i></button>
+            <span data-ng-model="item.vote">{{item.vote}}</span>
+            <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbDown"><i class="fa fa-thumbs-down"></i></button>
+             <span>{{item.name}}</span> ...{{item.description}} {{item.price | currency}}
+
+            </p>
+
+      </section>
+    </div>
+</div>
