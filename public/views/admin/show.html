@@ -4,8 +4,8 @@
     <a ng-href="#/admin">Home</a>
     <h1>{{rest.name}}</h1>
     <p>{{rest.number}}</p>
-    <p><a href="http://mapof.it/{{rest.address}}">{{rest.address}}</a></p>
-    <p><a href="{{rest.site}}">{{rest.site}}</a></p>
+    <p><a href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
+    <p><a href="{{rest.site}}" target="_blank">{{rest.site}}</a></p>
 
     <a href="#/rests/{{rest._id}}/edit">Edit</a> |
     <a href="#/rests/{{rest._id}}/editMenu">Edit MENU</a>  | <a ng-click="deleteRest(rest._id)">Delete</a>

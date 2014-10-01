@@ -110,7 +110,7 @@
             $('#alert').html('<div class="alert"><span>Added restaurant to list!</span></div>')
             setTimeout(function() {
                 $("div.alert").fadeOut();
-            }, 2500);
+            }, 2000);
         }
         ///Modal
         $scope.hideModal = function () {
