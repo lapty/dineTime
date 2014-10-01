@@ -4,7 +4,7 @@ body {
   padding: 0px; }
 
 .header {
-  position: fixed;
+  position: absolute;
   color: white; }
   .header input {
     background-color: rgba(0, 0, 0, 0.001);
@@ -25,11 +25,21 @@ body {
 
 a {
   color: white;
-  opacity: 0.8;
+  opacity: .8;
   font-weight: lighter; }
 
-.show a {
-  color: blue; }
+.modalBox {
+  margin-top: 50%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .modalBox a {
+    color: rgba(80, 120, 201, 0.6); }
+  .modalBox i {
+    position: absolute;
+    right: 0; }
+  .modalBox i:hover {
+    cursor: pointer;
+    color: rgba(80, 120, 201, 0.6); }
 
 .jumbotron {
   width: 100%;
@@ -44,20 +54,20 @@ a {
     margin-top: 40px; }
 
 .logo {
-  opacity: 0.7;
-  transition: all 0.5s ease;
+  opacity: .7;
+  transition: all .5s ease;
   width: 350px; }
 
 .logo:hover {
-  opacity: 1; }
+  opacity: 1;
+  cursor: pointer; }
 
 .restWrap {
   width: 100%;
   padding: 0px;
   height: 630px;
   overflow: auto;
-  background-color: black;
-  z-index: -1; }
+  background-color: black; }
 
 .restWrap::-webkit-scrollbar {
   display: block; }
@@ -77,13 +87,13 @@ a {
   padding: 0px;
   color: rgba(255, 255, 255, 0.4);
   font-size: 2.2em;
-  opacity: 0.5;
-  transition: all 0.5s ease;
+  opacity: .5;
+  transition: all .5s ease;
   border: 3px double white; }
   .restBlock a {
     text-decoration: none; }
   .restBlock span {
-    transition: all 0.5s ease;
+    transition: all .5s ease;
     position: relative;
     top: 100px;
     color: white;
@@ -104,9 +114,9 @@ a {
 
 #scrollButt {
   font-size: 1em;
-  opacity: 0.7;
+  opacity: .7;
   margin-top: 130px;
-  transition: all 0.5s ease; }
+  transition: all .5s ease; }
 
 #scrollButt:hover {
   cursor: pointer;
@@ -179,9 +189,12 @@ a {
 @media screen and (min-width: 0px) and (max-width: 639px) {
   ::-webkit-scrollbar {
     display: block; }
+
   .logo {
     width: 300px; }
-  #scrollButt {
-    margin-top: 20px; } }
 
-@media screen and (min-width: 640px) and (max-width: 1088px) { }
+  #scrollButt {
+    margin-top: 20px; }
+
+  .jumbotron {
+    height: 500px; } }

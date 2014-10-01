@@ -2,11 +2,11 @@
 
 
 <form action="" ng-submit="createRest(newRest)">
-<p><input type="text" data-ng-model="newRest.name" required></p>
+<p><input type="text" data-ng-model="newRest.name" placeholder="name" required></p>
 <p><input type="url" data-ng-model="newRest.image" placeholder="imageURL"></p>
 <p><input type="tel" data-ng-model="newRest.number" placeholder="phone number"></p>
-<p><input type="text" data-ng-model="newRest.address" placeholder="address"></p>
 <p><input type="url" data-ng-model="newRest.site" placeholder="website"></p>
+<p><input type="text" data-ng-model="newRest.address" placeholder="address"></p>
 <p><textarea data-ng-model="newRest.content"></textarea></p>
 
 <button type="submit">Add New Item</button>

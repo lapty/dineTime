@@ -11,10 +11,10 @@ Add item for {{rest.name}}
 Edit item
 <div class="menuItems">
     <form>
-  <section ng-repeat="item in rest.menu">
+  <section ng-repeat="item in rest.menu track by $index">
     <p>Item: <input type="text" data-ng-model="item.name" placeholder="item name">
     Description: <input type="text" data-ng-model="item.description" placeholder="Description">
-    Price: <input type="text" data-ng-model="item.price" placeholder="Price"> <button ng-click="deleteItem(index)">X</button></p>
+    Price: <input type="text" data-ng-model="item.price" placeholder="Price"> <button ng-click="deleteItem($index)">X</button></p>
 
   </section>
   <button ng-click="editRest(rest)">Submit Changes</button>

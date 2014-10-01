@@ -39,17 +39,19 @@
             restsService.deleteRest(id);
             $location.path('/rests');
         };
-
+            var phrases = [" sounds good to me!", "? Yes, please.", " is a great idea!", " is a good choice.", "? Let's do it!", " sounds tasty!", "? I could go for that.", " is something I can go for.", " is a smart decision.", "? You can't go wrong."];
         $scope.getSample = function () {
 
             var rests = $scope.rests;
             $scope.randomRest = _.sample(rests);
+            $scope.randomPhrase = _.sample(phrases);
         };
 
         $scope.getSampleList = function () {
 
             var userList = $scope.userList;
             $scope.randomRest = _.sample(userList);
+            $scope.randomPhrase = _.sample(phrases);
         };
 
         $scope.changeClass = function () {
@@ -80,8 +82,8 @@
             $scope.item = {};
         };
 
-        $scope.deleteItem = function (index) {
-            $scope.rest.menu.splice(index, 1);
+        $scope.deleteItem = function ($index) {
+            $scope.rest.menu.splice($index, 1);
         };
 
         $scope.isCollapsed = true;
@@ -93,23 +95,28 @@
             } else {
                 $scope.loginError = "Invalid username/password.";
             };
-          };
+        };
 
+        ///Click scroll
         $(function() {
-        $(".jumbotron").on("click", "#scrollButt", function() {
-        $('html, body').animate({
-          scrollTop: $("#scroll").offset().top }, 750);  });
-        });
+            $(".jumbotron").on("click", "#scrollButt", function() {
+                $('html, body').animate({
+                    scrollTop: $("#scroll").offset().top }, 750);  });
+                });
 
 
-    ///Alerts
+        ///Alerts
+        $scope.addAlert = function() {
+            $('#alert').html('<div class="alert"><span>Added restaurant to list!</span></div>')
+            setTimeout(function() {
+                $("div.alert").fadeOut();
+            }, 2500);
+        }
+        ///Modal
+        $scope.hideModal = function () {
+            $('#ranModal').modal('hide')
+        }
 
-    $scope.addAlert = function() {
-    $('#alert').html('<div class="alert"><span>Added restaurant to list!</span></div>')
-    setTimeout(function() {
-        $("div.alert").fadeOut();
-    }, 3000);
-}
 
-    }]);
-})();///END MODULE
+            }]);
+        })();///END MODULE

@@ -1,3 +1,6 @@
+$blue: rgba(80,120,201,.6);
+$clear: rgba(0,0,0,.001);
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0px;
@@ -5,16 +8,16 @@ body {
   }
 
 .header {
-    position:fixed;
+    position:absolute;
     color:white;
     input {
-        background-color:rgba(0,0,0,.001);
+        background-color:$clear;
         border:none;
         border-bottom:1px white solid;
         width:100px;
     }
     button {
-        background-color:rgba(0,0,0,.001);
+        background-color:$clear;
         border:none;
         font-size:2em;
     }
@@ -35,9 +38,20 @@ a {
   font-weight:lighter;
 }
 
-.show {
+.modalBox {
+    margin-top:50%;
+    width:100%;
+    background-color:rgba(0,0,0,.5);
     a {
-        color:blue;
+        color:$blue;
+    }
+    i {
+      position:absolute;
+      right: 0;
+    }
+    i:hover {
+      cursor:pointer;
+      color:$blue;
     }
 }
 
@@ -63,6 +77,7 @@ a {
 
 .logo:hover {
     opacity:1;
+    cursor:pointer;
 }
 
 .restWrap {
@@ -71,7 +86,6 @@ a {
     height:630px;
     overflow:auto;
     background-color:rgba(0,0,0,1);
-/*     z-index:-1; */
 
 }
 
@@ -107,7 +121,7 @@ a {
         position:relative;
         top:100px;
         color: white;
-        text-shadow: 3px 2px 0 black,
+        text-shadow: 3px 2px 0 black;
     }
 
 }
@@ -150,7 +164,7 @@ a {
 }
 
 .navButt {
-    background-color:rgba(0,0,0,.001);
+    background-color:$clear;
     border-radius:100%;
 }
 
@@ -192,7 +206,7 @@ a {
 }
 
 .thumbUp, .thumbDown {
-    background-color:rgba(0,0,0,.001);
+    background-color:$clear;
     font-size:1.5em;
     margin: 0px; padding:0px;
     border: none;
@@ -234,6 +248,10 @@ a {
 #scrollButt {
     margin-top:20px;
 
+}
+
+.jumbotron {
+    height:500px;
 }
 
 }

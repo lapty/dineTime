@@ -7,38 +7,42 @@
   </ul>
 </div>
 
-<div class="jumbotron"><br><br>
-  <h1><img class="logo" src="../images/logo.png" width="350" data-ng-click="getSample()"></h1>
-     </button>
-    <h1><a href="#/rests/{{randomRest._id}}">{{randomRest.name}}</a></h1>
+    <div class="jumbotron"><br><br>
+        <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
 
-<h1 id="scrollButt">
-        <i class="fa fa-angle-double-down"></i>
-    </h1>
+        <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content modalBox">
+                    <a href="#/rests/{{randomRest._id}}" ng-click="hideModal()"> <h1>{{randomRest.name}}</a>{{randomPhrase}}</h1> <i data-ng-click="getSample(); randomPhrase()">Try something else? </i>
+                </div>
+            </div>
+        </div>
 
-</div>
+        <h1><i id="scrollButt" class="fa fa-angle-double-down"></i></h1>
 
-<div class="row" id="scroll" style="margin:0;">
-            <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS">
-            <div class="restWrap col-xs-12">
-                <div ng-repeat="rest in rests | filter: search">
+    </div>
 
-                    <div class="restBlock col-md-3">
-                        <a class="restName" href="#/rests/{{rest._id}}">
+
+
+    <div id="alert"></div>
+
+    <div class="row" id="scroll" style="margin:0;">
+        <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+        <div class="restWrap col-xs-12">
+            <div ng-repeat="rest in rests | filter: search">
+
+                <div class="restBlock col-md-3">
+                    <a class="restName" href="#/rests/{{rest._id}}">
                         <div class="restBox" style="background-image:url({{rest.image}})">
 
                             <span>{{rest.name}}</span>
 
 
-                    </div>
-                </a>
-                    <i ng-click="addToList(rest); changeClass()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
-                    </div>
-
-
+                        </div>
+                    </a>
+                    <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
                 </div>
-
-
             </div>
         </div>
     </div>
+</div>
