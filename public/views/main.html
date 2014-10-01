@@ -1,21 +1,32 @@
-<div class="offCanvas"><div class="tagCan">
-    <ul>
+    <ul class="nav">
         <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In<i class="fa fa-user"></i></a>
             <div collapse="isCollapsed">
                 <form ng-submit="login(username, password)">
                     <p>User: <input type="text" ng-model="username" class="ng-pristine ng-valid"></p>
                     <p>Pass: <input type="password" ng-model="password" class="ng-pristine ng-valid"></p>
                     <button type="submit"><i class="fa fa-check-square"></i></button>
-
-                    <br/>
-                    {{loginError}}
+                    <br/>{{loginError}}
                 </form>
             </div></li>
             <li><a ng-href="#/userlist">Dine List <i class="fa fa-cutlery"></i></a></li>
         </ul>
-        <img src="../images/logo.png">
-    </div>
-    <i class="fa fa-caret-right tag"></i>
+
+    <div class="offCanvas"><div class="tagCan">
+        <ul>
+            <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In<i class="fa fa-user"></i></a>
+                <div collapse="isCollapsed">
+                    <form ng-submit="login(username, password)">
+                        <p>User: <input type="text" ng-model="username" class="ng-pristine ng-valid"></p>
+                        <p>Pass: <input type="password" ng-model="password" class="ng-pristine ng-valid"></p>
+                        <button type="submit"><i class="fa fa-check-square"></i></button>
+                        <br/>{{loginError}}
+                    </form>
+                </div></li>
+                <li><a ng-href="#/userlist">Dine List <i class="fa fa-cutlery"></i></a></li>
+            </ul>
+            <img src="../images/logo.png">
+        </div>
+        <i class="fa fa-caret-right tag"></i>
     </div>
 
 
@@ -38,7 +49,7 @@
     <div id="alert"></div>
 
     <div class="row" id="scroll" style="margin:0;">
-<input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+        <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
         <div class="restWrap col-xs-12">
             <div ng-repeat="rest in rests | filter: search">
                 <div class="restBlock col-md-3">
@@ -55,4 +66,4 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
