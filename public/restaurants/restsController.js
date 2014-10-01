@@ -117,6 +117,5 @@
             $('#ranModal').modal('hide')
         }
 
-
-            }]);
+    }])
         })();///END MODULE

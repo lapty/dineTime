@@ -3,16 +3,16 @@ User Restaurant List <a ng-href="#">Home</a>
 <button ng-click="getSampleList()">RANDOM FROM LIST</button>
 <h1><a style="color:black;" href="#/rests/{{randomRest._id}}">{{randomRest.name}}</a></h1>
 
-<div class="row" style="margin:0;">
-    <div class="listWrap col-xs-12">
-        <div ng-repeat="rest in userList track by $index">
-            <div class="restBlock col-md-3">
-                <a class="restName" href="#/rests/{{rest._id}}">
-                    <div class="restBox" style="background-image:url({{rest.image}})">
-                        <span>{{rest.name}}</span>
+        <div class="row" style="margin:0;">
+            <div class="listWrap col-xs-12">
+                <div ng-repeat="rest in userList track by $index">
+                    <div class="restBlock col-md-3">
+                        <a class="restName" href="#/rests/{{rest._id}}">
+                            <div class="restBox" style="background-image:url({{rest.image}})">
+                                <span>{{rest.name}}</span>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
-    </div>
-</div>
