@@ -54,16 +54,13 @@ button:hover {
   .modalBox a {
     color: rgba(80, 120, 201, 0.6);
     font-weight: bolder; }
-  .modalBox i {
-    position: absolute;
-    right: 0; }
   .modalBox i:hover {
     cursor: pointer;
     color: rgba(80, 120, 201, 0.6); }
 
 .alert {
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   text-align: center;
   border-radius: 4px;
   background-color: rgba(80, 201, 35, 0.7);
@@ -327,8 +324,7 @@ section {
   .tawpWrap {
     display: none; }
   .menuItems {
-    width: 100%;
-    margin: 0; } }
+    width: 90%; } }
 
 @media screen and (min-width: 781px) {
   .offCanvas:hover {

@@ -9,23 +9,32 @@
                     <br/>{{loginError}}
                 </form>
             </div></li>
-            <li><a ng-href="#/userlist">Dine List <i class="fa fa-cutlery"></i></a></li>
+            <li><a ng-href="#/userlist" ng-click="hideModal()">Dine List <i class="fa fa-cutlery"></i> ({{userList.length}})</a></li>
+            <li>
+            <a href="" ng-click="isCollapse = !isCollapse">Contact <i class="fa fa-paper-plane"></i></a>
+                <div collapse="isCollapse">
+                    <p>Hello! Thanks for checking my app out. Contact me at: </p><p><a href="mailto:charles.qh.nguyen@gmail.com">charles.qh.nguyen@gmail.com</a></p>
+                </div>
+
+            </li>
         </ul>
         <a href="#"><img src="../images/logo.png"></a>
     </div>
     <i class="fa fa-caret-right tag"></i>
-</div>
+    </div> <!-- end sidemenu -->
 
 <div class="list" style="text-align:center;">
-<button ng-click="getSampleList(); randomPhrase()">Click me to randomly pick a restaurant!</button>
+<button ng-click="getSampleList(); randomPhrase()" ng-hide="{{userList.length === 0}}">Click me to randomly pick a restaurant!</button>
+
+<p><h1 ng-hide="{{userList.length > 0 }}">You haven't added any restaurants!
+    <br> <a href="#">Press the <i class="fa fa-plus-square addTo"></i>  button to add restaurants.</a> </h1></p>
 
 <a href="#/user/{{randomRest._id}}"><h1>{{randomRest.name}}{{randomPhrase}}</h1></a>
-
 
             <div class="listWrap col-xs-12">
                 <div ng-repeat="rest in userList track by $index">
                     <div class="restBlock col-md-3" style="text-align:center;">
-                        <a class="restName" href="#/rests/{{rest._id}}">
+                        <a class="restName" href="#/user/{{rest._id}}">
                             <div class="restBox" style="background-image:url({{rest.image}})">
                                 <span>{{rest.name}}</span>
                             </div>

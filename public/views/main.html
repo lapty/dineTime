@@ -9,16 +9,42 @@
                         <br/>{{loginError}}
                     </form>
                 </div></li>
-                <li><a ng-href="#/userlist">Dine List <i class="fa fa-cutlery"></i> ({{userList.length}})</a></li>
+                <li><a ng-href="#/userlist" ng-click="hideModal()">Dine List <i class="fa fa-cutlery"></i> ({{userList.length}})</a></li>
+                <li>
+                <a href="" ng-click="isCollapse = !isCollapse">Contact <i class="fa fa-paper-plane"></i></a>
+                    <div collapse="isCollapse">
+                        <p>Hello! Thanks for checking my app out. Contact me at: </p><p><a href="mailto:charles.qh.nguyen@gmail.com">charles.qh.nguyen@gmail.com</a></p>
+                    </div>
+
+                </li>
             </ul>
-            <a href="" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"><img src="../images/logo.png"></a>
+            <a href="#"><img src="../images/logo.png"></a>
         </div>
         <i class="fa fa-caret-right tag"></i>
-    </div>
+        </div> <!-- end sidemenu -->
 
 
 
     <div class="jumbotron"><br><br>
+
+        <a href="" data-toggle="modal" data-target="#infoModal"><i style="position:absolute; top:5px; left:5px; font-size:1.5em;" class="fa fa-question-circle"></i></a>
+
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content modalBox" style="text-align:center;">
+      <p>"Where do you want to eat?"</p>
+        <p>"I don't know. Where do you want to go?"</p>
+        <p>"I don't care. What are you in the mood for?"</p>
+        <hr>
+      <p>Sound familiar?
+      DineTime is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square addTo"></i> button underneath the restaurant.</p>
+      <p>Check out the blue triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
+      <p style="color:rgb(0, 187, 255); font-weight:bold">Let's eat.</p>
+
+    </div>
+  </div>
+</div>
+
         <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
 
         <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -29,8 +55,8 @@
             </div>
         </div>
         <h1><i id="scrollButt" class="fa fa-angle-double-down"></i></h1>
-    </div>
 
+    </div>
 
 
     <div id="alert"></div>

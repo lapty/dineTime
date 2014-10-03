@@ -9,24 +9,31 @@
                     <br/>{{loginError}}
                 </form>
             </div></li>
-            <li><a ng-href="#/userlist">Dine List <i class="fa fa-cutlery"></i></a></li>
+            <li><a ng-href="#/userlist" ng-click="hideModal()">Dine List <i class="fa fa-cutlery"></i> ({{userList.length}})</a></li>
+            <li>
+            <a href="" ng-click="isCollapse = !isCollapse">Contact <i class="fa fa-paper-plane"></i></a>
+                <div collapse="isCollapse">
+                    <p>Hello! Thanks for checking my app out. Contact me at: </p><p><a href="mailto:charles.qh.nguyen@gmail.com">charles.qh.nguyen@gmail.com</a></p>
+                </div>
+
+            </li>
         </ul>
         <a href="#"><img src="../images/logo.png"></a>
     </div>
     <i class="fa fa-caret-right tag"></i>
-</div>
+    </div> <!-- end sidemenu -->
 
 <div id="alert"></div>
 
 <div class="show" style="background-image:url('{{rest.image}}')">
 
 <section class="info">
-    <h1>{{rest.name}}<br><i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i></h1>
-    <p><a href="tel:+1{{rest.number}}">{{rest.number}}</a></p>
+    <h1>{{rest.name}}<br></h1>
+    <p><a href="tel:+{{rest.number}}">{{rest.number}}</a></p>
     <p><a href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
     <p><a href="{{rest.site}}" target="_blank">{{rest.site}}</a></p>
-
-
+    <p><a href="{{rest.opentable}}" target="_blank">Open table reservation.</a></p>
+    <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
 </section>
 
 <div class="filters">

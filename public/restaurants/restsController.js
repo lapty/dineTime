@@ -15,6 +15,7 @@
 
 
         $scope.userList = restsService.userList;
+
         var phrases = [" sounds good to me!", "? Yes, please.", " is a great idea!", " is a good choice.", "? Let's do it!", " sounds tasty!", "? I could go for that.", " is something I can go for.", " is a smart decision.", "? You can't go wrong.", " would be wonderful."];
 
         $scope.createRest = function (newRest) {
@@ -23,7 +24,7 @@
                 image:newRest.image,
                 number:newRest.number,
                 address:newRest.address,
-                site:newRest.site,
+                site: newRest.site,
                 content:newRest.content,
                 menu:[]
             })
@@ -90,6 +91,7 @@
         };
 
         $scope.isCollapsed = true;
+        $scope.isCollapse = true;
         $scope.menuCollapse = true;
 
         $scope.login = function (username, password) {
@@ -110,7 +112,7 @@
 
         ///Alerts
         $scope.addAlert = function() {
-            $('#alert').html('<div class="alert"><span>Added restaurant to list! Check your dine list <a href="#/userlist">[here]</a>.</span></div>')
+            $('#alert').html('<a href="#/userlist"><div class="alert"><span>Added restaurant to dine list! Check it out! </span></div></a>')
             setTimeout(function() {
                 $("div.alert").fadeOut();
             }, 3000);
