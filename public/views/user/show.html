@@ -47,7 +47,9 @@
 </div>
 
     <div class="menuItems">
-      <section ng-repeat="item in rest.menu | orderBy:predicate:reverse | filter:search" ng-class-odd="'odd'">
+      <section ng-repeat="menu in rest.menus | filter:search">
+          <h2>{{menu.type}} </h2>
+          <section ng-repeat="item in menu.menu | orderBy:predicate:reverse"  ng-class-odd="'odd'">
         <p>
 
             <div class="votes"><button ng-click="item.vote = item.vote + 1; vote(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
@@ -57,6 +59,18 @@
              <div class="name"><span>{{item.name}}</span><br> {{item.description}}</div>
              <div class="price">${{item.price}}</div>
         </p>
+        </section>
       </section>
     </div>
 </div>
+
+<!-- SAMPLE MENU VIEW -->
+<!-- <h1><section ng-repeat="menu in rest.menus track by \$index">
+    <h2> MENU {{\$index}}: {{menu.type}} </h2>
+
+    <section ng-repeat="item in menu.menu track by \$index">
+        <h3><p>ITEM: {{item.name}} {{item.description}} {{item.price}}</p></h3>
+    </section>
+
+</section></h1> -->
+<!-- SAMPLE MENU VIEW END-->

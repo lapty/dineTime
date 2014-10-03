@@ -26,7 +26,7 @@
                 address:newRest.address,
                 site: newRest.site,
                 content:newRest.content,
-                menu:[]
+                menus:[]
             })
             $location.path("/admin/");
 
@@ -34,7 +34,7 @@
 
         $scope.editRest = function (rest) {
             restsService.editRest(rest);
-            $location.path('/rests/' + $routeParams.restId);
+            // $location.path('/rests/' + $routeParams.restId);
         };
         $scope.vote = function (rest) {
             restsService.editRest(rest);
@@ -42,7 +42,7 @@
 
         $scope.deleteRest = function (id) {
             restsService.deleteRest(id);
-            $location.path('/rests');
+            $location.path('/admin');
         };
         $scope.getSample = function () {
 
@@ -57,7 +57,7 @@
             $scope.randomRest = _.sample(userList);
             $scope.randomPhrase = _.sample(phrases);
         };
-
+        ///disable vote after voting
         $scope.changeClass = function () {
             this.class = "disabled";
         };
@@ -70,24 +70,62 @@
             console.log($scope.userList);
         };
 
-        $scope.addItem = function(item){
+        $scope.addMenu = function (menu) {
             restsService.getRest($routeParams.restId).success(function(rest) {
                 $scope.rest = rest;
-                $scope.rest.menu.push({
 
-                    name: item.name,
-                    description: item.description,
-                    price: parseInt(item.price),
-                    vote: 0
-
-                });
+                var newMenu = {
+                    type: menu.type,
+                    menu:[],
+                };
+                $scope.rest.menus.push(newMenu);
                 restsService.editRest($scope.rest);
             });
-            $scope.item = {};
+            $scope.menus = {};
+        }
+
+        $scope.addItem = function (item) {
+            restsService.getRest($routeParams.restId).success(function(rest) {
+                $scope.rest = rest;
+
+                var menuItem = {
+                    name: item.name,
+                    description: item.description,
+                    price: +(item.price),
+                    vote: 0
+                };
+                console.log($scope.menuIndex);
+                $scope.rest.menus[+$scope.menuIndex].menu.push(menuItem);
+                restsService.editRest($scope.rest);
+            });
+            $scope.menu = {};
+        }
+
+
+        $scope.menuIndex = +"";
+
+        // $scope.addItem = function(item){
+        //     restsService.getRest($routeParams.restId).success(function(rest) {
+        //         $scope.rest = rest;
+        //         $scope.rest.menus.push({
+        //
+        //             name: item.name,
+        //             description: item.description,
+        //             price: parseInt(item.price),
+        //             vote: 0
+        //
+        //         });
+        //         restsService.editRest($scope.rest);
+        //     });
+        //     $scope.item = {};
+        // };
+
+        $scope.deleteMenu = function ($index) {
+            $scope.rest.menus.splice($index, 1);
         };
 
         $scope.deleteItem = function ($index) {
-            $scope.rest.menu.splice($index, 1);
+            $scope.rest.menus[$scope.menuIndex].menu.splice($index, 1);
         };
 
         $scope.isCollapsed = true;
@@ -125,7 +163,7 @@
         $scope.click = function(){
             $scope.active = true;
 
-}
+        };
 
 
     }])

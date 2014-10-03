@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="show">
+
 <div style="background-image:url('{{rest.image}}')">
 
 <section class="info">
@@ -32,8 +32,12 @@
     </p>
 </div>
 
-    <div class="menuItems">
-      <section ng-repeat="item in rest.menu | orderBy:predicate:reverse | filter:search" ng-class-odd="'odd'">
+<!-- SAMPLE MENU VIEW -->
+<div class="menuItems">
+<section ng-repeat="menu in rest.menus track by $index | orderBy:predicate:reverse | filter:search">
+    <h2>{{menu.type}} </h2>
+
+    <section ng-repeat="item in menu.menu track by $index | orderBy:predicate:reverse | filter:search"  ng-class-odd="'odd'">
         <p>
 
             <div class="votes"><button ng-click="item.vote = item.vote + 1; vote(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
@@ -43,7 +47,25 @@
              <div class="name"><span>{{item.name}}</span><br> {{item.description}}</div>
              <div class="price">${{item.price}}</div>
         </p>
-      </section>
-    </div>
+    </section>
+
+</section>
 </div>
+<!-- SAMPLE MENU VIEW END-->
+
+
+
+<!--     <div class="menuItems">
+  <section ng-repeat="item in rest.menu | orderBy:predicate:reverse | filter:search" ng-class-odd="'odd'">
+    <p>
+
+        <div class="votes"><button ng-click="item.vote = item.vote + 1; vote(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
+        <span ng-class="{'thumbDown' : item.vote<0}" data-ng-model="item.vote">{{item.vote}}</span>
+        <button ng-click="item.vote = item.vote - 1; vote(rest); disabled = !disabled; no=!no" ng-disabled = "disabled"><i class="fa fa-thumbs-down" ng-class="{'thumbDown': no === true}"></i></button></div>
+
+         <div class="name"><span>{{item.name}}</span><br> {{item.description}}</div>
+         <div class="price">\${{item.price}}</div>
+    </p>
+  </section>
+</div> -->
 </div>
