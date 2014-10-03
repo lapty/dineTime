@@ -3,19 +3,32 @@ body {
   margin: 0px;
   padding: 0px;
   background-image: url("../images/black_twill.png"); }
+  body p {
+    margin: 0px; }
+  body h1 {
+    color: white; }
 
-.tawp {
-  position: fixed;
-  top: 0px;
-  left: 25%; }
+.tawpWrap {
+  text-align: center; }
+  .tawpWrap img {
+    margin-top: 10%;
+    right: 25%;
+    opacity: 0.5;
+    position: fixed; }
 
 a {
   color: white; }
 
+a:hover {
+  color: rgba(80, 120, 201, 0.6); }
+
 button {
   background-color: rgba(0, 0, 0, 0.001);
   border: none;
-  font-size: 2em; }
+  color: white; }
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5); }
 
 .nav {
   display: none;
@@ -36,7 +49,6 @@ button {
       width: 400px; }
 
 .modalBox {
-  margin-top: 35%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
   .modalBox a {
@@ -169,7 +181,7 @@ button {
     float: right;
     font-size: 5em;
     margin-top: 120px;
-    color: white; }
+    color: #00bbff; }
   .offCanvas input {
     background-color: rgba(0, 0, 0, 0.001);
     border: none;
@@ -192,9 +204,6 @@ button {
       list-style-type: none;
       padding: 10px; }
 
-/* .offCanvas:hover {
-    left:0;
-} */
 .tagCan {
   width: 90%;
   display: inline-block;
@@ -210,11 +219,28 @@ button {
     bottom: 0;
     margin-left: 19%; }
 
-.show {
-  background-size: cover;
+.show, .list, .edit, .create {
   width: 100%;
+  background-size: cover;
   height: 700px;
   position: fixed; }
+
+.filters {
+  margin-top: 25px;
+  margin-left: 10%; }
+  .filters a {
+    margin-left: 10px;
+    text-decoration: underline; }
+  .filters i {
+    margin-left: 10px; }
+  .filters input {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.odd {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0px;
+  margin: 0px; }
 
 .info {
   text-align: center;
@@ -222,18 +248,28 @@ button {
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Open Sans', sans-serif;
   text-shadow: black 0 2px 3px; }
+  .info h1 {
+    margin: 0px;
+    padding: 5px; }
 
 .menuItems {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.7); }
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 70%;
+  overflow: auto; }
   .menuItems span {
-    color: blue;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bolder; }
+  .menuItems button {
+    color: black; }
+  .menuItems i {
+    font-size: 1.5em; }
 
 .thumbUp, .thumbDown {
   background-color: rgba(0, 0, 0, 0.001);
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0px;
   padding: 0px;
   border: none; }
@@ -244,11 +280,30 @@ button {
 .thumbDown {
   color: red; }
 
-.list {
-  background-size: cover;
+section {
+  display: inline-block;
   width: 100%;
-  height: 700px;
-  position: fixed; }
+  vertical-align: top; }
+  section button {
+    padding: 0px; }
+  section .votes {
+    text-align: center;
+    display: inline-block;
+    width: 25px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 0.7em; }
+  section .name {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+    margin: 5px; }
+  section .price {
+    display: inline-block;
+    float: right;
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin: 5px; }
 
 @media screen and (min-width: 0px) and (max-width: 780px) {
   ::-webkit-scrollbar {
@@ -269,8 +324,11 @@ button {
     left: 0px; }
   .restBlock {
     opacity: 1; }
-  .tawp {
-    display: none; } }
+  .tawpWrap {
+    display: none; }
+  .menuItems {
+    width: 100%;
+    margin: 0; } }
 
 @media screen and (min-width: 781px) {
   .offCanvas:hover {

@@ -6,24 +6,42 @@ body {
   margin:0px;
   padding:0px;
   background-image:url("../images/black_twill.png");
+p {
+    margin:0px;
+}
+  h1 {
+      color:white;
+  }
   }
 
-.tawp {
-    position:fixed;
-    top:0px;
-    left:25%;
+
+.tawpWrap {
+    text-align: center;
+    img {
+        margin-top:10%;
+        right:25%;
+        opacity:.5;
+        position:fixed;
+    }
 }
 
 a {
     color:white;
 }
 
+a:hover {
+    color:$blue;
+}
+
 button {
     background-color:$clear;
     border:none;
-    font-size:2em;
+    color:white;
 }
 
+button:hover {
+    background-color: rgba(255,255,255,.5)
+}
  .nav {
 display:none;
 position: fixed;
@@ -48,7 +66,6 @@ font-size:1.5em;
 }
 
 .modalBox {
-    margin-top:35%;
     width:100%;
     background-color:rgba(0,0,0,.5);
     a {
@@ -208,7 +225,7 @@ font-size:1.5em;
         float:right;
         font-size:5em;
         margin-top:120px;
-        color:white;
+        color:rgb(0, 187, 255);
     }
     input {
         background-color:$clear;
@@ -235,9 +252,6 @@ font-size:1.5em;
         }
     }
 }
-/* .offCanvas:hover {
-    left:0;
-} */
 
 .tagCan {
     width:90%;
@@ -258,10 +272,31 @@ font-size:1.5em;
 
 ////show
 .show, .list, .edit, .create {
-    background-size:cover;
     width:100%;
+    background-size:cover;
     height:700px;
     position:fixed;
+}
+
+.filters {
+    margin-top:25px;
+    margin-left:10%;
+    a {
+        margin-left:10px;
+        text-decoration:underline;
+    }
+    i {
+        margin-left:10px;
+    }
+    input {
+        color:white;
+        background-color:rgba(0,0,0,.1)
+    }
+}
+
+.odd {
+    background-color:rgba(255,255,255,.5);
+    padding:0px; margin: 0px;
 }
 
 .info {
@@ -270,21 +305,33 @@ font-size:1.5em;
     color:rgba(255,255,255,.9);
     font-family: 'Open Sans', sans-serif;
     text-shadow: black 0 2px 3px;
+    h1 {
+        margin:0px;
+        padding:5px;
+    }
 }
 
 .menuItems {
-    width:100%;
+    width:80%;
+    margin-left:10%; margin-right:10%;
     background-color:rgba(255,255,255,.7);
+    height:70%;
+    overflow:auto;
     span {
-        color:blue;
-        font-size:1.2em;
+        font-size:1.3em;
         font-weight:bolder;
+    }
+    button {
+        color:black;
+    }
+    i {
+        font-size:1.5em;
     }
 }
 
 .thumbUp, .thumbDown {
     background-color:$clear;
-    font-size:1.5em;
+    font-size:1em;
     margin: 0px; padding:0px;
     border: none;
 }
@@ -295,6 +342,35 @@ font-size:1.5em;
 
 .thumbDown {
     color:red;
+}
+
+section {
+    display:inline-block;
+    width:100%;
+    vertical-align:top;
+    button {
+        padding:0px;
+    }
+    .votes {
+        text-align:center;
+        display:inline-block;
+        width:25px;
+        padding-bottom:7px; padding-top:7px;
+        font-size:.7em;
+    }
+    .name {
+        display:inline-block;
+        width:80%;
+        vertical-align:top;
+        margin:5px;
+    }
+    .price {
+        display:inline-block;
+        float:right;
+        font-weight:bolder;
+        font-size:1.2em;
+        margin:5px;
+    }
 }
 
 ////list
@@ -339,10 +415,14 @@ font-size:1.5em;
     opacity:1;
 }
 
-.tawp {
+.tawpWrap {
     display:none;
 }
 
+.menuItems {
+    width:100%;
+    margin:0;
+}
 
 }
   @media screen and (min-width:781px) {

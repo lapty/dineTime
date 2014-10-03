@@ -11,10 +11,11 @@
 
         restsService.getRest($routeParams.restId).success(function (rest) {
             $scope.rest = rest;
-
         });
 
+
         $scope.userList = restsService.userList;
+        var phrases = [" sounds good to me!", "? Yes, please.", " is a great idea!", " is a good choice.", "? Let's do it!", " sounds tasty!", "? I could go for that.", " is something I can go for.", " is a smart decision.", "? You can't go wrong.", " would be wonderful."];
 
         $scope.createRest = function (newRest) {
             restsService.createRest({
@@ -34,12 +35,14 @@
             restsService.editRest(rest);
             $location.path('/rests/' + $routeParams.restId);
         };
+        $scope.vote = function (rest) {
+            restsService.editRest(rest);
+        };
 
         $scope.deleteRest = function (id) {
             restsService.deleteRest(id);
             $location.path('/rests');
         };
-            var phrases = [" sounds good to me!", "? Yes, please.", " is a great idea!", " is a good choice.", "? Let's do it!", " sounds tasty!", "? I could go for that.", " is something I can go for.", " is a smart decision.", "? You can't go wrong."];
         $scope.getSample = function () {
 
             var rests = $scope.rests;
@@ -73,7 +76,7 @@
 
                     name: item.name,
                     description: item.description,
-                    price: item.price,
+                    price: parseInt(item.price),
                     vote: 0
 
                 });
@@ -107,10 +110,10 @@
 
         ///Alerts
         $scope.addAlert = function() {
-            $('#alert').html('<div class="alert"><span>Added restaurant to list!</span></div>')
+            $('#alert').html('<div class="alert"><span>Added restaurant to list! Check your dine list <a href="#/userlist">[here]</a>.</span></div>')
             setTimeout(function() {
                 $("div.alert").fadeOut();
-            }, 2000);
+            }, 3000);
         }
         ///Modal
         $scope.hideModal = function () {
@@ -118,8 +121,10 @@
         }
 
         $scope.click = function(){
-            $scope.active = true
+            $scope.active = true;
 
 }
+
+
     }])
         })();///END MODULE

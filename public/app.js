@@ -5,8 +5,8 @@
     "ngRoute",
     "ngCookies",
     "rests",
+    "ngAnimate",
     "ui.bootstrap",
-    "ngAnimate"
     ])
     .config(function ($routeProvider) {
         $routeProvider

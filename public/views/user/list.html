@@ -16,14 +16,15 @@
     <i class="fa fa-caret-right tag"></i>
 </div>
 
-<div class="list">
-<button ng-click="getSampleList()">RANDOM FROM LIST</button>
-<h1><a style="color:black;" href="#/rests/{{randomRest._id}}">{{randomRest.name}}</a></h1>
+<div class="list" style="text-align:center;">
+<button ng-click="getSampleList(); randomPhrase()">Click me to randomly pick a restaurant!</button>
 
-        <div class="row" style="margin:0;">
+<a href="#/user/{{randomRest._id}}"><h1>{{randomRest.name}}{{randomPhrase}}</h1></a>
+
+
             <div class="listWrap col-xs-12">
                 <div ng-repeat="rest in userList track by $index">
-                    <div class="restBlock col-md-3">
+                    <div class="restBlock col-md-3" style="text-align:center;">
                         <a class="restName" href="#/rests/{{rest._id}}">
                             <div class="restBox" style="background-image:url({{rest.image}})">
                                 <span>{{rest.name}}</span>
@@ -32,5 +33,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 </div>

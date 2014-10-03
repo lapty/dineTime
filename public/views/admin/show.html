@@ -1,26 +1,49 @@
-<div class="show" style="background-image:url('{{rest.image}}')">
+<div class="offCanvas" ng-click="isActive = !isActive"  ng-class="{'active': isActive == true}"><div class="tagCan" style="background-color:rgba(255,0,0,.7);" >
+    <ul>
+            <li><a href="#/rests/new" class="navButt">Create New Restaurant</a></li>
+            <li><a href="#/rests/{{rest._id}}/edit">Edit Restaurant</a></li>
+            <li><a href="#/rests/{{rest._id}}/editMenu">Edit Menu</a></li>
+            <li><a href="" ng-click="deleteRest(rest._id)">Delete</a></li>
+            <li><a ng-href="#">Admin Logout</a></li>
+        </ul>
+        <a href="#/admin"><img src="../images/logo.png"></a>
+    </div>
+    <i style="color:red" class="fa fa-caret-right tag"></i>
+</div>
+
+
+<div class="show">
+<div style="background-image:url('{{rest.image}}')">
 
 <section class="info">
-    <a ng-href="#/admin">Home</a>
     <h1>{{rest.name}}</h1>
     <p>{{rest.number}}</p>
     <p><a href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
     <p><a href="{{rest.site}}" target="_blank">{{rest.site}}</a></p>
-
-    <a href="#/rests/{{rest._id}}/edit">Edit</a> |
-    <a href="#/rests/{{rest._id}}/editMenu">Edit MENU</a>  | <a ng-click="deleteRest(rest._id)">Delete</a>
 </section>
 
+<div class="filters">
+<p style="color:white; font-size:.8em;">
+    <span style="font-weight:light;">Sort by:</span>
+    <a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a>
+    <a href="" ng-click="predicate = 'vote'; reverse=!reverse">Votes</a>
+    <a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a>
+    <i class="fa fa-search"></i> <input type="text" ng-model="search">
+    </p>
+</div>
+
     <div class="menuItems">
-      <section ng-repeat="item in rest.menu">
+      <section ng-repeat="item in rest.menu | orderBy:predicate:reverse | filter:search" ng-class-odd="'odd'">
         <p>
-            <button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbUp"><i class="fa fa-thumbs-up"></i></button>
-            <span data-ng-model="item.vote">{{item.vote}}</span>
-            <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled;" ng-disabled = "disabled" ng-class="thumbDown"><i class="fa fa-thumbs-down"></i></button>
-             <span>{{item.name}}</span> ...{{item.description}} {{item.price | currency}}
 
-            </p>
+            <div class="votes"><button ng-click="item.vote = item.vote + 1; vote(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
+            <span ng-class="{'thumbDown' : item.vote<0}" data-ng-model="item.vote">{{item.vote}}</span>
+            <button ng-click="item.vote = item.vote - 1; vote(rest); disabled = !disabled; no=!no" ng-disabled = "disabled"><i class="fa fa-thumbs-down" ng-class="{'thumbDown': no === true}"></i></button></div>
 
+             <div class="name"><span>{{item.name}}</span><br> {{item.description}}</div>
+             <div class="price">${{item.price}}</div>
+        </p>
       </section>
     </div>
+</div>
 </div>
