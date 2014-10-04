@@ -11,7 +11,7 @@
             </div></li>
             <li><a ng-href="#/userlist" ng-click="hideModal()">Dine List <i class="fa fa-cutlery"></i> ({{userList.length}})</a></li>
             <li>
-            <a href="" ng-click="isCollapse = !isCollapse">Contact <i class="fa fa-paper-plane"></i></a>
+                <a href="" ng-click="isCollapse = !isCollapse">Contact <i class="fa fa-paper-plane"></i></a>
                 <div collapse="isCollapse">
                     <p>Hello! Thanks for checking my app out. Contact me at: </p><p><a href="mailto:charles.qh.nguyen@gmail.com">charles.qh.nguyen@gmail.com</a></p>
                 </div>
@@ -21,59 +21,47 @@
         <a href="#"><img src="../images/logo.png"></a>
     </div>
     <i class="fa fa-caret-right tag"></i>
-    </div> <!-- end sidemenu -->
+</div> <!-- end sidemenu -->
 
 <div id="alert"></div>
 
 <div class="show" style="background-image:url('{{rest.image}}')">
 
-<section class="info">
-    <h1>{{rest.name}}<br></h1>
-    <p><a href="tel:+{{rest.number}}">{{rest.number}}</a></p>
-    <p><a href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
-    <p><a href="{{rest.site}}" target="_blank">{{rest.site}}</a></p>
-    <p><a href="{{rest.opentable}}" target="_blank">Open table reservation.</a></p>
-    <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
-</section>
+    <section class="info">
+        <h1>{{rest.name}}<br></h1>
+        <p><a ng-show="rest.number != null" href="tel:+{{rest.number}}">{{rest.number}}</a></p>
+        <p><a ng-show="rest.address != null" href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
+        <p><a ng-show="rest.site != null" href="{{rest.site}}" target="_blank">{{rest.site}}</a></p>
+        <p><a ng-show="rest.openTable != null" href="{{rest.openTable}}" target="_blank">Open table reservation.</a></p>
+        <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
+    </section>
 
-<div class="filters">
-<p style="color:white; font-size:.8em;">
-    <span style="font-weight:light;">Sort by:</span>
-    <a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a>
-    <a href="" ng-click="predicate = 'vote'; reverse=!reverse">Votes</a>
-    <a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a>
-    <i class="fa fa-search"></i> <input type="text" ng-model="search">
-    </p>
-<!--     <button ng-click="menuFilter = breakFast">FILTER</button> -->
-</div>
+    <div class="filters">
+        <p style="color:white; font-size:.8em;">
+            <span style="font-weight:light;">Sort by:</span>
+            <a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a>
+            <a href="" ng-click="predicate = 'vote'; reverse=!reverse">Votes</a>
+            <a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a>
+            <i class="fa fa-search"></i> <input type="text" ng-model="search">
+        </p>
+    </div>
 
 
 
     <div class="menuItems">
-      <section ng-repeat="menu in rest.menus  | filter:search"  ng-class-odd="'odd'">
-          <h2>{{menu.type}}</h2>
-          <section ng-repeat="item in menu.menu | orderBy:predicate:reverse" >
-        <p>
+        <section ng-repeat="menu in rest.menus  | filter:search"  ng-class-odd="'odd'">
+            <h2>{{menu.type}}</h2>
+            <section ng-repeat="item in menu.menu | orderBy:predicate:reverse" >
+                <p>
 
-            <div class="votes"><button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
-            <span ng-class="{'thumbDown' : item.vote<0}" data-ng-model="item.vote">{{item.vote}}</span>
-            <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled; no=!no" ng-disabled = "disabled"><i class="fa fa-thumbs-down" ng-class="{'thumbDown': no === true}"></i></button></div>
+                    <div class="votes"><button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
+                        <span ng-class="{'thumbDown' : item.vote<0}" data-ng-model="item.vote">{{item.vote}}</span>
+                        <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled; no=!no" ng-disabled = "disabled"><i class="fa fa-thumbs-down" ng-class="{'thumbDown': no === true}"></i></button></div>
 
-             <div class="name"><span style="text-transform:uppercase;">{{item.name}}</span><br> {{item.description}}</div>
-             <div class="price">${{item.price}}</div>
-        </p>
-        </section>
-      </section>
+                        <div class="name"><span style="text-transform:uppercase;">{{item.name}}</span><br> {{item.description}}</div>
+                        <div class="price">${{item.price}}</div>
+                    </p>
+                </section>
+            </section>
+        </div>
     </div>
-</div>
-
-<!-- SAMPLE MENU VIEW -->
-<!-- <h1><section ng-repeat="menu in rest.menus track by \$index">
-    <h2> MENU {{\$index}}: {{menu.type}} </h2>
-
-    <section ng-repeat="item in menu.menu track by \$index">
-        <h3><p>ITEM: {{item.name}} {{item.description}} {{item.price}}</p></h3>
-    </section>
-
-</section></h1> -->
-<!-- SAMPLE MENU VIEW END-->

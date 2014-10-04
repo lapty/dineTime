@@ -24,9 +24,6 @@
             restsService.createRest({
                 name:newRest.name,
                 image:newRest.image,
-                number:newRest.number,
-                address:newRest.address,
-                site: newRest.site,
                 content:newRest.content,
                 menus:[]
             })
@@ -38,7 +35,7 @@
             restsService.editRest(rest);
             // $location.path('/rests/' + $routeParams.restId);
         };
-
+        
 
         $scope.deleteRest = function (id) {
             restsService.deleteRest(id);
@@ -86,7 +83,7 @@
                 var menuItem = {
                     name: item.name,
                     description: item.description,
-                    price: +(item.price),
+                    price: item.price,
                     vote: 0
                 };
                 console.log($scope.menuIndex);

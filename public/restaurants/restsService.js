@@ -6,7 +6,7 @@
         .factory('restsService', ['$http', '$rootScope', function ($http, $rootScope) {
 
             var userList = [];
-            var restList = "api/collections/demotiy/";
+            var restList = "api/collections/restaurants/";
 
 
 
