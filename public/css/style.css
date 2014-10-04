@@ -1,5 +1,5 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica", Arial, sans-serif;
   margin: 0px;
   padding: 0px;
   background-image: url("../images/black_twill.png"); }
@@ -253,7 +253,7 @@ button:hover {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   height: 70%;
   overflow: auto; }
   .menuItems span {
@@ -263,6 +263,11 @@ button:hover {
     color: black; }
   .menuItems i {
     font-size: 1.5em; }
+  .menuItems h2 {
+    margin: 0px;
+    text-align: center;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid; }
 
 .thumbUp, .thumbDown {
   background-color: rgba(0, 0, 0, 0.001);
@@ -283,21 +288,21 @@ section {
   vertical-align: top; }
   section button {
     padding: 0px; }
+  section .votes, section .name, section .price {
+    display: inline-block; }
   section .votes {
     text-align: center;
-    display: inline-block;
-    width: 25px;
+    width: 55px;
+    float: left;
     padding-bottom: 7px;
     padding-top: 7px;
     font-size: 0.7em; }
   section .name {
-    display: inline-block;
     width: 80%;
     vertical-align: top;
     margin: 5px;
     font-weight: light; }
   section .price {
-    display: inline-block;
     float: right;
     font-weight: bolder;
     font-size: 1.2em;

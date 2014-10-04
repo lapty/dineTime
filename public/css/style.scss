@@ -2,7 +2,7 @@ $blue: rgba(80,120,201,.6);
 $clear: rgba(0,0,0,.001);
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica", Arial, sans-serif;
   margin:0px;
   padding:0px;
   background-image:url("../images/black_twill.png");
@@ -310,7 +310,7 @@ font-size:1.5em;
 .menuItems {
     width:80%;
     margin-left:10%; margin-right:10%;
-    background-color:rgba(255,255,255,.7);
+    background-color:rgba(255,255,255,1);
     height:70%;
     overflow:auto;
     span {
@@ -322,6 +322,12 @@ font-size:1.5em;
     }
     i {
         font-size:1.5em;
+    }
+    h2 {
+        margin:0px;
+        text-align:center;
+        border-top:2px black solid;
+        border-bottom:2px black solid;
     }
 }
 
@@ -347,22 +353,23 @@ section {
     button {
         padding:0px;
     }
+    .votes, .name, .price {
+        display:inline-block;
+    }
     .votes {
         text-align:center;
-        display:inline-block;
-        width:25px;
+        width:55px;
+        float:left;
         padding-bottom:7px; padding-top:7px;
         font-size:.7em;
     }
     .name {
-        display:inline-block;
         width:80%;
         vertical-align:top;
         margin:5px;
         font-weight:light;
     }
     .price {
-        display:inline-block;
         float:right;
         font-weight:bolder;
         font-size:1.2em;

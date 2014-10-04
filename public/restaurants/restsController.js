@@ -104,11 +104,6 @@
             $scope.rest.menus[$scope.menuIndex].menu.splice($index, 1);
         };
 
-
-                // $scope.vote = function (rest) {
-                //     restsService.editRest(rest);
-                // };
-
                 ///disable vote after voting
                 $scope.changeClass = function () {
                     this.class = "disabled";
