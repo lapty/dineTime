@@ -18,6 +18,8 @@
 
         var phrases = [" sounds good to me!", "? Yes, please.", " is a great idea!", " is a good choice.", "? Let's do it!", " sounds tasty!", "? I could go for that.", " is something I can go for.", " is a smart decision.", "? You can't go wrong.", " would be wonderful."];
 
+        $scope.menuIndex = +"";
+
         $scope.createRest = function (newRest) {
             restsService.createRest({
                 name:newRest.name,
@@ -36,9 +38,7 @@
             restsService.editRest(rest);
             // $location.path('/rests/' + $routeParams.restId);
         };
-        $scope.vote = function (rest) {
-            restsService.editRest(rest);
-        };
+
 
         $scope.deleteRest = function (id) {
             restsService.deleteRest(id);
@@ -57,11 +57,6 @@
             $scope.randomRest = _.sample(userList);
             $scope.randomPhrase = _.sample(phrases);
         };
-        ///disable vote after voting
-        $scope.changeClass = function () {
-            this.class = "disabled";
-        };
-
 
         $scope.addToList = function(rest) {
 
@@ -101,25 +96,6 @@
             $scope.menu = {};
         }
 
-
-        $scope.menuIndex = +"";
-
-        // $scope.addItem = function(item){
-        //     restsService.getRest($routeParams.restId).success(function(rest) {
-        //         $scope.rest = rest;
-        //         $scope.rest.menus.push({
-        //
-        //             name: item.name,
-        //             description: item.description,
-        //             price: parseInt(item.price),
-        //             vote: 0
-        //
-        //         });
-        //         restsService.editRest($scope.rest);
-        //     });
-        //     $scope.item = {};
-        // };
-
         $scope.deleteMenu = function ($index) {
             $scope.rest.menus.splice($index, 1);
         };
@@ -128,43 +104,51 @@
             $scope.rest.menus[$scope.menuIndex].menu.splice($index, 1);
         };
 
-        $scope.isCollapsed = true;
-        $scope.isCollapse = true;
-        $scope.menuCollapse = true;
 
-        $scope.login = function (username, password) {
-            if ( username === 'admin' && password === 'admin') {
-                $location.path('/admin');
-            } else {
-                $scope.loginError = "Invalid username/password.";
-            };
-        };
+                // $scope.vote = function (rest) {
+                //     restsService.editRest(rest);
+                // };
 
-        ///Click scroll
-        $(function() {
-            $(".jumbotron").on("click", "#scrollButt", function() {
-                $('html, body').animate({
-                    scrollTop: $("#scroll").offset().top }, 750);  });
-                });
+                ///disable vote after voting
+                $scope.changeClass = function () {
+                    this.class = "disabled";
+                };
 
 
-        ///Alerts
-        $scope.addAlert = function() {
-            $('#alert').html('<a href="#/userlist"><div class="alert"><span>Added restaurant to dine list! Check it out! </span></div></a>')
-            setTimeout(function() {
-                $("div.alert").fadeOut();
-            }, 3000);
-        }
-        ///Modal
-        $scope.hideModal = function () {
-            $('#ranModal').modal('hide')
-        }
-
-        $scope.click = function(){
-            $scope.active = true;
-
-        };
+                ///Click scroll
+                $(function() {
+                    $(".jumbotron").on("click", "#scrollButt", function() {
+                        $('html, body').animate({
+                            scrollTop: $("#scroll").offset().top }, 750);  });
+                        });
 
 
-    }])
+                ///Alerts
+                $scope.addAlert = function() {
+                    $('#alert').html('<a href="#/userlist"><div class="alert"><span>Added restaurant to dine list! Check it out! </span></div></a>')
+                    setTimeout(function() {
+                        $("div.alert").fadeOut();
+                    }, 3000);
+                }
+                ///Modal
+                $scope.hideModal = function () {
+                    $('#ranModal').modal('hide')
+                }
+
+                ////"user authentication"
+                $scope.login = function (username, password) {
+                    if ( username === 'admin' && password === 'admin') {
+                        $location.path('/admin');
+                    } else {
+                        $scope.loginError = "Invalid username/password.";
+                    };
+                };
+
+                ///side-menu start collapsed
+                $scope.isCollapsed = true;
+                $scope.isCollapse = true;
+                $scope.menuCollapse = true;
+
+
+            }])
         })();///END MODULE

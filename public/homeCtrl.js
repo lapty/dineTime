@@ -5,6 +5,7 @@
         .module('dinetime')
         .controller('homeCtrl',['$scope', function ($scope) {
 
+                
         }]);
 
 })();
