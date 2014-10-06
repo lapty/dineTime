@@ -1,16 +1,14 @@
-<div class="create">
 
-<h1>Create a New Restaurant</h1>
+<div class="edit">
 
-
-<a ng-href="#/admin">Cancel</a>
-
+<h1>Add a New Restaurant</h1>
+<a ng-href="#/admin">>>Back</a>
 <form action="" ng-submit="createRest(newRest)">
 <p><input type="text" data-ng-model="newRest.name" placeholder="name" required></p>
-<p><input type="url" data-ng-model="newRest.image" placeholder="imageURL"></p>
+<p><input type="url" data-ng-model="newRest.image" placeholder="imageURL"> This will serve as the restaurant's background image.</p>
 <p><textarea data-ng-model="newRest.content" placeholder="tags"></textarea></p>
 
-<button type="submit">Add New Item</button>
+<button type="submit">Add Restaurant</button>
 
 
 

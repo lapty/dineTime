@@ -1,101 +1,73 @@
+<div class="edit">
+
 <a ng-href="#/rests/{{rest._id}}">>>Back</a>
-<h2>{{rest.name}}</h2>
+<h1><span>{{rest.name}}'s</span> menus</h1>
 
 
-
-<form action="" ng-submit=addMenu(menu)>
-  <p><input type="text" placeholder="Menu Name" ng-model="menu.type"></p>
-  <p><button>(ADD MENU)</button></p>
-</form>
 
 <form>
+  <p>Add new menu: <input type="text" placeholder="Menu Name" ng-model="menu.type">
+  <i ng-click="addMenu(menu)" class="fa fa-plus-circle"></i></p>
+</form>
+
+<br>
+<form>
     <section ng-repeat="menu in rest.menus track by $index">
-    <p>MENU TYPE: <input type="text" data-ng-model="menu.type" placeholder="menuname">
+    <p>Menu: <input type="text" data-ng-model="menu.type" placeholder="menuname">
     <button ng-click="deleteMenu($index)">X</button></p>
     </section>
 </form>
-<button ng-click="editRest(rest)">(SUBMIT CHANGES)</button>
 <hr>
 
 
-<!-- <select name="menuType">
-<option ng-repeat="menu in rest.menus track by \$index" ng-model="menuIndex">{{\$index}} {{menu.type}}</option>
-</select>
-{{menuIndex}} -->
+<!-- <select name="menuType" ng-model="\$index" ng-options="menu.type for menu in rest.menus">
 
-<input type="text" placeholder="MENU INDEX!" ng-model="menuIndex">{{menuIndex}}
-
-<form action="" ng-submit="addItem(item)">
+</select> -->
+<p>
+<h2>Select menu:</h2>
+<div style="color:white;" ng-model="menuIndex" ng-repeat="menu in rest.menus track by $index">
+<input type="radio" data-ng-model="$parent.menuIndex" value="{{$index}}">
+Index {{$index}}: {{rest.menus[$index].type}}
+</div>
+<hr>
+<h2>Currently editing <span>{{rest.menus[menuIndex].type}}</span> menu</h2>
+</p>
+<form action="">
 
   <p><input type="text" placeholder="Name" ng-model="item.name"></p>
-  <p><input type="text" placeholder="descript" ng-model="item.description"></p>
+  <p><input type="text" placeholder="description" ng-model="item.description"></p>
   <p><input type="text" placeholder="price" ng-model="item.price"></p>
 
-  <p><button>(ADD ITEM)</button></p>
+  <p><i ng-click="addItem(item)" class="fa fa-plus-circle"> Add menu item</i></p>
 </form>
+<br>
+
 
 <form>
-    <section ng-repeat="menu in rest.menus track by $index">
-        <section ng-repeat="item in menu.menu track by $index">
-            <p>ITEM: <input type="text" data-ng-model="item.name" placeholder="itemname">
-            DESCRIPTION: <input type="text" data-ng-model="item.description" placeholder="itemdescript">
-                PRICE: <input type="text" data-ng-model="item.price" placeholder="itemprice">
+    <section ng-repeat="item in rest.menus[menuIndex].menu track by $index">
+            <p>ITEM {{$index}}: <input type="text" data-ng-model="item.name" placeholder="itemname">
+                 <input style="width:600px;" type="text" data-ng-model="item.description" placeholder="item description">
+                    PRICE: <input style="width:50px;" type="text" data-ng-model="item.price" placeholder="price">
             <button ng-click="deleteItem($index)">X</button></p>
-        </section>
     </section>
 </form>
-<button ng-click="editRest(rest)">(SUBMIT CHANGES)</button>
+<br>
+<p>Total {{rest.menus[menuIndex].type}} items: {{rest.menus[menuIndex].menu.length}}</p><br>
+<br>
+<p>MENU NOTES:</p> <p><textarea ng-model="rest.notes" cols="30" rows="5"></textarea></p>
+<br>
+<a href="#/rests/{{rest._id}}"><button ng-click="editRest(rest)">(SUBMIT CHANGES)</button></a>
 
 <hr>
 
 <!-- SAMPLE MENU VIEW -->
-<h1><section ng-repeat="menu in rest.menus track by $index">
+<h2><section ng-repeat="menu in rest.menus track by $index">
     <h2> MENU {{$index}}: {{menu.type}} </h2>
 
     <section ng-repeat="item in menu.menu track by $index">
         <h3><p>ITEM: {{item.name}} {{item.description}} {{item.price}}</p></h3>
     </section>
 
-</section></h1>
-<!-- SAMPLE MENU VIEW END-->
-
-
-
-<!-- <section ng-repeat="menu in rest.menus track by \$index">
-    MENU TYPE: {{menu.type}}
-    <section ng-repeat="item in menu.menu track by \$index">
-        <p>Item: <input type="text" data-ng-model="item.name" placeholder="item name">
-        Description: <input type="text" data-ng-model="item.description" style="width:300px" placeholder="Description">
-        Price: <input type="number" data-ng-model="item.price" placeholder="Price"> <button ng-click="deleteItem(\$index)">X</button></p>
-    </section>
-</section> -->
-
-
-
-
-
-
-
-<!--ORIGINAL --><!--ORIGINAL --><!--ORIGINAL --><!--ORIGINAL --><!--ORIGINAL --><!--ORIGINAL -->
-
-<!-- <h1>Add item for {{rest.name}}</h1>
-<form action="" ng-submit=addItem(item)>
-  <p><input type="text" placeholder="Name" ng-model="item.name"></p>
-  <p><textarea name="" id="" cols="30" rows="10" ng-model="item.description"></textarea></p>
-  <p><input type="text" ng-model="item.price" placeholder="price"></input></p>
-  <p><button>(ADD ITEM)</button></p>
-</form>
-Edit item
-<div class="menuItems">
-    <form>
-  <section ng-repeat="item in rest.menu track by \$index">
-    <p>Item: <input type="text" data-ng-model="item.name" placeholder="item name">
-    Description: <input type="text" data-ng-model="item.description" style="width:300px" placeholder="Description">
-    Price: <input type="number" data-ng-model="item.price" placeholder="Price"> <button ng-click="deleteItem(\$index)">X</button></p>
-
-  </section>
-
-  </form>
-
+</section></h2>
 </div>
-<button ng-click="editRest(rest)">(Submit Changes)</button> -->
+<!-- SAMPLE MENU VIEW END-->

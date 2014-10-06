@@ -1,6 +1,7 @@
 <div class="edit">
 <a ng-href="#/rests/{{rest._id}}">Back</a>
 
+<h1><span>{{rest.name}}'s</span> Info</h1>
 
 <p><input type="text" data-ng-model="rest.name"> Name</p>
 <p><input type="text" data-ng-model="rest.image" placeholder="imageURL"> ImageURL</p>
@@ -10,5 +11,5 @@
 <p><textarea data-ng-model="rest.content" placeholder="tags"></textarea> Tags</p>
 <br><br>
 <p><input type="text" data-ng-model="rest.openTable" placeholder="openTable"> Opentable</p>
-<a href="#/rests/{{rest._id}}" data-ng-click="editRest(rest)">Update Restaurant</a>
+<a href="#/rests/{{rest._id}}"><button ng-click="editRest(rest)">(SUBMIT CHANGES)</button></a>
 </div>

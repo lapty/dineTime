@@ -35,7 +35,7 @@
             restsService.editRest(rest);
             // $location.path('/rests/' + $routeParams.restId);
         };
-        
+
 
         $scope.deleteRest = function (id) {
             restsService.deleteRest(id);
@@ -140,6 +140,9 @@
                 $scope.isCollapsed = true;
                 $scope.isCollapse = true;
                 $scope.menuCollapse = true;
+
+
+
 
 
             }])

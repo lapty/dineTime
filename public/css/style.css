@@ -3,8 +3,11 @@ body {
   margin: 0px;
   padding: 0px;
   background-image: url("../images/black_twill.png"); }
+  body input, body textarea {
+    color: black; }
   body p {
-    margin: 0px; }
+    margin: 0px;
+    color: white; }
   body h1 {
     color: white; }
 
@@ -13,7 +16,7 @@ body {
   .tawpWrap img {
     margin-top: 10%;
     right: 25%;
-    opacity: 0.5;
+    opacity: .5;
     position: fixed; }
 
 a {
@@ -81,8 +84,8 @@ button:hover {
     margin-top: 100px; }
 
 .logo {
-  opacity: 0.7;
-  transition: all 0.5s ease;
+  opacity: .7;
+  transition: all .5s ease;
   width: 350px;
   border: 1px rgba(255, 255, 255, 0.001) double;
   border-radius: 50%;
@@ -120,13 +123,13 @@ button:hover {
   padding: 0px;
   color: rgba(255, 255, 255, 0.4);
   font-size: 2.2em;
-  opacity: 0.5;
-  transition: all 0.5s ease;
+  opacity: .5;
+  transition: all .5s ease;
   border: 3px double white; }
   .restBlock a {
     text-decoration: none; }
   .restBlock span {
-    transition: all 0.5s ease-in-out;
+    transition: all .5s ease-in-out;
     position: relative;
     top: 100px;
     color: white;
@@ -139,9 +142,9 @@ button:hover {
 
 #scrollButt {
   font-size: 1em;
-  opacity: 0.7;
+  opacity: .7;
   margin-top: 20px;
-  transition: all 0.5s ease; }
+  transition: all .5s ease; }
 
 #scrollButt:hover {
   cursor: pointer;
@@ -170,7 +173,7 @@ button:hover {
   left: -230px;
   z-index: 9999;
   top: 147px;
-  transition: all 0.5s ease;
+  transition: all .5s ease;
   color: white; }
   .offCanvas .tag {
     opacity: 1;
@@ -216,11 +219,20 @@ button:hover {
     bottom: 0;
     margin-left: 19%; }
 
-.show, .list, .edit, .create {
+.show {
   width: 100%;
   background-size: cover;
   height: 700px;
   position: fixed; }
+
+.menuNotes {
+  color: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5px;
+  font-size: .8em;
+  background-color: rgba(0, 0, 0, 0.9); }
 
 .filters {
   margin-top: 25px;
@@ -235,7 +247,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 
 .odd {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 0px;
   margin: 0px; }
 
@@ -253,8 +265,7 @@ button:hover {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: white;
-  height: 70%;
+  background-color: rgba(255, 255, 255, 0.8);
   overflow: auto; }
   .menuItems span {
     font-size: 1.3em;
@@ -296,7 +307,7 @@ section {
     float: left;
     padding-bottom: 7px;
     padding-top: 7px;
-    font-size: 0.7em; }
+    font-size: .7em; }
   section .name {
     width: 80%;
     vertical-align: top;
@@ -308,56 +319,122 @@ section {
     font-size: 1.2em;
     margin: 5px; }
 
+.listWrap {
+  height: 300px;
+  border: 1px red solid; }
+
+.listBox {
+  height: 200px;
+  border: 1px red solid; }
+
+.listBlock {
+  text-align: center;
+  padding: 0px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1em;
+  opacity: 1;
+  transition: all .5s ease;
+  border: 1px solid white;
+  overflow-y: auto; }
+  .listBlock a {
+    text-decoration: none; }
+  .listBlock span {
+    transition: all .5s ease-in-out;
+    position: relative;
+    top: 100px;
+    color: white;
+    text-shadow: 3px 2px 0 black; }
+
+.edit button {
+  background-color: red;
+  border: 1px;
+  border-radius: 10px; }
+.edit i {
+  color: green;
+  font-size: 1.5em; }
+.edit i:hover {
+  color: rgba(0, 220, 0, 0.9);
+  cursor: pointer; }
+.edit button:hover {
+  background-color: rgba(220, 0, 0, 0.9); }
+.edit h2 {
+  color: white; }
+.edit span {
+  color: rgba(220, 0, 0, 0.9); }
+
 @media screen and (min-width: 0px) and (max-width: 780px) {
   ::-webkit-scrollbar {
     display: block; }
+
   .logo {
     width: 300px; }
+
   #scrollButt {
     margin-top: 0px; }
+
   .jumbotron {
     height: 500px; }
     .jumbotron h1 {
       margin-top: 45px; }
+
   .search {
     font-size: 1em; }
+
   .modalBox {
     margin-top: 45%; }
+
   .active {
     left: 0px; }
+
   .restBlock {
     opacity: 1; }
+
   .tawpWrap {
     display: none; }
-  .menuItems {
-    width: 90%; } }
 
+  .menuItems {
+    width: 90%; }
+
+  .show, .list, .edit {
+    position: relative;
+    background-size: .001%; } }
 @media screen and (min-width: 781px) {
   .offCanvas:hover {
     left: 0px; }
+
   .slide {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%; }
-  .slide.ng-enter, .slide.ng-leave {
+
+  .slide.ng-enter,
+  .slide.ng-leave {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease; }
+
   .slide.ng-enter {
     left: 100%; }
+
   .slide.ng-enter-active {
     left: 0; }
+
   .slide.ng-leave {
     left: 0; }
+
   .slide.ng-leave-active {
     left: -100%; }
+
   .restBlock:hover {
     opacity: 1;
     color: white; }
     .restBlock:hover span {
       text-decoration: none;
       color: white;
-      font-size: 1.1em; } }
+      font-size: 1.1em; }
+
+  .menuItems {
+    height: 70%; } }

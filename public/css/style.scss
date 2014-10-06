@@ -6,8 +6,12 @@ body {
   margin:0px;
   padding:0px;
   background-image:url("../images/black_twill.png");
+  input, textarea {
+      color:black;
+  }
 p {
     margin:0px;
+    color:white;
 }
   h1 {
       color:white;
@@ -265,13 +269,22 @@ font-size:1.5em;
 }
 ///////END SIDE MENU
 
-
-////show
-.show, .list, .edit, .create {
+///show
+.show{
     width:100%;
     background-size:cover;
     height:700px;
     position:fixed;
+}
+
+.menuNotes {
+    color:white;
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    padding:5px;
+    font-size:.8em;
+    background-color:rgba(0,0,0,.9)
 }
 
 .filters {
@@ -291,7 +304,7 @@ font-size:1.5em;
 }
 
 .odd {
-    background-color:rgba(255,255,255,.5);
+    background-color:rgba(255,255,255,.9);
     padding:0px; margin: 0px;
 }
 
@@ -310,8 +323,8 @@ font-size:1.5em;
 .menuItems {
     width:80%;
     margin-left:10%; margin-right:10%;
-    background-color:rgba(255,255,255,1);
-    height:70%;
+    background-color:rgba(255,255,255,.8);
+
     overflow:auto;
     span {
         font-size:1.3em;
@@ -377,7 +390,64 @@ section {
     }
 }
 
-////list
+///list
+.listWrap {
+    height:300px;
+    border:1px red solid;
+}
+
+.listBox {
+    height:200px;
+    border:1px red solid;
+}
+
+.listBlock {
+    text-align:center;
+    padding:0px;
+    color:rgba(255,255,255,.4);
+    font-size:1em;
+    opacity:1;
+    transition:all .5s ease;
+    border:1px solid white;
+    overflow-y:auto;
+    a {
+        text-decoration:none;
+    }
+    span {
+        transition:all .5s ease-in-out;
+        position:relative;
+        top:100px;
+        color: white;
+        text-shadow: 3px 2px 0 black;
+    }
+}
+
+///edit
+.edit {
+    button {
+        background-color:red;
+        border:1px;
+        border-radius:10px;
+    }
+    i {
+        color: green;
+        font-size:1.5em;
+    }
+    i:hover {
+        color: rgba(0,220,0,.9);
+        cursor:pointer;
+    }
+     button:hover{
+        background-color:rgba(220,0,0,.9);
+
+    }
+    h2 {
+        color:white;
+    }
+    span {
+        color:rgba(220,0,0,.9)
+    }
+}
 
 
 /////////Media queries
@@ -427,6 +497,13 @@ section {
     width:90%;
 }
 
+
+.show, .list, .edit, {
+    position:relative;
+    background-size:.001%;
+}
+
+
 }
   @media screen and (min-width:781px) {
 
@@ -471,5 +548,9 @@ section {
 
         }
     }
+
+.menuItems {
+    height:70%;
+}
 
 }
