@@ -106,13 +106,25 @@
                     this.class = "disabled";
                 };
 
+                $scope.showMenu = false;
 
                 ///Click scroll
                 $(function() {
-                    $(".jumbotron").on("click", "#scrollButt", function() {
+                    $(".jumbotron").on("click", "#scrollButtBot", function() {
                         $('html, body').animate({
-                            scrollTop: $("#scroll").offset().top }, 750);  });
+                            scrollTop: $("#scroll").offset().top }, 1000);
+                            });
+                                $scope.showMenu = true;
                         });
+
+                ///Search bar sticky fade
+                $(window).scroll(function() {
+                if ($(this).scrollTop() > 650) {
+                    $( "#search" ).fadeIn(500);
+                } else {
+                    $( "#search" ).fadeOut(500);
+                }
+            });
 
 
                 ///Alerts

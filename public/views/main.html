@@ -1,4 +1,5 @@
-    <div class="offCanvas" ng-click="isActive = !isActive"  ng-class="{'active': isActive == true}"><div class="tagCan">
+<input id="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+    <div class="offCanvas"  ng-class="{'active': isActive == true}"><div class="tagCan">
         <ul>
             <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
                 <div collapse="isCollapsed">
@@ -11,7 +12,7 @@
                 </div></li>
                 <li><a ng-href="#/userlist" ng-click="hideModal()">Dine List <i class="fa fa-cutlery"></i> ({{userList.length}})</a></li>
                 <li>
-                <a href="" ng-click="isCollapse = !isCollapse">Contact <i class="fa fa-paper-plane"></i></a>
+                    <a href="" ng-click="isCollapse = !isCollapse">Contact <i class="fa fa-paper-plane"></i></a>
                     <div collapse="isCollapse">
                         <p>Hello! Thanks for checking my app out. Contact me at: </p><p><a href="mailto:charles.qh.nguyen@gmail.com">charles.qh.nguyen@gmail.com</a></p>
                     </div>
@@ -20,60 +21,63 @@
             </ul>
             <a href="#"><img src="../images/logo.png"></a>
         </div>
-        <i class="fa fa-caret-right tag"></i>
-        </div> <!-- end sidemenu -->
-
+        <i class="fa fa-caret-right tag" ng-click="isActive = !isActive"></i>
+    </div> <!-- end sidemenu -->
 
 
     <div class="jumbotron"><br><br>
 
         <a href="" data-toggle="modal" data-target="#infoModal"><i style="position:absolute; top:5px; left:5px; font-size:1.5em;" class="fa fa-question-circle"></i></a>
 
-<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content modalBox" style="text-align:center;">
-<p>"Where do you want to eat?"</p>
-  <p>"I don't know. Where do you want to go?"</p>
-  <p>"I don't care. What are you in the mood for?"</p>
-  <hr>
-<p>Sound familiar?
-DineTime is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square addTo"></i> button underneath the restaurant.</p>
-<p>Check out the blue triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
-<p style="color:rgb(0, 187, 255); font-weight:bold" data-dismiss="modal">Let's eat.</p>
-
-    </div>
-  </div>
-</div>
-
-        <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
-
-        <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content modalBox">
-                    <a href="#/user/{{randomRest._id}}" ng-click="hideModal()"> <h1>{{randomRest.name}}</a>{{randomPhrase}}</h1> <i style="float:right;" data-ng-click="getSample(); randomPhrase()">Try something else? </i>
+                <div class="modal-content modalBox" style="text-align:center;">
+                    <p>"Where do you want to eat?"</p>
+                    <p>"I don't know. Where do you want to go?"</p>
+                    <p>"I don't care. What are you in the mood for?"</p>
+                    <hr>
+                    <p>Sound familiar?
+                        DineTime is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square addTo"></i> button underneath the restaurant.</p>
+                        <p>Check out the blue triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
+                        <p style="color:rgb(0, 187, 255); font-weight:bold" data-dismiss="modal">Let's eat.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
+
+            <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content modalBox">
+                        <a href="#/user/{{randomRest._id}}" ng-click="hideModal()"> <h1>{{randomRest.name}}</a>{{randomPhrase}}</h1> <i style="float:right;" data-ng-click="getSample(); randomPhrase()">Try something else? </i>
+                    </div>
+                </div>
+            </div>
+            <h1><i id="scrollButtBot" class="fa fa-angle-double-down"></i></h1>
+
+        </div>
+
+
+        <div id="alert"></div>
+
+<input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+<div class="divider" ><h1 id="scroll">HUNGRY AND INDECISIVE? NO PROBLEM.</h1></div>
+
+        <div class="row" style="margin:0;">
+            <div class="restWrap" >
+                <div ng-repeat="rest in rests | filter: search">
+                    <div class="restBlock col-md-4">
+                        <a class="restName" href="#/user/{{rest._id}}">
+
+                            <div class="restBox" style="background-image:url({{rest.image}})">
+                                <span>{{rest.name}}
+                                </span>
+                            </div>
+                        </a>
+                            <i  ng-click="addToList(rest); changeClass(); addAlert();" ng-disabled="disabled" class="fa fa-plus-square fa-lg addTo"></i>
+                    </div>
                 </div>
             </div>
         </div>
-        <h1><i id="scrollButt" class="fa fa-angle-double-down"></i></h1>
-
-    </div>
-
-
-    <div id="alert"></div>
-
-    <div class="row" id="scroll" style="margin:0;">
-        <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
-        <div class="restWrap col-xs-12">
-            <div ng-repeat="rest in rests | filter: search">
-                <div class="restBlock col-md-3">
-                    <a class="restName" href="#/user/{{rest._id}}">
-                        <div class="restBox" style="background-image:url({{rest.image}})">
-                            <span>{{rest.name}}</span>
-                        </div>
-                    </a>
-                    <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>

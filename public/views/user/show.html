@@ -25,7 +25,7 @@
 
 <div id="alert"></div>
 
-<div class="show" style="background-image:url('{{rest.image}}')">
+<div class="show">
 
     <section class="info">
         <h1>{{rest.name}}<br></h1>
@@ -33,7 +33,7 @@
         <p><a ng-show="rest.address != null" href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
         <p><a ng-show="rest.site != null" href="{{rest.site}}" target="_blank">{{rest.site}}</a></p>
         <p><a ng-show="rest.openTable != null" href="{{rest.openTable}}" target="_blank">Open table reservation.</a></p>
-        <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square addTo"></i>
+        <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square fa-4x addTo"></i>
     </section>
 
     <div class="filters">
