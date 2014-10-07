@@ -31,20 +31,21 @@
     </div>
 
     <div class="menuItems">
-        <section ng-repeat="menu in rest.menus  | filter:search"  ng-class-odd="'odd'">
-            <h2>{{menu.type}}</h2>
-            <section ng-repeat="item in menu.menu | orderBy:predicate:reverse" >
-                <p>
+    <section ng-repeat="menu in rest.menus  | filter:search"  ng-class-odd="'odd'">
+        <h2 style="text-transform:uppercase;">{{menu.type}}</h2>
+        <section ng-repeat="item in menu.menu | orderBy:predicate:reverse" >
+            <p>
 
-                    <div class="votes"><button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
-                        <span ng-class="{'thumbDown' : item.vote<0}" data-ng-model="item.vote">{{item.vote}}</span>
-                        <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled; no=!no" ng-disabled = "disabled"><i class="fa fa-thumbs-down" ng-class="{'thumbDown': no === true}"></i></button></div>
+                <div class="votes"><button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
+                    <span ng-class="{'thumbDown' : item.vote<0}" data-ng-model="item.vote">{{item.vote}}</span>
+                    <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled; no=!no" ng-disabled = "disabled"><i class="fa fa-thumbs-down" ng-class="{'thumbDown': no === true}"></i></button></div>
 
-                        <div class="name"><span style="text-transform:uppercase;">{{item.name}}</span><br> {{item.description}}</div>
-                        <div class="price">${{item.price}}</div>
-                    </p>
-                </section>
+                    <div class="name"><span style="text-transform:uppercase;">{{item.name}}</span><br> {{item.description}}</div>
+                    <div class="price">{{item.price}}</div>
+                </p>
             </section>
-        </div>
-        <div class="menuNotes"> {{rest.notes}} </div>
+        </section>
     </div>
+    <div class="menuNotes"> {{rest.notes}} <br><i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square fa-3x"></i> </div>
+
+</div>

@@ -94,7 +94,7 @@ button:hover {
     color:white;
     h1 {
         text-align:center;
-        margin-top:100px;
+        margin-top:80px;
     }
 
 }
@@ -246,6 +246,7 @@ button:hover {
         border:none;
         border-bottom:1px white solid;
         width:100px;
+        color:white;
     }
     form {
         padding:5px;
@@ -292,13 +293,18 @@ button:hover {
 }
 
 .menuNotes {
+    text-align:center;
     color:white;
     width:80%;
     margin-left:10%;
     margin-right:10%;
     padding:5px;
     font-size:.8em;
-    background-color:rgba(0,0,0,.9)
+    background-color:rgba(0,0,0,.9);
+    i:hover {
+        color:$blueL;
+        cursor:pointer;
+    }
 }
 
 .filters {
@@ -496,15 +502,22 @@ section {
                                 margin-top:45px;
                             }
                         }
+                        #scrollButtBot {
+                            display:none;
+                        }
 
                         .restWrap {
                             padding:0px;
                         }
 
-                        #search, .search {
+                        .search {
                             font-size:1em;
                             display:block;
                         }
+                        #search {
+                            display:none;
+                        }
+
 
                         .modalBox {
                             margin-top: 45%;

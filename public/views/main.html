@@ -48,7 +48,7 @@
 
 &nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 1">&nbsp;<i class="fa fa-money"></i>
 &nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 2">&nbsp;<i class="fa fa-money fa-2x"></i>
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 3">&nbsp;<i class="fa fa-money fa-3x"></i>     &nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 0">&nbsp; Surprise me.
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 3">&nbsp;<i class="fa fa-money fa-3x"></i><br> &nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 0">&nbsp; Surprise me.
 
 </p>
 </div>
@@ -72,11 +72,12 @@
 
 <div class="divider"  id="scroll">
 
-<input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+<input id="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
 
     <h1>HUNGRY AND INDECISIVE? NO PROBLEM.</h1>
     </div>
         <div class="row" style="margin:0;">
+            <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
             <div class="restWrap" >
                 <div ng-repeat="rest in rests | filter: search">
                     <div class="restBlock col-md-4">

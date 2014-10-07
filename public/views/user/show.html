@@ -33,7 +33,6 @@
         <p><a ng-show="rest.address != null" href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
         <p><a ng-show="rest.site != null" href="{{rest.site}}" target="_blank">{{rest.site}}</a></p>
         <p><a ng-show="rest.openTable != null" href="{{rest.openTable}}" target="_blank">Open table reservation.</a></p>
-        <i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square fa-4x addTo"></i>
     </section>
 
     <div class="filters">
@@ -49,8 +48,8 @@
 
 
     <div class="menuItems">
-        <section style="text-transform:uppercase;" ng-repeat="menu in rest.menus  | filter:search"  ng-class-odd="'odd'">
-            <h2 >{{menu.type}}</h2>
+        <section ng-repeat="menu in rest.menus  | filter:search"  ng-class-odd="'odd'">
+            <h2 style="text-transform:uppercase;">{{menu.type}}</h2>
             <section ng-repeat="item in menu.menu | orderBy:predicate:reverse" >
                 <p>
 
@@ -64,5 +63,6 @@
                 </section>
             </section>
         </div>
-        <div class="menuNotes"> {{rest.notes}} </div>
+        <div class="menuNotes"> {{rest.notes}} <br><i ng-click="addToList(rest); changeClass(); addAlert()" ng-disabled="disabled" class="fa fa-plus-square fa-3x"></i> </div>
+
     </div>
