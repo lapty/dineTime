@@ -76,6 +76,14 @@ button:hover {
     text-align: center;
     margin-top: 100px; }
 
+.priceFilter {
+  text-align: center;
+  width: 100%; }
+  .priceFilter .filterButt {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%; }
+
 .logo {
   opacity: .7;
   transition: all .5s ease;
@@ -89,7 +97,7 @@ button:hover {
   cursor: pointer;
   border: 8px white double;
   border-radius: 100%;
-  background-color: rgba(255, 255, 255, 0.05); }
+  background-color: rgba(255, 255, 255, 0.08); }
 
 .divider {
   width: 100%;

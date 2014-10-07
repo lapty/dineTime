@@ -3,7 +3,15 @@
 
 <h1><span>{{rest.name}}'s</span> Info</h1>
 
-<p><input type="text" data-ng-model="rest.name"> Name</p>
+<p><input type="text" data-ng-model="rest.name"> Name</p><br>
+
+<div><p> How expensive is the restaurant?<br>
+    <input type="radio" name="filter" ng-click="rest.cost = 1"> $
+    <input type="radio" name="filter" ng-click="rest.cost = 2"> $$
+    <input type="radio" name="filter" ng-click="rest.cost = 3"> $$$
+    </p>
+</div>
+<br>
 <p><input type="text" data-ng-model="rest.image" placeholder="imageURL"> ImageURL</p>
 <p><input type="text" data-ng-model="rest.number" placeholder="phone number"> Phone Number</p>
 <p><input type="text" data-ng-model="rest.address" placeholder="address"> Street Address</p>

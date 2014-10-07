@@ -6,6 +6,7 @@
         .factory('restsService', ['$http', '$rootScope', function ($http, $rootScope) {
 
             var userList = [];
+            var filteredList = [];
             var restList = "api/collections/restaurants/";
 
 
@@ -45,6 +46,7 @@
 
             return {
                 userList: userList,
+                filteredList: filteredList,
                 getRests: getRests,
                 getRest: getRest,
                 createRest: createRest,

@@ -45,7 +45,19 @@
                 </div>
             </div>
 
+<div class="priceFilter"><p>How much do you want to spend?<br>
+
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 1" selected>&nbsp;$
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 2">&nbsp;$$
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 3">&nbsp;$$$<br>
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 0">&nbsp;Surprise me.
+</p>
+</div>
+
             <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
+
+
+
 
             <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -62,7 +74,10 @@
         <div id="alert"></div>
 
 <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
-<div class="divider" ><h1 id="scroll">HUNGRY AND INDECISIVE? NO PROBLEM.</h1></div>
+<div class="divider"  id="scroll">
+
+    <h1>HUNGRY AND INDECISIVE? NO PROBLEM.</h1>
+    </div>
 
         <div class="row" style="margin:0;">
             <div class="restWrap" >

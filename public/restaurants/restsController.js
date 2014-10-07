@@ -15,6 +15,9 @@
 
 
         $scope.userList = restsService.userList;
+        $scope.filteredList = restsService.filteredList;
+        $scope.filteredCost = 0;
+
 
         var phrases = [" sounds good to me!", "? Yes, please.", " is a great idea!", " is a good choice.", "? Let's do it!", " sounds tasty!", "? I could go for that.", " is something I can go for.", " is a smart decision.", "? You can't go wrong.", " would be wonderful."];
 
@@ -41,11 +44,23 @@
             restsService.deleteRest(id);
             $location.path('/admin');
         };
+
+
         $scope.getSample = function () {
 
-            var rests = $scope.rests;
-            $scope.randomRest = _.sample(rests);
             $scope.randomPhrase = _.sample(phrases);
+            var rests = $scope.rests;
+            $scope.filteredList = [];
+
+            for (var i = 0; i < rests.length; i++) {
+                if (rests[i].cost === $scope.filteredCost) {
+                    $scope.filteredList.push(rests[i]);
+                }
+                $scope.randomRest = _.sample($scope.filteredList);
+            } if ($scope.filteredCost === 0) {
+                $scope.randomRest = _.sample(rests);
+            }
+                console.log($scope.filteredList);
         };
 
         $scope.getSampleList = function () {
@@ -100,6 +115,9 @@
         $scope.deleteItem = function ($index) {
             $scope.rest.menus[$scope.menuIndex].menu.splice($index, 1);
         };
+
+
+
 
                 ///disable vote after voting
                 $scope.changeClass = function () {
