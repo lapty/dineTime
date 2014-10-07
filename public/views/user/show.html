@@ -48,9 +48,9 @@
 
 
     <div class="menuItems">
-        <section ng-repeat="menu in rest.menus  | filter:search"  ng-class-odd="'odd'">
+        <section ng-repeat="menu in rest.menus"  ng-class-odd="'odd'">
             <h2 style="text-transform:uppercase;">{{menu.type}}</h2>
-            <section ng-repeat="item in menu.menu | orderBy:predicate:reverse" >
+            <section ng-repeat="item in menu.menu | orderBy:predicate:reverse  | filter:search" >
                 <p>
 
                     <div class="votes"><button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
