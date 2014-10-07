@@ -40,45 +40,42 @@
                         DineTime is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square"></i> button underneath the restaurant.</p>
                         <p>Check out the blue triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
                         <p style="color:rgb(0, 187, 255); font-weight:bold" data-dismiss="modal">Let's eat.</p>
-
                     </div>
                 </div>
             </div>
 
 <div class="priceFilter"><p>How much do you want to spend?<br>
 
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 1" selected>&nbsp;$
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 2">&nbsp;$$
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 3">&nbsp;$$$<br>
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 0">&nbsp;Surprise me.
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 1">&nbsp;<i class="fa fa-money"></i>
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 2">&nbsp;<i class="fa fa-money fa-2x"></i>
+&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 3">&nbsp;<i class="fa fa-money fa-3x"></i>     &nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 0">&nbsp; Surprise me.
+
 </p>
 </div>
 
             <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
 
 
-
-
-            <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content modalBox">
-                        <a href="#/user/{{randomRest._id}}" ng-click="hideModal()"> <h1>{{randomRest.name}}</a>{{randomPhrase}}</h1> <i style="float:right;" data-ng-click="getSample(); randomPhrase()">Try something else? </i>
-                    </div>
-                </div>
-            </div>
-            <h1><i id="scrollButtBot" class="fa fa-angle-double-down"></i></h1>
-
-        </div>
+                                <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content modalBox">
+                                            <a href="#/user/{{randomRest._id}}" ng-click="hideModal()"> <h1>{{randomRest.name}}</a>{{randomPhrase}}</h1> <i style="float:right;" data-ng-click="getSample(); randomPhrase()">Try something else? </i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1><i id="scrollButtBot" class="fa fa-angle-double-down"></i></h1>
+                            </div>
 
 
         <div id="alert"></div>
 
-<input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+
 <div class="divider"  id="scroll">
+
+<input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
 
     <h1>HUNGRY AND INDECISIVE? NO PROBLEM.</h1>
     </div>
-
         <div class="row" style="margin:0;">
             <div class="restWrap" >
                 <div ng-repeat="rest in rests | filter: search">
