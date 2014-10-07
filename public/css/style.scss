@@ -60,7 +60,7 @@ button:hover {
     width:100%;
     background-color:rgba(0,0,0,.5);
     a {
-        color:$blue;
+        color:$blueL;
         font-weight:bolder;
     }
     i:hover {
@@ -113,7 +113,7 @@ button:hover {
     cursor:pointer;
     border:8px white double;
     border-radius:100%;
-    background-color:rgba(255,255,255,.1);
+    background-color:rgba(255,255,255,.05);
 }
 
 .divider {

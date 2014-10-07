@@ -45,7 +45,7 @@ button:hover {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
   .modalBox a {
-    color: rgba(80, 120, 201, 0.6);
+    color: #00bbff;
     font-weight: bolder; }
   .modalBox i:hover {
     cursor: pointer;
@@ -89,7 +89,7 @@ button:hover {
   cursor: pointer;
   border: 8px white double;
   border-radius: 100%;
-  background-color: rgba(255, 255, 255, 0.1); }
+  background-color: rgba(255, 255, 255, 0.05); }
 
 .divider {
   width: 100%;
