@@ -83,7 +83,7 @@ button:hover {
 .jumbotron {
   background: url("../images/rest1.png") no-repeat center center fixed;
   width: 100%;
-  height: 700px;
+  height: 1000px;
   margin: 0;
   padding: 0;
   background-size: cover;
@@ -189,7 +189,7 @@ button:hover {
 #scrollButtTop, #scrollButtBot {
   font-size: 1em;
   opacity: .7;
-  margin-top: 40px;
+  margin-top: 80px;
   transition: all .5s ease; }
 
 #scrollButtTop:hover, #scrollButtBot:hover {
