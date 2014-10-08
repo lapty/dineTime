@@ -188,6 +188,7 @@ button:hover {
     background-color:white;
     padding-left:100px;padding-right:100px;padding-bottom:100px;
     text-align:center;
+/*     height:650px; */
     h1 {
         font-style:italic;
         color:gray;
@@ -548,7 +549,7 @@ section {
 
 ////////////////////////////////Media queries
 
-                          @media screen and (min-width:0) and (max-width:780px) {
+                          @media screen and (min-width:0) and (max-width:981px) {
 
                         ::-webkit-scrollbar {
                             display:block;
@@ -573,7 +574,7 @@ section {
 
                         .jumbotron {
                             height:575px;
-                            background-size:cover;
+                            background:none;
 
                         }
 
@@ -641,7 +642,7 @@ section {
 
 
                         }
-                          @media screen and (min-width:781px) {
+                          @media screen and (min-width:982px) {
 
                         .offCanvas:hover {
                             left:0;
@@ -675,7 +676,6 @@ section {
                         }
 
                         .restBlock:hover {
-                            -webkit-filter: none;
                             color:rgba(255,255,255,1);
                                 span {
                                 text-decoration:none;
@@ -689,16 +689,10 @@ section {
                             height:70%;
                         }
 
-
-                        .restWrap {
-                            padding:0;
-                            height:100%;
-                        }
-
-
                         .restBlock {
                             opacity:1;
                             border:none;
+                            position:relative;
                         }
 
 
