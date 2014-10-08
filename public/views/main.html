@@ -1,4 +1,4 @@
-<input id="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+<div id="search"><i class="fa fa-search"></i> <input type="text" class="searchBar" ng-model="search" placeholder="SEARCH HERE"></div>
     <div class="offCanvas"  ng-class="{'active': isActive == true}"><div class="tagCan">
         <ul>
             <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
@@ -73,11 +73,11 @@
 
 <div id="scroll"></div>
 <div class="divider"  >
-<div id="flair"><h1>HUNGRY AND INDECISIVE? NO PROBLEM.</h1></div>
+<div id="flair"><h1>STILL CAN'T DECIDE? CHECK OUT THE RESTAURANTS <i class="fa fa-hand-o-down"></i></h1></div>
 
     </div>
         <div class="row" style="margin:0;">
-            <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS?">
+            <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
             <div class="restWrap" >
                 <div ng-repeat="rest in rests | filter: search">
                     <div class="restBlock col-md-4">

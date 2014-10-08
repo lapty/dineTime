@@ -12,6 +12,9 @@ body {
   body h1 {
     color: white; }
 
+/* ::-webkit-input-placeholder {
+   color: \$green;
+} */
 ::selection {
   background: #50c923; }
 
@@ -135,7 +138,7 @@ button:hover {
 
 #scroll {
   width: 100%;
-  height: 60px;
+  height: 50px;
   background-color: black; }
 
 .divider {
@@ -176,7 +179,7 @@ button:hover {
   .restBlock span {
     transition: all .5s ease-in-out;
     position: relative;
-    top: 100px;
+    top: 125px;
     color: white;
     text-shadow: -.5px -.5px 0 black, .5px -.5px 0 black, -.5px .5px 0 black, .5px .5px 0 black; }
 
@@ -199,18 +202,26 @@ button:hover {
 
 #search, .search {
   width: 100%;
-  text-align: center;
-  height: 50px;
   background-color: white;
-  color: black;
+  color: #50c923;
   font-size: 1.5em;
-  border: none;
   display: none;
-  z-index: 9999; }
+  z-index: 9999;
+  text-align: center; }
+  #search i, .search i {
+    margin-left: 40%;
+    margin-right: 10px;
+    font-size: 1.2em; }
 
 #search {
   position: fixed;
-  top: 0; }
+  top: 50;
+  width: 100%; }
+
+.searchBar {
+  border: none;
+  height: 50px;
+  width: 50%; }
 
 .offCanvas {
   position: fixed;
@@ -295,6 +306,7 @@ button:hover {
     margin-left: 10px; }
   .filters input {
     color: white;
+    width: 200px;
     background-color: rgba(0, 0, 0, 0.1); }
 
 .odd {
@@ -438,10 +450,12 @@ section {
       margin-top: 45px; }
 
   .row {
-    padding: 0px; }
+    padding: 0px;
+    background-color: black; }
 
   .restWrap {
-    padding: 0; }
+    padding: 0;
+    height: 0; }
 
   .search {
     font-size: 1em;

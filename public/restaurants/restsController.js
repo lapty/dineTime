@@ -137,7 +137,7 @@
 
                 ///Search bar sticky fade
                 $(window).scroll(function() {
-                if ($(this).scrollTop() > 650) {
+                if ($(this).scrollTop() > 990) {
                     $( "#search" ).fadeIn(500);
                 } else {
                     $( "#search" ).fadeOut(500);
