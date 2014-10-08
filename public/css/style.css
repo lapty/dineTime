@@ -456,7 +456,7 @@ section {
     display: none; }
 
   .jumbotron {
-    height: 575px;
+    height: 750spx;
     background-size: cover; }
 
   .row {
@@ -490,7 +490,7 @@ section {
   .restBlock {
     opacity: 1;
     border: none;
-    -webkit-filter: none; }
+    /* -webkit-filter: none; */ }
 
   .restBox {
     margin: 0px;
