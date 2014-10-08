@@ -68,6 +68,18 @@ button:hover {
   z-index: 9999;
   width: 100%; }
 
+/* .covered {
+    width:100%;
+    height:700px;
+    z-index:1;
+    background-color:red;
+}
+
+#flair {
+    position:fixed;
+    top:15px;
+    z-index:0;
+} */
 .jumbotron {
   background: url("../images/rest1.png") no-repeat center center fixed;
   width: 100%;
@@ -121,16 +133,22 @@ button:hover {
 .divWrap {
   background-color: white; }
 
+#scroll {
+  width: 100%;
+  height: 60px;
+  background-color: black; }
+
 .divider {
   width: 100%;
   height: 150px;
   background-color: black;
   text-align: center;
   opacity: 1;
-  transition: all ease .5s; }
+  transition: all ease .5s;
+  z-index: 0; }
   .divider h1 {
     margin: 0;
-    padding-top: 80px;
+    padding-top: 50px;
     font-weight: bold; }
 
 .row {
@@ -171,7 +189,7 @@ button:hover {
 #scrollButtTop, #scrollButtBot {
   font-size: 1em;
   opacity: .7;
-  margin-top: 20px;
+  margin-top: 40px;
   transition: all .5s ease; }
 
 #scrollButtTop:hover, #scrollButtBot:hover {
@@ -411,16 +429,13 @@ section {
   .logo {
     width: 300px; }
 
-  .divider, #scrollButtTop, .tawpWrap {
+  .divider, #scrollButtTop, #scrollButtBot, #scroll, #search, .tawpWrap {
     display: none; }
 
   .jumbotron {
     height: 530px; }
     .jumbotron h1 {
       margin-top: 45px; }
-
-  #scrollButtBot {
-    display: none; }
 
   .row {
     padding: 0px; }
@@ -431,9 +446,6 @@ section {
   .search {
     font-size: 1em;
     display: block; }
-
-  #search {
-    display: none; }
 
   .modalBox {
     margin-top: 45%; }

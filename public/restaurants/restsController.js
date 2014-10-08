@@ -30,7 +30,7 @@
                 content:newRest.content,
                 menus:[]
             })
-            $location.path("/admin/");
+            $location.path("/admin/" + $routeParams.restId);
 
         };
 
