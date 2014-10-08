@@ -576,7 +576,7 @@ section {
 
                         .row {
                             padding:0px;
-                            background-color:black;
+                            background-color:white;
                         }
 
                         .restWrap {
@@ -587,6 +587,12 @@ section {
                         .search {
                             font-size:1em;
                             display:block;
+                            height:50px;
+                        }
+
+                        #search {
+                            opacity:.001;
+                            height:.001px;
                         }
 
 
@@ -604,6 +610,11 @@ section {
                             -webkit-filter: none;
                         }
 
+                        .restBox {
+                            margin:0px;
+                            border:15px white solid;
+                        }
+
                         .menuItems {
                             width:90%;
                         }
@@ -616,7 +627,7 @@ section {
 
 
                         }
-                          @media screen and (min-width:781px) {
+                          @media screen and (min-width:800px) {
 
                         .offCanvas:hover {
                             left:0;
@@ -663,5 +674,33 @@ section {
                         .menuItems {
                             height:70%;
                         }
+
+                        .row {
+                            padding:0px;
+                            background-color:white;
+                        }
+
+                        .tawpWrap {
+                            display:none;
+                        }
+
+                        .restWrap {
+                            padding:0;
+                            height:0;
+                        }
+
+
+                        .restBlock {
+                            opacity:1;
+                            border:none;
+                            -webkit-filter: none;
+                        }
+
+                        .restBox {
+                            margin:0px;
+                            border:15px white solid;
+                        }
+
+
 
                         }

@@ -451,7 +451,7 @@ section {
 
   .row {
     padding: 0px;
-    background-color: black; }
+    background-color: white; }
 
   .restWrap {
     padding: 0;
@@ -459,7 +459,12 @@ section {
 
   .search {
     font-size: 1em;
-    display: block; }
+    display: block;
+    height: 50px; }
+
+  #search {
+    opacity: .001;
+    height: .001px; }
 
   .modalBox {
     margin-top: 45%; }
@@ -472,13 +477,17 @@ section {
     border: none;
     -webkit-filter: none; }
 
+  .restBox {
+    margin: 0px;
+    border: 15px white solid; }
+
   .menuItems {
     width: 90%; }
 
   .show, .list, .edit {
     position: relative;
     background-size: .001%; } }
-@media screen and (min-width: 781px) {
+@media screen and (min-width: 800px) {
   .offCanvas:hover {
     left: 0; }
 
@@ -517,4 +526,24 @@ section {
       font-size: 1.1em; }
 
   .menuItems {
-    height: 70%; } }
+    height: 70%; }
+
+  .row {
+    padding: 0px;
+    background-color: white; }
+
+  .tawpWrap {
+    display: none; }
+
+  .restWrap {
+    padding: 0;
+    height: 0; }
+
+  .restBlock {
+    opacity: 1;
+    border: none;
+    -webkit-filter: none; }
+
+  .restBox {
+    margin: 0px;
+    border: 15px white solid; } }
