@@ -267,6 +267,7 @@ button:hover {
     display:none;
     z-index:9999;
     text-align:center;
+    border:none;
     i {
         margin-left:40%;
         margin-right:10px;
@@ -565,9 +566,8 @@ section {
 
                         .jumbotron {
                             height:575px;
-                            h1 {
-                                margin-top:45px;
-                            }
+                            background-size:cover;
+
                         }
 
                         .row {
@@ -595,6 +595,9 @@ section {
                             height:.001px;
                         }
 
+                        .priceFilter {
+                            bottom:85px;
+                        }
 
                         .modalBox {
                             margin-top: 45%;
