@@ -37,7 +37,7 @@
                     <p>"I don't care. What are you in the mood for?"</p>
                     <hr>
                     <p>Sound familiar?
-                        DineTime is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square"></i> button underneath the restaurant.</p>
+                        Dine Time is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square"></i> button underneath the restaurant.</p>
                         <p>Check out the green triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
                         <p style="color:rgb(0, 187, 255); font-weight:bold" data-dismiss="modal">Let's eat.</p>
                     </div>
@@ -48,7 +48,7 @@
 
             <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
 
-            <div class="priceFilter"><p>How much do you want to spend?<br>
+            <div class="priceFilter"><p>Pick your budget:<br>
 
             <input type="radio" id="radio1" name="filter" ng-click="filteredCost = 1"><label for="radio1"><i class="fa fa-money fa-lg"></i></label>&nbsp;&nbsp;
             <input type="radio" id="radio2" name="filter" ng-click="filteredCost = 2"><label for="radio2"><i class="fa fa-money fa-2x"></i></label>&nbsp;&nbsp;
@@ -71,13 +71,11 @@
 
         <div id="alert"></div>
 
-<div id="scroll"></div>
-<div class="divider"  >
-<div id="flair"><h1>STILL CAN'T DECIDE? CHECK OUT THE RESTAURANTS <i class="fa fa-hand-o-down"></i></h1></div>
-
-    </div>
+<div class="divider" id="scroll"></div>
         <div class="row" style="margin:0;">
+            <h1>Still can't decide? No problem.</h1>
             <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+
             <div class="restWrap" >
                 <div ng-repeat="rest in rests | filter: search">
                     <div class="restBlock col-md-4">

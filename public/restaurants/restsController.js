@@ -138,9 +138,9 @@
                 ///Search bar sticky fade
                 $(window).scroll(function() {
                 if ($(this).scrollTop() > 990) {
-                    $( "#search" ).fadeIn(500);
+                    $( "#search" ).fadeIn(800);
                 } else {
-                    $( "#search" ).fadeOut(500);
+                    $( "#search" ).fadeOut(300);
                 }
             });
 
