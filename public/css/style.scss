@@ -557,6 +557,7 @@ section {
 
                         .logo {
                             width:300px;
+                            top:10px;
                         }
 
                         .divider, #scrollButtTop, #scrollButtBot, #scroll, #search, .tawpWrap {
@@ -565,7 +566,7 @@ section {
 
 
                         .jumbotron {
-                            height:750px;
+                            height:575px;
                             background-size:cover;
 
                         }
@@ -596,7 +597,7 @@ section {
                         }
 
                         .priceFilter {
-                            bottom:85px;
+                            bottom:10px;
                         }
 
                         .modalBox {
@@ -610,12 +611,16 @@ section {
                         .restBlock {
                             opacity:1;
                             border:none;
-                            /* -webkit-filter: none; */
+
                         }
 
                         .restBox {
                             margin:0px;
                             border:15px white solid;
+                            -webkit-filter: brightness(.5);
+                            span {
+                                font-weight:bolder;
+                            }
                         }
 
                         .menuItems {

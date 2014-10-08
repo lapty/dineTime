@@ -450,13 +450,14 @@ section {
     height: 5px; }
 
   .logo {
-    width: 300px; }
+    width: 300px;
+    top: 10px; }
 
   .divider, #scrollButtTop, #scrollButtBot, #scroll, #search, .tawpWrap {
     display: none; }
 
   .jumbotron {
-    height: 750spx;
+    height: 575px;
     background-size: cover; }
 
   .row {
@@ -479,7 +480,7 @@ section {
     height: .001px; }
 
   .priceFilter {
-    bottom: 85px; }
+    bottom: 10px; }
 
   .modalBox {
     margin-top: 45%; }
@@ -489,12 +490,14 @@ section {
 
   .restBlock {
     opacity: 1;
-    border: none;
-    /* -webkit-filter: none; */ }
+    border: none; }
 
   .restBox {
     margin: 0px;
-    border: 15px white solid; }
+    border: 15px white solid;
+    -webkit-filter: brightness(0.5); }
+    .restBox span {
+      font-weight: bolder; }
 
   .menuItems {
     width: 90%; }
