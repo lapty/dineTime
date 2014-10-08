@@ -41,6 +41,7 @@ p {
 
 .tawpWrap {
     text-align: center;
+    z-index:0;
     img {
         margin-top:10%;
         left:28%;
@@ -627,7 +628,7 @@ section {
 
 
                         }
-                          @media screen and (min-width:800px) {
+                          @media screen and (min-width:790px) {
 
                         .offCanvas:hover {
                             left:0;
@@ -676,31 +677,25 @@ section {
                         }
 
                         .row {
-                            padding:0px;
+                            padding:100px;
                             background-color:white;
                         }
 
-                        .tawpWrap {
-                            display:none;
-                        }
 
                         .restWrap {
                             padding:0;
-                            height:0;
+                            height:100%;
                         }
 
 
                         .restBlock {
                             opacity:1;
                             border:none;
-                            -webkit-filter: none;
                         }
 
-                        .restBox {
-                            margin:0px;
-                            border:15px white solid;
-                        }
-
-
+                    /*     .restBox {
+                        margin:0px;
+                        border:15px white solid;
+                    } */
 
                         }

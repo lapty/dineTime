@@ -27,7 +27,8 @@ body {
   transition: all ease .5s; }
 
 .tawpWrap {
-  text-align: center; }
+  text-align: center;
+  z-index: 0; }
   .tawpWrap img {
     margin-top: 10%;
     left: 28%;
@@ -487,7 +488,7 @@ section {
   .show, .list, .edit {
     position: relative;
     background-size: .001%; } }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 790px) {
   .offCanvas:hover {
     left: 0; }
 
@@ -529,21 +530,18 @@ section {
     height: 70%; }
 
   .row {
-    padding: 0px;
+    padding: 100px;
     background-color: white; }
-
-  .tawpWrap {
-    display: none; }
 
   .restWrap {
     padding: 0;
-    height: 0; }
+    height: 100%; }
 
   .restBlock {
     opacity: 1;
-    border: none;
-    -webkit-filter: none; }
+    border: none; }
 
-  .restBox {
-    margin: 0px;
-    border: 15px white solid; } }
+  /*     .restBox {
+      margin:0px;
+      border:15px white solid;
+  } */ }
