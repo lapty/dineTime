@@ -38,22 +38,23 @@
                     <hr>
                     <p>Sound familiar?
                         DineTime is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square"></i> button underneath the restaurant.</p>
-                        <p>Check out the blue triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
+                        <p>Check out the green triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
                         <p style="color:rgb(0, 187, 255); font-weight:bold" data-dismiss="modal">Let's eat.</p>
                     </div>
                 </div>
             </div>
 
-<div class="priceFilter"><p>How much do you want to spend?<br> 
 
-<input type="radio" id="radio1" name="filter" ng-click="filteredCost = 1"><label for="radio1"><i class="fa fa-money fa-lg"></i></label>&nbsp;&nbsp;
-<input type="radio" id="radio2" name="filter" ng-click="filteredCost = 2"><label for="radio2"><i class="fa fa-money fa-2x"></i></label>&nbsp;&nbsp;
-<input type="radio" id="radio3" name="filter" ng-click="filteredCost = 3"><label for="radio3"><i class="fa fa-money fa-3x"></i></label>&nbsp;&nbsp;<input type="radio" id="radio4"  name="filter" ng-click="filteredCost = 0"> <label id="radio4" for="radio4">Money <br>is <br>no<br> object</label>
-
-</p>
-</div>
 
             <h1><img class="logo" src="../images/logo.png" data-ng-click="getSample(); randomPhrase()" data-toggle="modal" data-target="#ranModal"></h1>
+
+            <div class="priceFilter"><p>How much do you want to spend?<br>
+
+            <input type="radio" id="radio1" name="filter" ng-click="filteredCost = 1"><label for="radio1"><i class="fa fa-money fa-lg"></i></label>&nbsp;&nbsp;
+            <input type="radio" id="radio2" name="filter" ng-click="filteredCost = 2"><label for="radio2"><i class="fa fa-money fa-2x"></i></label>&nbsp;&nbsp;
+            <input type="radio" id="radio3" name="filter" ng-click="filteredCost = 3"><label for="radio3"><i class="fa fa-money fa-3x"></i></label>&nbsp;&nbsp;<input type="radio" id="radio4"  name="filter" ng-click="filteredCost = 0"> <label id="radio4" for="radio4">Money <br>is <br>no<br> object </label>
+            </p>
+            </div>
 
 
                                 <div class="modal fade" id="ranModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
