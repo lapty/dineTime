@@ -157,8 +157,8 @@ button:hover {
     color: gray;
     font-size: 2em;
     opacity: .5;
-    padding: 50px;
-    padding-top: 75px; }
+    padding: 10px;
+    padding-top: 35px; }
 
 .restWrap {
   width: 100%;
@@ -171,9 +171,8 @@ button:hover {
   color: rgba(255, 255, 255, 0.4);
   font-size: 2.2em;
   opacity: 1;
-  -webkit-filter: brightness(0.7);
-  -webkit-transform-origin: top left;
-  -webkit-transform: scale(1);
+  background-size: cover;
+  font-family: "Oswald";
   transition: all .5s ease; }
   .restBlock a {
     text-decoration: none;
@@ -181,15 +180,21 @@ button:hover {
   .restBlock span {
     transition: all .5s ease-in-out;
     position: relative;
-    top: 125px;
+    top: 110px;
     color: white;
     text-shadow: -.5px -.5px 0 black, .5px -.5px 0 black, -.5px .5px 0 black, .5px .5px 0 black; }
 
 .restBox {
+  background-color: rgba(0, 0, 0, 0.4);
   height: 300px;
   padding: 0;
-  margin: 15px;
-  background-size: cover; }
+  border: 15px white solid;
+  transition: all .2s ease-in-out;
+  /*     background-size:cover; */ }
+
+.restBox:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  border: 11px white solid; }
 
 #scrollButtTop, #scrollButtBot {
   font-size: 1em;
@@ -480,7 +485,7 @@ section {
     height: .001px; }
 
   .priceFilter {
-    bottom: 10px; }
+    bottom: 100px; }
 
   .modalBox {
     margin-top: 45%; }
@@ -490,12 +495,12 @@ section {
 
   .restBlock {
     opacity: 1;
-    border: none; }
+    border: none;
+    -webkit-filter: none; }
 
   .restBox {
     margin: 0px;
-    border: 15px white solid;
-    -webkit-filter: brightness(0.5); }
+    border: 15px white solid; }
     .restBox span {
       font-weight: bolder; }
 

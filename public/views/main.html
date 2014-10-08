@@ -78,16 +78,18 @@
 
             <div class="restWrap" >
                 <div ng-repeat="rest in rests | filter: search">
-                    <div class="restBlock col-md-4">
+                    <div class="restBlock col-md-4"  style="background-image:url({{rest.image}})">
+                        <div class="restFilter">
                         <a class="restName" href="#/user/{{rest._id}}">
 
-                            <div class="restBox" style="background-image:url({{rest.image}})">
+                            <div class="restBox">
                                 <span>{{rest.name}}
                                 </span>
                             </div>
                         </a>
                             <i  ng-click="addToList(rest); changeClass(); addAlert();" ng-disabled="disabled" class="fa fa-plus-square fa-lg addTo"></i>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
