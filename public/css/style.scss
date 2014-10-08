@@ -1,22 +1,37 @@
-$blue: rgba(80,120,201,.6);
+$blue: rgba(80,120,201,.8);
 $blueL: rgba(0,187,255, 1);
+$green: rgba(80,201,35,.7);
 $clear: rgba(0,0,0,.001);
 
 body {
   font: 14px "Merriweather", Helvetica, sans-serif;
-  margin:0px;
-  padding:0px;
+  margin:0;
+  padding:0;
   background-image:url("../images/black_mamba.png");
   input, textarea {
       color:black;
   }
 p {
-    margin:0px;
+    margin:0;
     color:white;
 }
   h1 {
       color:white;
   }
+}
+
+
+input[type=radio] {
+    display:none;
+    margin-left:30px;
+
+}
+
+input[type=radio] + label {
+    background-color: none;
+}
+input[type=radio]:checked + label {
+    color:$blueL;
 }
 
 .hidden {
@@ -89,7 +104,7 @@ button:hover {
     background: url("../images/rest1.png") no-repeat center center fixed;
     width:100%;
     height:700px;
-    margin:0px; padding: 0px;
+    margin:0; padding: 0;
     background-size:cover;
     color:white;
     h1 {
@@ -105,7 +120,21 @@ button:hover {
     text-align:center;
     width:100%;
     opacity:.8;
+    label {
+        cursor:pointer;
+        vertical-align:middle;
+    }
+    label:hover  {
+        color:$green;
+
+    }
+    #radio4 {
+        line-height:14px;
+        font-size:.8em;
+    }
+
 }
+
 
 
 
@@ -139,24 +168,27 @@ button:hover {
     opacity:1;
     transition:all ease .5s;
     h1 {
-        margin:0px;
+        margin:0;
         padding-top:80px;
         font-weight:bold;
     }
 }
 
+.row {
+    background-color:white;
+    padding:100px;
+}
+
 .restWrap {
     width:100%;
-    padding:100px;
     height:650px;
-    overflow:auto;
     background-color:rgba(255,255,255,1);
 
 }
 
 .restBlock {
     text-align:center;
-    padding:0px;
+    padding:0;
     color:rgba(255,255,255,.4);
     font-size:2.2em;
     opacity:1;
@@ -184,9 +216,9 @@ button:hover {
 
 
 .restBox {
-    height:275px;
-    padding:0px;
-    margin:5px;
+    height:300px;
+    padding:0;
+    margin:15px;
     background-size:cover;
 
 }
@@ -220,7 +252,7 @@ button:hover {
 
 #search {
     position:fixed;
-    top:0px;
+    top:0;
 }
 
 /////SIDE MENU
@@ -257,7 +289,7 @@ button:hover {
         cursor:pointer;
     }
     ul {
-        margin:0px; padding: 0px;
+        margin:0; padding: 0;
         li {
             text-align:center;
             width:100%;
@@ -274,7 +306,7 @@ button:hover {
     height:100%;
     border-right:1px white solid; border-bottom:1px white solid;
     background-color:rgba(0,0,0,.8);
-    margin: 0px; padding: 0px;
+    margin: 0; padding: 0;
     img {
         width:50%;
         position:absolute;
@@ -325,7 +357,7 @@ button:hover {
 
 .odd {
     background-color:rgba(255,255,255,.9);
-    padding:0px; margin: 0px;
+    padding:0; margin: 0;
 }
 
 .info {
@@ -335,7 +367,7 @@ button:hover {
     font-family: 'Open Sans', sans-serif;
     text-shadow: black 0 2px 3px;
     h1 {
-        margin:0px;
+        margin:0;
         padding:5px;
     }
 }
@@ -357,7 +389,7 @@ button:hover {
         font-size:1.5em;
     }
     h2 {
-        margin:0px;
+        margin:0;
         text-align:center;
         border-top:2px black solid;
         border-bottom:2px black solid;
@@ -367,7 +399,7 @@ button:hover {
 .thumbUp, .thumbDown {
     background-color:$clear;
     font-size:1em;
-    margin: 0px; padding:0px;
+    margin: 0; padding:0;
     border: none;
 }
 
@@ -384,7 +416,7 @@ section {
     width:100%;
     vertical-align:top;
     button {
-        padding:0px;
+        padding:0;
     }
     .votes, .name, .price {
         display:inline-block;
@@ -413,7 +445,7 @@ section {
 
 .listBlock {
     text-align:center;
-    padding:0px;
+    padding:0;
     color:rgba(255,255,255,.4);
     font-size:1em;
     opacity:1;
@@ -474,7 +506,7 @@ section {
 
 ////////////////////////////////Media queries
 
-                          @media screen and (min-width:0px) and (max-width:780px) {
+                          @media screen and (min-width:0) and (max-width:780px) {
 
                         ::-webkit-scrollbar {
                             display:block;
@@ -506,8 +538,13 @@ section {
                             display:none;
                         }
 
-                        .restWrap {
+                        .row {
                             padding:0px;
+                        }
+
+                        .restWrap {
+                            padding:0;
+                            height:0;
                         }
 
                         .search {
@@ -524,7 +561,7 @@ section {
                         }
 
                         .active {
-                            left:0px;
+                            left:0;
                         }
 
                         .restBlock {
@@ -548,7 +585,7 @@ section {
                           @media screen and (min-width:781px) {
 
                         .offCanvas:hover {
-                            left:0px;
+                            left:0;
                         }
 
                         .slide {

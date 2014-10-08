@@ -44,11 +44,11 @@
                 </div>
             </div>
 
-<div class="priceFilter"><p>How much do you want to spend?<br>
+<div class="priceFilter"><p>How much do you want to spend?<br> 
 
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 1">&nbsp;<i class="fa fa-money"></i>
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 2">&nbsp;<i class="fa fa-money fa-2x"></i>
-&nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 3">&nbsp;<i class="fa fa-money fa-3x"></i><br> &nbsp;&nbsp;<input type="radio" name="filter" ng-click="filteredCost = 0">&nbsp; Surprise me.
+<input type="radio" id="radio1" name="filter" ng-click="filteredCost = 1"><label for="radio1"><i class="fa fa-money fa-lg"></i></label>&nbsp;&nbsp;
+<input type="radio" id="radio2" name="filter" ng-click="filteredCost = 2"><label for="radio2"><i class="fa fa-money fa-2x"></i></label>&nbsp;&nbsp;
+<input type="radio" id="radio3" name="filter" ng-click="filteredCost = 3"><label for="radio3"><i class="fa fa-money fa-3x"></i></label>&nbsp;&nbsp;<input type="radio" id="radio4"  name="filter" ng-click="filteredCost = 0"> <label id="radio4" for="radio4">Money <br>is <br>no<br> object</label>
 
 </p>
 </div>
@@ -72,12 +72,10 @@
 
 <div class="divider"  id="scroll">
 
-<input id="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
-
     <h1>HUNGRY AND INDECISIVE? NO PROBLEM.</h1>
     </div>
         <div class="row" style="margin:0;">
-            <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS">
+            <input class="search" type="text" ng-model="search" placeholder="SEARCH RESTAURANTS/MENU ITEMS?">
             <div class="restWrap" >
                 <div ng-repeat="rest in rests | filter: search">
                     <div class="restBlock col-md-4">
