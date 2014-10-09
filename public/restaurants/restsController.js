@@ -130,14 +130,14 @@
                 $(function() {
                     $(".jumbotron").on("click", "#scrollButtBot", function() {
                         $('html, body').animate({
-                            scrollTop: $("#scroll").offset().top }, 1000);
+                            scrollTop: $("#scroll").offset().top }, 1500);
                             });
                                 $scope.showMenu = true;
                         });
 
                 ///Search bar sticky fade
                 $(window).scroll(function() {
-                if ($(this).scrollTop() > 990) {
+                if ($(this).scrollTop() > 1190) {
                     $( "#search" ).fadeIn(800);
                 } else {
                     $( "#search" ).fadeOut(400);
