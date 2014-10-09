@@ -479,7 +479,7 @@ section {
 
   .jumbotron {
     height: 500px;
-    background-image: url("https://i.imgur.com/uMtBE.jpg"); }
+    background-image: url("../images/subtle_carbon.png"); }
 
   .row {
     padding: 0px;
@@ -520,8 +520,20 @@ section {
     .restBox span {
       font-weight: bolder; }
 
+  .info {
+    position: relative; }
+
   .menuItems {
-    width: 90%; }
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    margin-left: 0px;
+    margin-right: 0px; }
+
+  section .name {
+    width: 75%; }
+  section .votes {
+    padding-top: 10px; }
 
   .show, .list, .edit {
     position: relative;
@@ -531,8 +543,7 @@ section {
     top: 25px; }
 
   .menuNotes {
-    width: 100%;
-    bottom: 0px; } }
+    position: relative; } }
 @media screen and (min-width: 982px) {
   .offCanvas:hover {
     left: 0; }

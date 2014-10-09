@@ -60,7 +60,7 @@
                 <p>
 
                     <div class="votes"><button ng-click="item.vote = item.vote + 1; editRest(rest); disabled = !disabled; yes=!yes" ng-disabled = "disabled"><i class="fa fa-thumbs-up" ng-class="{'thumbUp': yes === true}"></i></button>
-                        <span ng-class="{'thumbDown' : item.vote<0}" data-ng-model="item.vote">{{item.vote}}</span>
+                        <span ng-class="{'thumbDown' : item.vote<0}; {'thumbUp' : item.vote>10}" data-ng-model="item.vote">{{item.vote}}</span>
                         <button ng-click="item.vote = item.vote - 1; editRest(rest); disabled = !disabled; no=!no" ng-disabled = "disabled"><i class="fa fa-thumbs-down" ng-class="{'thumbDown': no === true}"></i></button></div>
 
                         <div class="name"><span style="text-transform:uppercase;">{{item.name}}</span><br> {{item.description}}</div>

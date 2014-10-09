@@ -602,7 +602,7 @@ top:200px;
 
                         .jumbotron {
                             height:500px;
-                            background-image:url("https://i.imgur.com/uMtBE.jpg");
+                            background-image:url("../images/subtle_carbon.png");
 
                         }
 
@@ -658,8 +658,25 @@ top:200px;
                             }
                         }
 
+                        .info {
+                            position:relative;
+                        }
+
                         .menuItems {
-                            width:90%;
+                            width:100%;
+                            margin-bottom:0px;
+                            margin-top:25px;
+                            margin-left:0px;
+                            margin-right:0px;
+                        }
+
+                        section {
+                            .name {
+                                width:75%;
+                            }
+                            .votes {
+                                padding-top:10px;
+                            }
                         }
 
 
@@ -673,8 +690,7 @@ top:200px;
                         }
 
                         .menuNotes {
-                            width:100%;
-                            bottom:0px;
+                            position:relative;
                         }
 
 
