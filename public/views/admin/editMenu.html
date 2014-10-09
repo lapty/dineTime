@@ -27,7 +27,7 @@
 <h2>Select menu:</h2>
 <div ng-model="menuIndex" ng-repeat="menu in rest.menus track by $index">
 <input type="radio" data-ng-model="$parent.menuIndex" value="{{$index}}">
-Index {{$index}}: {{rest.menus[$index].type}}
+{{rest.menus[$index].type}}
 </div>
 <hr>
 <h2>Currently editing <span>{{rest.menus[menuIndex].type}}</span> menu</h2>
