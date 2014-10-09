@@ -33,7 +33,7 @@ body {
   .tawpWrap img {
     margin-top: 10%;
     left: 28%;
-    opacity: .5;
+    opacity: .3;
     position: fixed; }
 
 a {
@@ -555,7 +555,8 @@ section {
     margin-bottom: 0px;
     margin-top: 25px;
     margin-left: 0px;
-    margin-right: 0px; }
+    margin-right: 0px;
+    position: relative; }
 
   section .name {
     width: 75%; }
@@ -607,7 +608,8 @@ section {
       text-decoration: none; }
 
   .menuItems {
-    height: 67%; }
+    height: 67%;
+    width: 85%; }
 
   .restBlock {
     opacity: 1;

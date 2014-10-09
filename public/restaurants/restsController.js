@@ -140,7 +140,7 @@
                 if ($(this).scrollTop() > 990) {
                     $( "#search" ).fadeIn(800);
                 } else {
-                    $( "#search" ).fadeOut(300);
+                    $( "#search" ).fadeOut(400);
                 }
             });
 

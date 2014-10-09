@@ -48,7 +48,7 @@ p {
     img {
         margin-top:10%;
         left:28%;
-        opacity:.5;
+        opacity:.3;
         position:fixed;
     }
 }
@@ -708,6 +708,7 @@ margin:50px;
                             margin-top:25px;
                             margin-left:0px;
                             margin-right:0px;
+                            position:relative;
                         }
 
                         section {
@@ -781,6 +782,7 @@ margin:50px;
 
                         .menuItems {
                             height:67%;
+                            width:85%;
                         }
 
                         .restBlock {
