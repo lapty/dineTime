@@ -23,7 +23,7 @@
     </div> <!-- end sidemenu -->
 
 <div class="list" style="text-align:center;">
-<button ng-click="getSampleList(); randomPhrase()" ng-hide="{{userList.length === 0}}"><h1>Still can't decide? We'll pick one for you if you click here.</h1></button>
+<a href="" ng-click="getSampleList(); randomPhrase()" ng-hide="{{userList.length === 0}}" style="text-decoration:none;"><h2>We'll pick one for <span>you</span> if you click here.</h2></a>
 
 <p><h1 ng-hide="{{userList.length > 0 }}">You haven't added any restaurants!
     <br> <a href="#">Press the <i class="fa fa-plus-square"></i>  button to add restaurants.</a> </h1></p>

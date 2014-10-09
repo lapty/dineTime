@@ -421,7 +421,6 @@ button:hover {
     }
     a:hover {
         color:$green;
-        text-decoration:none;
     }
     .filters {
         text-align:center;
@@ -529,41 +528,50 @@ section {
 .list {
     font-family:$font2;
 
-    button {
+    a {
         color:$green;
+        h2 {
+            font-weight:lighter;
+            color:black;
+        }
+        h2:hover {
+            text-decoration:none;
+            span {
+                color:$green;
+            }
+        }
     }
     h1 {
         font-weight:lighter;
         span {
             color:$green;
             font-weight:bold;
+            font-size:2.8em;
         }
 
-    a {
-        color:$green;
-    }
+
+    a:hover {
+        text-decoration:none;
+}
 }
 }
 
 .listWrap {
 position:absolute;
-top:150px;
+top:160px;
 margin:50px;
 
-
-
-.listBox {
-    opacity:.8;
-    border:none;
-    height:258px !important;
-    border:5px $green solid;
-    margin:5px;
-    .restBox:hover{
+    .listBox {
+        opacity:.8;
         border:none;
+        height:258px !important;
+        border:5px $green solid;
+        margin:5px;
+        .restBox:hover{
+            border:none;
 
+        }
     }
-}
-
 }
 ///edit
 .edit {

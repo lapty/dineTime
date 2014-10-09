@@ -340,8 +340,7 @@ button:hover {
   .info a {
     color: black; }
   .info a:hover {
-    color: #50c923;
-    text-decoration: none; }
+    color: #50c923; }
   .info .filters {
     text-align: center;
     width: 100%;
@@ -427,19 +426,27 @@ section {
 
 .list {
   font-family: "Oswald"; }
-  .list button {
+  .list a {
     color: #50c923; }
+    .list a h2 {
+      font-weight: lighter;
+      color: black; }
+    .list a h2:hover {
+      text-decoration: none; }
+      .list a h2:hover span {
+        color: #50c923; }
   .list h1 {
     font-weight: lighter; }
     .list h1 span {
       color: #50c923;
-      font-weight: bold; }
-    .list h1 a {
-      color: #50c923; }
+      font-weight: bold;
+      font-size: 2.8em; }
+    .list h1 a:hover {
+      text-decoration: none; }
 
 .listWrap {
   position: absolute;
-  top: 150px;
+  top: 160px;
   margin: 50px; }
   .listWrap .listBox {
     opacity: .8;
