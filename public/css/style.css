@@ -474,8 +474,10 @@ section {
     display: none; }
 
   .jumbotron {
-    height: 500px;
-    background-image: url("../images/subtle_carbon.png"); }
+    height: 550px;
+    background-image: url("../images/rest1.png");
+    background-repeat: initial;
+    background-size: initial; }
 
   .row {
     padding: 0px;
