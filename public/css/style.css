@@ -12,6 +12,10 @@ body {
   body h1 {
     color: black; }
 
+.col-centered {
+  float: none;
+  margin: 0 auto; }
+
 ::selection {
   background: #50c923; }
 
@@ -40,8 +44,7 @@ a:hover {
 
 button {
   background-color: rgba(0, 0, 0, 0.001);
-  border: none;
-  color: white; }
+  border: none; }
 
 button:hover {
   background-color: rgba(255, 255, 255, 0.5); }
@@ -51,11 +54,13 @@ button:hover {
   color: white;
   font-family: "Merriweather";
   background-color: rgba(0, 0, 0, 0.5); }
+  .modalBox h1 {
+    font-weight: lighter; }
   .modalBox p {
     color: white; }
   .modalBox a {
-    color: #00bbff;
-    font-weight: bolder; }
+    color: #50c923;
+    font-weight: bold; }
   .modalBox i:hover {
     cursor: pointer;
     color: rgba(80, 120, 201, 0.8); }
@@ -116,7 +121,8 @@ button:hover {
     font-family: "Oswald";
     font-weight: lighter;
     opacity: .8;
-    color: white; }
+    color: white;
+    letter-spacing: 2px; }
 
 .logo {
   opacity: .7;
@@ -134,9 +140,9 @@ button:hover {
 .logo:hover {
   opacity: 1;
   cursor: pointer;
-  border: 8px white double;
+  border: 4px white solid;
   border-radius: 100%;
-  background-color: rgba(255, 255, 255, 0.08); }
+  /*     background-color:rgba(255,255,255,.08); */ }
 
 .divWrap {
   background-color: white; }
@@ -177,6 +183,7 @@ button:hover {
     transition: all .5s ease-in-out;
     position: relative;
     top: 110px;
+    letter-spacing: 2px;
     color: white;
     text-shadow: -.5px -.5px 0 black, .5px -.5px 0 black, -.5px .5px 0 black, .5px .5px 0 black; }
 
@@ -343,7 +350,8 @@ button:hover {
     .info .filters a {
       color: #50c923;
       font-weight: bolder;
-      margin-left: 10px;
+      margin-left: 10px; }
+    .info .filters a:hover {
       text-decoration: underline; }
     .info .filters i {
       margin-left: 10px; }
@@ -355,7 +363,7 @@ button:hover {
 
 .menuItems {
   font-family: "Oswald";
-  margin-top: 135px;
+  margin-top: 150px;
   position: relative;
   top: 0px;
   margin-bottom: 80px;
@@ -417,14 +425,28 @@ section {
     font-size: 1.2em;
     margin: 5px; }
 
+.list {
+  font-family: "Oswald"; }
+  .list button {
+    color: #50c923; }
+  .list h1 {
+    font-weight: lighter; }
+    .list h1 span {
+      color: #50c923;
+      font-weight: bold; }
+    .list h1 a {
+      color: #50c923; }
+
 .listWrap {
   position: absolute;
-  top: 200px; }
+  top: 150px;
+  margin: 50px; }
   .listWrap .listBox {
     opacity: .8;
     border: none;
-    margin: 10px;
-    border-radius: 100%; }
+    height: 258px !important;
+    border: 5px #50c923 solid;
+    margin: 5px; }
     .listWrap .listBox .restBox:hover {
       border: none; }
 

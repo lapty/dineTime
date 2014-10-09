@@ -23,6 +23,10 @@ p {
   }
 }
 
+.col-centered {
+    float:none;
+    margin:0 auto;
+}
 
 ::selection {
   background: $green;
@@ -60,7 +64,6 @@ a:hover {
 button {
     background-color:$clear;
     border:none;
-    color:white;
 }
 
 button:hover {
@@ -72,12 +75,15 @@ button:hover {
     color:white;
     font-family:$font1;
     background-color:rgba(0,0,0,.5);
+    h1 {
+        font-weight:lighter;
+    }
     p {
         color:white;
     }
     a {
-        color:$blueL;
-        font-weight:bolder;
+        color:$green;
+        font-weight:bold;
     }
     i:hover {
       cursor:pointer;
@@ -154,6 +160,7 @@ button:hover {
         font-weight:lighter;
         opacity:.8;
         color:white;
+        letter-spacing:2px;
     }
 
 }
@@ -175,9 +182,9 @@ button:hover {
 .logo:hover {
     opacity:1;
     cursor:pointer;
-    border:8px white double;
+    border:4px white solid;
     border-radius:100%;
-    background-color:rgba(255,255,255,.08);
+/*     background-color:rgba(255,255,255,.08); */
 }
 
 .divWrap {
@@ -223,6 +230,7 @@ button:hover {
         transition:all .5s ease-in-out;
         position:relative;
         top:110px;
+        letter-spacing:2px;
         color: white;
         text-shadow:
         -.5px -.5px 0 black,
@@ -399,13 +407,12 @@ button:hover {
     width:100%;
     z-index:5;
     background-color:white;
-
     h1 {
         font-family:$font2;
         text-transform:uppercase;
         font-weight:lighter;
         margin:0;
-        color:rgba(0,0,0,1);
+        color:black;
         padding:5px;
     }
     a {
@@ -425,6 +432,9 @@ button:hover {
             color:$green;
             font-weight:bolder;
             margin-left:10px;
+
+        }
+        a:hover {
             text-decoration:underline;
         }
         i {
@@ -441,7 +451,7 @@ button:hover {
 
 .menuItems {
     font-family:$font2;
-    margin-top:135px;
+    margin-top:150px;
     position:relative;
     top:0px;
     margin-bottom:80px;
@@ -516,21 +526,44 @@ section {
     }
 }
 
+.list {
+    font-family:$font2;
+
+    button {
+        color:$green;
+    }
+    h1 {
+        font-weight:lighter;
+        span {
+            color:$green;
+            font-weight:bold;
+        }
+
+    a {
+        color:$green;
+    }
+}
+}
+
 .listWrap {
 position:absolute;
-top:200px;
+top:150px;
+margin:50px;
+
+
 
 .listBox {
     opacity:.8;
     border:none;
-    margin:10px;
-    border-radius:100%;
+    height:258px !important;
+    border:5px $green solid;
+    margin:5px;
     .restBox:hover{
         border:none;
 
-
     }
 }
+
 }
 ///edit
 .edit {
