@@ -294,22 +294,18 @@ button:hover {
 
 .show {
   width: 100%;
-  background-size: cover;
-  /*     height:700px; */
-  /*     position:fixed; */ }
+  background-size: cover; }
 
 .menuNotes {
   text-align: center;
   color: black;
   position: fixed;
   bottom: 0px;
-  width: 80%;
+  height: 80px;
+  width: 100%;
+  padding: 20px;
   background-color: white;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 5px;
-  font-size: .8em;
-  /*     background-color:rgba(0,0,0,.9); */ }
+  font-size: .8em; }
   .menuNotes i:hover {
     color: #00bbff;
     cursor: pointer; }
@@ -359,12 +355,12 @@ button:hover {
 
 .menuItems {
   font-family: "Oswald";
-  margin-top: 150px;
+  margin-top: 135px;
   position: relative;
   top: 0px;
-  margin-bottom: 70px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
   background-color: rgba(0, 0, 0, 0.03);
   /*     overflow:auto; */ }
   .menuItems span {
