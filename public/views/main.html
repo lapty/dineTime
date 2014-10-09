@@ -1,4 +1,7 @@
 <div id="search"><i class="fa fa-search"></i> <input type="text" class="searchBar" ng-model="search" placeholder="SEARCH ANYTHING"></div>
+
+                            <!-- SIDE MENU START -->
+
     <div class="offCanvas"  ng-class="{'active': isActive == true}"><div class="tagCan">
         <ul>
             <li><a href="" ng-click="isCollapsed = !isCollapsed">Sign In <i class="fa fa-user"></i></a>
@@ -22,7 +25,8 @@
             <a href="#"><img src="../images/logo.png"></a>
         </div>
         <i class="fa fa-caret-right tag" ng-click="isActive = !isActive"></i>
-    </div> <!-- end sidemenu -->
+    </div>
+                            <!-- end sidemenu -->
 
 
     <div class="jumbotron"><div class="covered"><br><br>
@@ -39,7 +43,7 @@
                     <p>Sound familiar?
                         Dine Time is a web application built to help get rid of this dialogue once and for all. To start, click on the logo and a restaurant will be randomly chosen for you. Or, check out the restaurant list below and add restaurants to your dine list by pressing the <i class="fa fa-plus-square"></i> button underneath the restaurant.</p>
                         <p>Check out the green triangle on your left for more info. Use the search bar to find restaurants with desired characteristics (i.e. "dog friendly", "fries", "okonomiyaki").</p>
-                        <p style="color:rgb(0, 187, 255); font-weight:bold" data-dismiss="modal">Let's eat.</p>
+                        <p style="color:rgb(0, 187, 255); font-weight:bold" data-dismiss="modal">LET'S EAT.</p>
                     </div>
                 </div>
             </div>
@@ -52,7 +56,7 @@
 
             <input type="radio" id="radio1" name="filter" ng-click="filteredCost = 1"><label for="radio1"><i class="fa fa-money fa-lg"></i></label>&nbsp;&nbsp;
             <input type="radio" id="radio2" name="filter" ng-click="filteredCost = 2"><label for="radio2"><i class="fa fa-money fa-2x"></i></label>&nbsp;&nbsp;
-            <input type="radio" id="radio3" name="filter" ng-click="filteredCost = 3"><label for="radio3"><i class="fa fa-money fa-3x"></i></label>&nbsp;&nbsp;<input type="radio" id="radio4"  name="filter" ng-click="filteredCost = 0"> <label for='radio4' id="radio4">Money <br>is <br>no<br> object </label>
+            <input type="radio" id="radio3" name="filter" ng-click="filteredCost = 3"><label for="radio3"><i class="fa fa-money fa-3x"></i></label>&nbsp;&nbsp;<input type="radio" id="radio4"  name="filter" ng-click="filteredCost = 0"> <label for=radio4 id="radio4">Money <br>is <br>no<br> object </label>
             </p>
             </div>
 

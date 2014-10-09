@@ -20,18 +20,21 @@
         <p><a ng-show="rest.number != null" href="tel:{{rest.number}}">{{rest.number}}</a></p>
         <p><a ng-show="rest.address != null" href="http://mapof.it/{{rest.address}}" target="_blank">{{rest.address}}</a></p>
         <p><a ng-show="rest.site != null" href="http://{{rest.site}}">Website</a></p>
-        <p><a ng-show="rest.openTable != null" href="{{rest.openTable}}" target="_blank">Open Table reservation</a></p>
+        <p><a ng-show="rest.openTable != ''" href="{{rest.openTable}}" target="_blank">Open Table reservation</a></p>
+
+        <div class="filters">
+            <p style="font-size:.8em;">
+                <span style="font-weight:light;">Sort by:</span>
+                <a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a>
+                <a href="" ng-click="predicate = 'vote'; reverse=!reverse">Votes</a>
+                <a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a>
+                &nbsp;&nbsp;<input type="text" ng-model="search"><i class="fa fa-search"></i>
+            </p>
+        </div>
+
     </section>
 
-    <div class="filters">
-        <p style="color:white; font-size:.8em;">
-            <span style="font-weight:light;">Sort by:</span>
-            <a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a>
-            <a href="" ng-click="predicate = 'vote'; reverse=!reverse">Votes</a>
-            <a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a>
-            &nbsp;&nbsp;<input type="text" ng-model="search"><i class="fa fa-search"></i>
-        </p>
-    </div>
+
 
 
 

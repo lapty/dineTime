@@ -25,7 +25,7 @@
 </select> -->
 <p>
 <h2>Select menu:</h2>
-<div style="color:white;" ng-model="menuIndex" ng-repeat="menu in rest.menus track by $index">
+<div ng-model="menuIndex" ng-repeat="menu in rest.menus track by $index">
 <input type="radio" data-ng-model="$parent.menuIndex" value="{{$index}}">
 Index {{$index}}: {{rest.menus[$index].type}}
 </div>
@@ -35,7 +35,7 @@ Index {{$index}}: {{rest.menus[$index].type}}
 <form ng-submit="addItem(item)">
 
   <p><input type="text" placeholder="Name" ng-model="item.name"></p>
-  <p><input type="text" placeholder="description" ng-model="item.description"></p>
+  <p><textarea ng-model="item.description" cols="19" rows="5" placeholder="Description"></textarea></p>
   <p><input type="text" placeholder="price" ng-model="item.price"></p>
 
   <p><i ng-click="addItem(item)" class="fa fa-plus-circle"> Add menu item</i></p>
@@ -46,10 +46,12 @@ Index {{$index}}: {{rest.menus[$index].type}}
 <form>
     <section ng-repeat="item in rest.menus[menuIndex].menu track by $index">
             <p>ITEM {{$index}}: <input type="text" data-ng-model="item.name" placeholder="itemname">
-                 <input style="width:600px;" type="text" data-ng-model="item.description" placeholder="item description">
+                 <textarea data-ng-model="item.description" cols="60" rows="2" placeholder="Description"></textarea>
                     PRICE: <input style="width:50px;" type="number" data-ng-model="item.price" placeholder="price">
             <button ng-click="deleteItem($index)">X</button></p>
+            <hr>
     </section>
+
 </form>
 <br>
 <p>Total {{rest.menus[menuIndex].type}} items: {{rest.menus[menuIndex].menu.length}}</p><br>

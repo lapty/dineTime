@@ -98,7 +98,7 @@
                 var menuItem = {
                     name: item.name,
                     description: item.description,
-                    price: +item.price,
+                    price: item.price,
                     vote: 0
                 };
                 console.log($scope.menuIndex);

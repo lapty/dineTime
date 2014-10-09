@@ -2,15 +2,15 @@ body {
   font: 14px "Merriweather", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("../images/subtle_carbon.png");
-  background-color: black; }
+  /*   background-image:url("../images/subtle_carbon.png"); */
+  background-color: white; }
   body input, body textarea {
     color: black; }
   body p {
     margin: 0;
-    color: white; }
+    color: black; }
   body h1 {
-    color: white; }
+    color: black; }
 
 ::selection {
   background: #50c923; }
@@ -48,7 +48,11 @@ button:hover {
 
 .modalBox {
   width: 100%;
+  color: white;
+  font-family: "Merriweather";
   background-color: rgba(0, 0, 0, 0.5); }
+  .modalBox p {
+    color: white; }
   .modalBox a {
     color: #00bbff;
     font-weight: bolder; }
@@ -69,18 +73,6 @@ button:hover {
   z-index: 9999;
   width: 100%; }
 
-/* .covered {
-    width:100%;
-    height:700px;
-    z-index:1;
-    background-color:red;
-}
-
-#flair {
-    position:fixed;
-    top:15px;
-    z-index:0;
-} */
 .jumbotron {
   background: url("../images/rest1.png") no-repeat center center fixed;
   width: 100%;
@@ -103,7 +95,6 @@ button:hover {
 
 .priceFilter {
   font-family: "Merriweather";
-  font-weight: lighter;
   text-align: center;
   width: 100%;
   bottom: 120px;
@@ -114,6 +105,7 @@ button:hover {
   .priceFilter label {
     cursor: pointer;
     opacity: .7;
+    color: white;
     vertical-align: middle; }
   .priceFilter label:hover {
     opacity: 1; }
@@ -123,7 +115,8 @@ button:hover {
   .priceFilter span {
     font-family: "Oswald";
     font-weight: lighter;
-    opacity: .8; }
+    opacity: .8;
+    color: white; }
 
 .logo {
   opacity: .7;
@@ -302,59 +295,78 @@ button:hover {
 .show {
   width: 100%;
   background-size: cover;
-  height: 700px;
-  position: fixed; }
+  /*     height:700px; */
+  /*     position:fixed; */ }
 
 .menuNotes {
   text-align: center;
-  color: white;
+  color: black;
+  position: fixed;
+  bottom: 0px;
   width: 80%;
+  background-color: white;
   margin-left: 10%;
   margin-right: 10%;
   padding: 5px;
   font-size: .8em;
-  background-color: rgba(0, 0, 0, 0.9); }
+  /*     background-color:rgba(0,0,0,.9); */ }
   .menuNotes i:hover {
     color: #00bbff;
     cursor: pointer; }
 
-.filters {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10%; }
-  .filters a {
-    margin-left: 10px;
-    text-decoration: underline; }
-  .filters i {
-    margin-left: 10px; }
-  .filters input {
-    color: white;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: none;
-    border-bottom: 1px white solid; }
-
 .odd {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(211, 211, 211, 0.2);
   padding: 0;
   margin: 0; }
 
 .info {
+  top: 0px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 255, 0.9);
-  font-family: 'Open Sans', sans-serif;
-  text-shadow: black 0 2px 3px; }
+  font-family: "Oswald";
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: white; }
   .info h1 {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-weight: lighter;
     margin: 0;
+    color: black;
     padding: 5px; }
+  .info a {
+    color: black; }
+  .info a:hover {
+    color: #50c923;
+    text-decoration: none; }
+  .info .filters {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    background-color: white; }
+    .info .filters a {
+      color: #50c923;
+      font-weight: bolder;
+      margin-left: 10px;
+      text-decoration: underline; }
+    .info .filters i {
+      margin-left: 10px; }
+    .info .filters input {
+      width: 150px;
+      background-color: rgba(0, 0, 0, 0.001);
+      border: none;
+      border-bottom: 1px black solid; }
 
 .menuItems {
-  width: 80%;
+  font-family: "Oswald";
+  margin-top: 150px;
+  position: relative;
+  top: 0px;
+  margin-bottom: 70px;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: rgba(255, 255, 255, 0.8);
-  overflow: auto; }
+  background-color: rgba(0, 0, 0, 0.03);
+  /*     overflow:auto; */ }
   .menuItems span {
     font-size: 1.3em;
     font-weight: bolder; }
@@ -363,7 +375,8 @@ button:hover {
   .menuItems i {
     font-size: 1.5em; }
   .menuItems h2 {
-    margin: 0;
+    margin: 15px;
+    padding: 5px;
     text-align: center;
     border-top: 2px black solid;
     border-bottom: 2px black solid; }
@@ -384,7 +397,8 @@ button:hover {
 section {
   display: inline-block;
   width: 100%;
-  vertical-align: top; }
+  vertical-align: top;
+  letter-spacing: 1px; }
   section button {
     padding: 0; }
   section .votes, section .name, section .price {
@@ -400,7 +414,7 @@ section {
     width: 80%;
     vertical-align: top;
     margin: 5px;
-    font-weight: light; }
+    font-weight: lighter; }
   section .price {
     float: right;
     font-weight: bolder;
@@ -431,7 +445,7 @@ section {
 .edit button:hover {
   background-color: rgba(220, 0, 0, 0.9); }
 .edit h2 {
-  color: white; }
+  color: black; }
 .edit span {
   color: rgba(220, 0, 0, 0.9); }
 
@@ -465,7 +479,7 @@ section {
 
   .jumbotron {
     height: 500px;
-    background: none; }
+    background-image: url("https://i.imgur.com/uMtBE.jpg"); }
 
   .row {
     padding: 0px;
@@ -514,7 +528,11 @@ section {
     background-size: .001%; }
 
   .offCanvas {
-    top: 0px; } }
+    top: 25px; }
+
+  .menuNotes {
+    width: 100%;
+    bottom: 0px; } }
 @media screen and (min-width: 982px) {
   .offCanvas:hover {
     left: 0; }
@@ -548,9 +566,7 @@ section {
   .restBlock:hover {
     color: white; }
     .restBlock:hover span {
-      text-decoration: none;
-      color: white;
-      font-size: 1.1em; }
+      text-decoration: none; }
 
   .menuItems {
     height: 70%; }

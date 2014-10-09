@@ -2,25 +2,27 @@ $blue: rgba(80,120,201,.8);
 $blueL: rgba(0,187,255, 1);
 $green: rgba(80,201,35,1);
 $clear: rgba(0,0,0,.001);
+$font1: "Merriweather";
 $font2: "Oswald";
 
 body {
   font: 14px "Merriweather", Helvetica, sans-serif;
   margin:0;
   padding:0;
-  background-image:url("../images/subtle_carbon.png");
-  background-color:black;
+/*   background-image:url("../images/subtle_carbon.png"); */
+  background-color:white;
   input, textarea {
       color:black;
   }
 p {
     margin:0;
-    color:white;
+    color:black;
 }
   h1 {
-      color:white;
+      color:black;
   }
 }
+
 
 ::selection {
   background: $green;
@@ -67,7 +69,12 @@ button:hover {
 
 .modalBox {
     width:100%;
+    color:white;
+    font-family:$font1;
     background-color:rgba(0,0,0,.5);
+    p {
+        color:white;
+    }
     a {
         color:$blueL;
         font-weight:bolder;
@@ -93,18 +100,7 @@ button:hover {
     z-index:9999;
     width:100%;
 }
-/* .covered {
-    width:100%;
-    height:700px;
-    z-index:1;
-    background-color:red;
-}
 
-#flair {
-    position:fixed;
-    top:15px;
-    z-index:0;
-} */
 
 .jumbotron {
     background: url("../images/rest1.png") no-repeat center center fixed;
@@ -134,8 +130,7 @@ button:hover {
 }
 
 .priceFilter {
-    font-family:"Merriweather";
-    font-weight:lighter;
+    font-family:$font1;
     text-align:center;
     width:100%;
     bottom:120px;
@@ -143,6 +138,7 @@ button:hover {
     label {
         cursor:pointer;
         opacity:.7;
+        color:white;
         vertical-align:middle;
     }
     label:hover  {
@@ -154,9 +150,10 @@ button:hover {
         font-size:.8em;
     }
     span {
-        font-family:"Oswald";
+        font-family:$font2;
         font-weight:lighter;
         opacity:.8;
+        color:white;
     }
 
 }
@@ -371,67 +368,91 @@ button:hover {
 .show{
     width:100%;
     background-size:cover;
-    height:700px;
-    position:fixed;
+/*     height:700px; */
+/*     position:fixed; */
 }
 
 .menuNotes {
     text-align:center;
-    color:white;
+    color:black;
+    position:fixed;
+    bottom:0px;
     width:80%;
+    background-color:white;
     margin-left:10%;
     margin-right:10%;
     padding:5px;
     font-size:.8em;
-    background-color:rgba(0,0,0,.9);
+/*     background-color:rgba(0,0,0,.9); */
     i:hover {
         color:$blueL;
         cursor:pointer;
     }
 }
 
-.filters {
-    margin-top:5px; margin-bottom:5px;
-    margin-left:10%;
-    a {
-        margin-left:10px;
-        text-decoration:underline;
-    }
-    i {
-        margin-left:10px;
-    }
-    input {
-        color:white;
-        width:200px;
-        background-color:rgba(0,0,0,.1);
-        border:none;
-        border-bottom:1px white solid;
-    }
-}
-
 .odd {
-    background-color:rgba(255,255,255,.9);
+    background-color:rgba(211,211,211,.2);
     padding:0; margin: 0;
 }
 
 .info {
+    top:0px;
     text-align:center;
-    background-color:rgba(0,0,0,.5);
-    color:rgba(255,255,255,.9);
-    font-family: 'Open Sans', sans-serif;
-    text-shadow: black 0 2px 3px;
+    font-family:$font2;
+    position:fixed;
+    width:100%;
+    z-index:5;
+    background-color:white;
+
     h1 {
+        font-family:$font2;
+        text-transform:uppercase;
+        font-weight:lighter;
         margin:0;
+        color:rgba(0,0,0,1);
         padding:5px;
+    }
+    a {
+        color:black;
+
+    }
+    a:hover {
+        color:$green;
+        text-decoration:none;
+    }
+    .filters {
+        text-align:center;
+        width:100%;
+        padding:5px;
+        background-color:white;
+        a {
+            color:$green;
+            font-weight:bolder;
+            margin-left:10px;
+            text-decoration:underline;
+        }
+        i {
+            margin-left:10px;
+        }
+        input {
+            width:150px;
+            background-color:rgba(0,0,0,.001);
+            border:none;
+            border-bottom:1px black solid;
+        }
     }
 }
 
 .menuItems {
-    width:80%;
+    font-family:$font2;
+    margin-top:150px;
+    position:relative;
+    top:0px;
+    margin-bottom:70px;
     margin-left:10%; margin-right:10%;
-    background-color:rgba(255,255,255,.8);
+    background-color:rgba(0,0,0,.03);
 
-    overflow:auto;
+/*     overflow:auto; */
     span {
         font-size:1.3em;
         font-weight:bolder;
@@ -443,7 +464,8 @@ button:hover {
         font-size:1.5em;
     }
     h2 {
-        margin:0;
+        margin:15px;
+        padding:5px;
         text-align:center;
         border-top:2px black solid;
         border-bottom:2px black solid;
@@ -469,6 +491,7 @@ section {
     display:inline-block;
     width:100%;
     vertical-align:top;
+    letter-spacing:1px;
     button {
         padding:0;
     }
@@ -486,7 +509,7 @@ section {
         width:80%;
         vertical-align:top;
         margin:5px;
-        font-weight:light;
+        font-weight:lighter;
     }
     .price {
         float:right;
@@ -532,7 +555,7 @@ top:200px;
 
     }
     h2 {
-        color:white;
+        color:black;
     }
     span {
         color:rgba(220,0,0,.9)
@@ -579,7 +602,7 @@ top:200px;
 
                         .jumbotron {
                             height:500px;
-                            background:none;
+                            background-image:url("https://i.imgur.com/uMtBE.jpg");
 
                         }
 
@@ -646,7 +669,12 @@ top:200px;
                         }
 
                         .offCanvas {
-                            top:0px;
+                            top:25px;
+                        }
+
+                        .menuNotes {
+                            width:100%;
+                            bottom:0px;
                         }
 
 
@@ -688,8 +716,6 @@ top:200px;
                             color:rgba(255,255,255,1);
                                 span {
                                 text-decoration:none;
-                                color:white;
-                                font-size:1.1em;
 
                                 }
                             }
