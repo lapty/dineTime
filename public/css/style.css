@@ -476,8 +476,7 @@ section {
   .jumbotron {
     height: 550px;
     background-image: url("../images/rest1.png");
-    /* background-repeat: initial; */
-    background-size: initial; }
+    background-attachment: initial; }
 
   .row {
     padding: 0px;
