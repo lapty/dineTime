@@ -216,6 +216,7 @@ button:hover {
   transform: translateY(-10px); }
 
 #search, .search {
+  font-family: "Oswald";
   width: 100%;
   background-color: white;
   color: #50c923;
