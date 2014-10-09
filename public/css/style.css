@@ -308,9 +308,9 @@ button:hover {
   color: black;
   position: fixed;
   bottom: 0px;
-  height: 80px;
+  height: 75px;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   background-color: white;
   font-size: .8em; }
   .menuNotes i:hover {
@@ -363,8 +363,9 @@ button:hover {
 .menuItems {
   font-family: "Oswald";
   margin-top: 150px;
-  position: relative;
   top: 0px;
+  overflow: auto;
+  position: fixed;
   margin-bottom: 80px;
   margin-left: 100px;
   margin-right: 100px;
@@ -606,7 +607,7 @@ section {
       text-decoration: none; }
 
   .menuItems {
-    height: 70%; }
+    height: 67%; }
 
   .restBlock {
     opacity: 1;

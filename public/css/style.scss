@@ -383,9 +383,9 @@ button:hover {
     color:black;
     position:fixed;
     bottom:0px;
-    height:80px;
+    height:75px;
     width:100%;
-    padding:20px;
+    padding:10px;
     background-color:white;
     font-size:.8em;
     i:hover {
@@ -451,8 +451,9 @@ button:hover {
 .menuItems {
     font-family:$font2;
     margin-top:150px;
-    position:relative;
     top:0px;
+    overflow: auto;
+    position: fixed;
     margin-bottom:80px;
     margin-left:100px;
     margin-right:100px;
@@ -759,12 +760,15 @@ margin:50px;
                         }
                         .slide.ng-enter-active {
                             left: 0;
+
                         }
                         .slide.ng-leave {
                             left: 0;
+
                         }
                         .slide.ng-leave-active {
                             left: -100%;
+
                         }
 
                         .restBlock:hover {
@@ -776,7 +780,7 @@ margin:50px;
                             }
 
                         .menuItems {
-                            height:70%;
+                            height:67%;
                         }
 
                         .restBlock {
