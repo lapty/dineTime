@@ -107,7 +107,6 @@ button:hover {
   text-align: center;
   width: 100%;
   bottom: 120px;
-  position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -121,12 +120,15 @@ button:hover {
   .priceFilter #radio4 {
     line-height: 14px;
     font-size: .8em; }
+  .priceFilter span {
+    font-family: "Oswald";
+    font-weight: lighter;
+    opacity: .8; }
 
 .logo {
   opacity: .7;
   transition: all .5s ease;
   width: 400px;
-  position: absolute;
   top: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -195,7 +197,7 @@ button:hover {
 
 .restBox:hover {
   background-color: rgba(0, 0, 0, 0.01);
-  border: 11px white solid; }
+  border: 10px white solid; }
 
 #scrollButtTop, #scrollButtBot {
   font-size: 1em;
@@ -317,6 +319,7 @@ button:hover {
 
 .filters {
   margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 10%; }
   .filters a {
     margin-left: 10px;
@@ -326,7 +329,9 @@ button:hover {
   .filters input {
     color: white;
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-bottom: 1px white solid; }
 
 .odd {
   background-color: rgba(255, 255, 255, 0.9);
@@ -401,23 +406,16 @@ section {
     font-size: 1.2em;
     margin: 5px; }
 
-.listBlock {
-  text-align: center;
-  padding: 0;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 1em;
-  opacity: 1;
-  transition: all .5s ease;
-  border: 1px solid white;
-  overflow-y: auto; }
-  .listBlock a {
-    text-decoration: none; }
-  .listBlock span {
-    transition: all .5s ease-in-out;
-    position: relative;
-    top: 100px;
-    color: white;
-    text-shadow: 3px 2px 0 black; }
+.listWrap {
+  position: absolute;
+  top: 200px; }
+  .listWrap .listBox {
+    opacity: .8;
+    border: none;
+    margin: 10px;
+    border-radius: 100%; }
+    .listWrap .listBox .restBox:hover {
+      border: none; }
 
 .edit button {
   background-color: red;

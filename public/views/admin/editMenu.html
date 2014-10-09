@@ -32,7 +32,7 @@ Index {{$index}}: {{rest.menus[$index].type}}
 <hr>
 <h2>Currently editing <span>{{rest.menus[menuIndex].type}}</span> menu</h2>
 </p>
-<form action="" ng-submit="addItem(item)">
+<form ng-submit="addItem(item)">
 
   <p><input type="text" placeholder="Name" ng-model="item.name"></p>
   <p><input type="text" placeholder="description" ng-model="item.description"></p>

@@ -139,7 +139,6 @@ button:hover {
     text-align:center;
     width:100%;
     bottom:120px;
-    position:absolute;
     margin-left:auto; margin-right:auto; left:0; right:0;
     label {
         cursor:pointer;
@@ -154,6 +153,11 @@ button:hover {
         line-height:14px;
         font-size:.8em;
     }
+    span {
+        font-family:"Oswald";
+        font-weight:lighter;
+        opacity:.8;
+    }
 
 }
 
@@ -164,7 +168,6 @@ button:hover {
     opacity:.7;
     transition:all .5s ease;
     width:400px;
-    position:absolute;
     top:100px;
     margin-left:auto; margin-right:auto; left:0; right:0;
     border:1px rgba(255,255,255,.001) double;
@@ -245,7 +248,7 @@ button:hover {
 
 .restBox:hover {
     background-color:rgba(0,0,0,.01);
-    border:11px white solid;
+    border:10px white solid;
 }
 
 #scrollButtTop, #scrollButtBot {
@@ -387,7 +390,7 @@ button:hover {
 }
 
 .filters {
-    margin-top:5px;
+    margin-top:5px; margin-bottom:5px;
     margin-left:10%;
     a {
         margin-left:10px;
@@ -399,7 +402,9 @@ button:hover {
     input {
         color:white;
         width:200px;
-        background-color:rgba(0,0,0,.1)
+        background-color:rgba(0,0,0,.1);
+        border:none;
+        border-bottom:1px white solid;
     }
 }
 
@@ -490,28 +495,22 @@ section {
     }
 }
 
+.listWrap {
+position:absolute;
+top:200px;
 
-.listBlock {
-    text-align:center;
-    padding:0;
-    color:rgba(255,255,255,.4);
-    font-size:1em;
-    opacity:1;
-    transition:all .5s ease;
-    border:1px solid white;
-    overflow-y:auto;
-    a {
-        text-decoration:none;
-    }
-    span {
-        transition:all .5s ease-in-out;
-        position:relative;
-        top:100px;
-        color: white;
-        text-shadow: 3px 2px 0 black;
+.listBox {
+    opacity:.8;
+    border:none;
+    margin:10px;
+    border-radius:100%;
+    .restBox:hover{
+        border:none;
+
+
     }
 }
-
+}
 ///edit
 .edit {
     button {

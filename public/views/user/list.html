@@ -28,14 +28,13 @@
 
 <p><h1 ng-hide="{{userList.length > 0 }}">You haven't added any restaurants!
     <br> <a href="#">Press the <i class="fa fa-plus-square"></i>  button to add restaurants.</a> </h1></p>
-
 <a href="#/user/{{randomRest._id}}"><h1>{{randomRest.name}}{{randomPhrase}}</h1></a>
 
             <div class="listWrap col-xs-12">
                 <div ng-repeat="rest in userList track by $index">
                     <div class="restBlock col-md-3" style="text-align:center;">
                         <a class="restName" href="#/user/{{rest._id}}">
-                            <div class="restBox" style="background-image:url({{rest.image}})">
+                            <div class="restBox listBox" style="background-image:url({{rest.image}})">
                                 <span>{{rest.name}}</span>
                             </div>
                         </a>
